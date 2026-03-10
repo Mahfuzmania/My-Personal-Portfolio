@@ -1,0 +1,536 @@
+{
+  "profile": {
+    "name": "Md. Mahfuzul Islam",
+    "identityLine": "Data Engineer and EEE graduate building applied AI, machine learning, and engineering simulation systems.",
+    "shortIntro": "I build data-driven systems across healthcare analytics, applied machine learning, and control-oriented engineering software.",
+    "location": "Dhaka, Bangladesh",
+    "email": "mahfuzulislam@iut-dhaka.edu",
+    "secondaryEmail": "mahfuzulislam41@gmail.com",
+    "github": "https://github.com/Mahfuzmania",
+    "linkedin": "https://www.linkedin.com/in/mahfuzul-islam-4366941a5/",
+    "resumePath": "/docs/Md_Mahfuzul_Islam_Resume.pdf",
+    "cvPath": "/docs/Md_Mahfuzul_Islam_CV.pdf",
+    "assessmentPath": "/docs/Technical_Assessment_Report_Md_Mahfuzul_Islam.pdf",
+    "photoPath": "/images/mahfuzul-islam.jpg"
+  },
+  "featuredProjects": [
+    {
+      "title": "Healthcare Data Integration & Analytics Pipeline",
+      "summary": "Large-scale clinical data processing pipeline for Ibrahim Cardiac Hospital & Research Institute, turning complex records into analysis-ready datasets.",
+      "detail": "Designed and implemented Python workflows to clean, validate, and harmonize patient records, laboratory data, and clinical metadata across multiple sources, with strong consistency checks for downstream analytics and research.",
+      "stack": [
+        "Python",
+        "Pandas",
+        "OpenPyXL",
+        "Data Cleaning",
+        "Data Integration",
+        "Data Validation",
+        "Healthcare Data Processing"
+      ],
+      "category": "Data Engineering",
+      "tags": [
+        "Healthcare ETL",
+        "Data Quality",
+        "Clinical Analytics"
+      ],
+      "impact": "Enabled reliable analysis-ready healthcare datasets for research and reporting workflows.",
+      "contributions": [
+        "Designed Python-based healthcare data processing pipelines",
+        "Harmonized large clinical datasets from multiple sources",
+        "Resolved duplicate records, ID mismatches, and irregular date formats",
+        "Integrated patient and laboratory data into a unified analytical dataset",
+        "Performed quality validation and standardization for research usage"
+      ],
+      "featured": true,
+      "privateRepo": true
+    },
+    {
+      "title": "Electrical Engineering RAG Bot",
+      "summary": "Local-first EE chatbot with retrieval-augmented generation over textbooks, bilingual support (English/Bengali), source citations, and step-by-step answers.",
+      "detail": "Built as a practical AI toolchain for technical learning with retrieval over engineering sources, controllable reasoning detail, and configurable local/remote model support.",
+      "stack": [
+        "Python",
+        "Flask",
+        "RAG",
+        "BM25",
+        "OCR",
+        "Ollama"
+      ],
+      "category": "AI / Intelligent Systems",
+      "tags": [
+        "LLM Tooling",
+        "Education AI",
+        "Retrieval",
+        "Applied Systems"
+      ],
+      "impact": "Demonstrates full-stack AI system design for engineering education.",
+      "featured": true,
+      "repoUrl": "https://github.com/Mahfuzmania/EE-Solutions"
+    },
+    {
+      "title": "EV Powertrain Simulation",
+      "summary": "MATLAB/Simulink modeling of EV powertrain performance with variable battery sizing and PID control.",
+      "detail": "Time-domain simulation explored acceleration, efficiency, and range tradeoffs to identify practical battery configuration strategies.",
+      "stack": [
+        "MATLAB",
+        "Simulink",
+        "Control Systems",
+        "PID"
+      ],
+      "category": "Engineering Simulation",
+      "tags": [
+        "Energy Systems",
+        "Optimization",
+        "Performance Modeling"
+      ],
+      "featured": true,
+      "repoUrl": "https://github.com/Mahfuzmania/EV-Powertrain-Simulation"
+    },
+    {
+      "title": "Breast Cancer Survival Prediction",
+      "summary": "SEER-based survival analysis using Kaplan-Meier, Cox Proportional Hazard, and Random Survival Forest models.",
+      "detail": "Applied statistical and machine learning survival modeling to support risk-aware clinical decision support analysis.",
+      "stack": [
+        "Python",
+        "Scikit-learn",
+        "Survival Analysis",
+        "Jupyter"
+      ],
+      "category": "Machine Learning & Analytics",
+      "tags": [
+        "Healthcare ML",
+        "Biostatistics",
+        "Predictive Modeling"
+      ],
+      "featured": true,
+      "repoUrl": "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction"
+    },
+    {
+      "title": "Advanced Controller Design and Optimization (PMSM FOC)",
+      "summary": "Technical assessment project on PI current-controller redesign for PMSM field-oriented control with improved settling and robustness.",
+      "detail": "Used series PI controller design, comparative tuning analysis, and simulation-based validation of dynamic response under parameter variations.",
+      "stack": [
+        "Control Theory",
+        "FOC",
+        "PMSM",
+        "Simulation Analysis"
+      ],
+      "category": "Engineering Simulation",
+      "tags": [
+        "Controller Design",
+        "Motor Drives",
+        "Stability"
+      ],
+      "impact": "Showcases analytical controller design workflow from problem framing to quantitative validation.",
+      "featured": true,
+      "privateRepo": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "Healthcare Data Integration & Analytics Pipeline",
+      "summary": "Large-scale clinical data processing pipeline for Ibrahim Cardiac Hospital & Research Institute, turning complex records into analysis-ready datasets.",
+      "detail": "Designed and implemented Python workflows to clean, validate, and harmonize patient records, laboratory data, and clinical metadata across multiple sources, with strong consistency checks for downstream analytics and research.",
+      "stack": [
+        "Python",
+        "Pandas",
+        "OpenPyXL",
+        "Data Cleaning",
+        "Data Integration",
+        "Data Validation",
+        "Healthcare Data Processing"
+      ],
+      "category": "Data Engineering",
+      "tags": [
+        "Healthcare ETL",
+        "Data Quality",
+        "Clinical Analytics"
+      ],
+      "impact": "Enabled reliable analysis-ready healthcare datasets for research and reporting workflows.",
+      "contributions": [
+        "Designed Python-based healthcare data processing pipelines",
+        "Harmonized large clinical datasets from multiple sources",
+        "Resolved duplicate records, ID mismatches, and irregular date formats",
+        "Integrated patient and laboratory data into a unified analytical dataset",
+        "Performed quality validation and standardization for research usage"
+      ],
+      "featured": true,
+      "privateRepo": true
+    },
+    {
+      "title": "Electrical Engineering RAG Bot",
+      "summary": "Local-first EE chatbot with retrieval-augmented generation over textbooks, bilingual support (English/Bengali), source citations, and step-by-step answers.",
+      "detail": "Built as a practical AI toolchain for technical learning with retrieval over engineering sources, controllable reasoning detail, and configurable local/remote model support.",
+      "stack": [
+        "Python",
+        "Flask",
+        "RAG",
+        "BM25",
+        "OCR",
+        "Ollama"
+      ],
+      "category": "AI / Intelligent Systems",
+      "tags": [
+        "LLM Tooling",
+        "Education AI",
+        "Retrieval",
+        "Applied Systems"
+      ],
+      "impact": "Demonstrates full-stack AI system design for engineering education.",
+      "featured": true,
+      "repoUrl": "https://github.com/Mahfuzmania/EE-Solutions"
+    },
+    {
+      "title": "EV Powertrain Simulation",
+      "summary": "MATLAB/Simulink modeling of EV powertrain performance with variable battery sizing and PID control.",
+      "detail": "Time-domain simulation explored acceleration, efficiency, and range tradeoffs to identify practical battery configuration strategies.",
+      "stack": [
+        "MATLAB",
+        "Simulink",
+        "Control Systems",
+        "PID"
+      ],
+      "category": "Engineering Simulation",
+      "tags": [
+        "Energy Systems",
+        "Optimization",
+        "Performance Modeling"
+      ],
+      "featured": true,
+      "repoUrl": "https://github.com/Mahfuzmania/EV-Powertrain-Simulation"
+    },
+    {
+      "title": "Breast Cancer Survival Prediction",
+      "summary": "SEER-based survival analysis using Kaplan-Meier, Cox Proportional Hazard, and Random Survival Forest models.",
+      "detail": "Applied statistical and machine learning survival modeling to support risk-aware clinical decision support analysis.",
+      "stack": [
+        "Python",
+        "Scikit-learn",
+        "Survival Analysis",
+        "Jupyter"
+      ],
+      "category": "Machine Learning & Analytics",
+      "tags": [
+        "Healthcare ML",
+        "Biostatistics",
+        "Predictive Modeling"
+      ],
+      "featured": true,
+      "repoUrl": "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction"
+    },
+    {
+      "title": "Advanced Controller Design and Optimization (PMSM FOC)",
+      "summary": "Technical assessment project on PI current-controller redesign for PMSM field-oriented control with improved settling and robustness.",
+      "detail": "Used series PI controller design, comparative tuning analysis, and simulation-based validation of dynamic response under parameter variations.",
+      "stack": [
+        "Control Theory",
+        "FOC",
+        "PMSM",
+        "Simulation Analysis"
+      ],
+      "category": "Engineering Simulation",
+      "tags": [
+        "Controller Design",
+        "Motor Drives",
+        "Stability"
+      ],
+      "impact": "Showcases analytical controller design workflow from problem framing to quantitative validation.",
+      "featured": true,
+      "privateRepo": true
+    },
+    {
+      "title": "Anomaly Detection Using Gaussian Model",
+      "summary": "Server anomaly detection with Gaussian and multivariate density modeling, threshold tuning, and F1-guided evaluation.",
+      "stack": [
+        "MATLAB",
+        "Statistical Modeling"
+      ],
+      "category": "Machine Learning & Analytics",
+      "tags": [
+        "Anomaly Detection",
+        "Probabilistic Methods"
+      ],
+      "repoUrl": "https://github.com/Mahfuzmania/Anomaly-Detection-Using-Gaussian-Model",
+      "detail": "Built a probabilistic anomaly-detection workflow for server metrics using univariate and multivariate Gaussian models, threshold selection via F1 optimization, and false-positive control analysis for more reliable incident flagging."
+    },
+    {
+      "title": "ECG Signal Denoising with Wiener Filtering",
+      "summary": "Biomedical signal enhancement using synchronous averaging, cross-correlation QRS detection, and Wiener filtering.",
+      "stack": [
+        "MATLAB",
+        "Signal Processing"
+      ],
+      "category": "Signal / Image Processing",
+      "tags": [
+        "ECG",
+        "Biomedical Signals",
+        "Filtering"
+      ],
+      "repoUrl": "https://github.com/Mahfuzmania/ECG-Signal-Denoising-Wiener-Filtering",
+      "detail": "Implemented an ECG-cleaning pipeline combining synchronous averaging, QRS detection through cross-correlation, and Wiener filtering to improve signal quality for downstream waveform interpretation."
+    },
+    {
+      "title": "Image Thresholding for Background Removal",
+      "summary": "Image preprocessing workflow for white/near-white background removal through threshold-based segmentation.",
+      "stack": [
+        "MATLAB",
+        "Image Processing"
+      ],
+      "category": "Signal / Image Processing",
+      "tags": [
+        "Segmentation",
+        "Thresholding",
+        "Preprocessing"
+      ],
+      "repoUrl": "https://github.com/Mahfuzmania/Image-Thresholding-for-Background-Removal",
+      "detail": "Developed a threshold-based RGB preprocessing workflow to isolate foreground objects from white and near-white backgrounds, with parameter tuning for improved edge preservation and segmentation stability."
+    },
+    {
+      "title": "Bluetooth Interfacing with 8051",
+      "summary": "Embedded wireless command-control system with HC-05 and 8051 for LED/LCD/relay/buzzer operations.",
+      "stack": [
+        "8051 Assembly",
+        "MIDE 51",
+        "Serial Communication"
+      ],
+      "category": "Embedded / Systems Work",
+      "tags": [
+        "Microcontroller",
+        "Bluetooth",
+        "Real-time Control"
+      ],
+      "repoUrl": "https://github.com/Mahfuzmania/Bluetooth-Interfacing-8051-Final",
+      "detail": "Engineered an embedded Bluetooth command system around 8051 + HC-05 to control LCD, LEDs, relay modules, and buzzer states through serial protocols, including command handling and basic security logic."
+    },
+    {
+      "title": "Two-Area Power System MATLAB Simulink",
+      "summary": "Load-frequency and tie-line dynamic analysis for an interconnected two-area power system.",
+      "stack": [
+        "MATLAB",
+        "Simulink",
+        "Power Systems"
+      ],
+      "category": "Engineering Simulation",
+      "tags": [
+        "LFC",
+        "Grid Dynamics",
+        "Frequency Control"
+      ],
+      "repoUrl": "https://github.com/Mahfuzmania/Two-Area-Power-System-MATLAB-Simulink",
+      "detail": "Modeled a two-area interconnected power system in Simulink to analyze load-frequency control behavior, tie-line power deviations, and system response under load disturbances."
+    },
+    {
+      "title": "Cardiac EDA Processing",
+      "summary": "Private healthcare ETL pipeline for extracting Oracle exports and multi-sheet labs, then consolidating into curated clinical data assets.",
+      "stack": [
+        "Python",
+        "Pandas",
+        "OpenPyXL",
+        "Healthcare ETL"
+      ],
+      "category": "Data Engineering",
+      "tags": [
+        "Clinical Data",
+        "ETL",
+        "Standardization"
+      ],
+      "privateRepo": true,
+      "detail": "Designed a private healthcare ETL workflow that ingests Oracle exports and multi-sheet lab reports, standardizes identifiers and timelines, and outputs curated patient-level datasets for reliable analysis."
+    },
+    {
+      "title": "Coronary Angiogram Dataset Cleaning",
+      "summary": "Private workflow for cleaning and standardizing coronary angiogram data including severity classification and derived features.",
+      "stack": [
+        "Python",
+        "Data Cleaning",
+        "Clinical Rules"
+      ],
+      "category": "Data Engineering",
+      "tags": [
+        "Data Quality",
+        "Feature Engineering",
+        "Clinical Analytics"
+      ],
+      "privateRepo": true,
+      "detail": "Implemented rule-based cleaning and harmonization for coronary angiogram records, including severity normalization, derived feature generation, and quality checks to reduce analytical noise."
+    }
+  ],
+  "technicalFocus": [
+    {
+      "title": "Data Engineering for Healthcare",
+      "detail": "Robust pipelines for high-volume, multi-source clinical data with strict quality and consistency controls."
+    },
+    {
+      "title": "Applied Machine Learning",
+      "detail": "Production-minded modeling for survival analysis, anomaly detection, and evidence-based decision support."
+    },
+    {
+      "title": "Engineering Modeling & Simulation",
+      "detail": "Control and energy system simulation in MATLAB/Simulink to evaluate performance, stability, and design tradeoffs."
+    },
+    {
+      "title": "AI Tools & Educational Systems",
+      "detail": "RAG and LLM-assisted systems for technical domains with grounded citations and practical user workflows."
+    }
+  ],
+  "highlights": [
+    "Built data pipelines integrating roughly 70k patient records and 1M+ laboratory entries for healthcare analytics.",
+    "Published survival-analysis work at ICECET 2023 (South Africa) on SEER-based breast cancer outcomes.",
+    "Led technical execution and cross-domain collaboration in healthcare AI and data projects.",
+    "Co-founding AZM Labs startup focused on practical data-driven systems."
+  ],
+  "aboutSummary": [
+    "I am a data engineer with an Electrical and Electronic Engineering background.",
+    "My work combines rigorous data preparation, applied machine learning, and engineering modeling for practical outcomes.",
+    "I am co-building AZM Labs startup while contributing to implementation-focused software development."
+  ],
+  "workingPhilosophy": [
+    "Start with data integrity before modeling decisions.",
+    "Use engineering constraints to keep AI systems practical and reliable.",
+    "Prefer reproducible pipelines over ad-hoc analysis.",
+    "Design for clarity, traceability, and measurable outcomes."
+  ],
+  "experience": [
+    {
+      "period": "2025 - Present",
+      "role": "Co-Founder, AZM Labs Startup",
+      "org": "AZM Labs",
+      "type": "Startup Leadership",
+      "points": [
+        "Defining product direction for practical AI and data-driven technical solutions.",
+        "Leading roadmap planning, venture operations, and early delivery priorities."
+      ]
+    },
+    {
+      "period": "2025 - Present",
+      "role": "Software Engineer, AZM Labs Startup",
+      "org": "AZM Labs",
+      "type": "Startup Engineering",
+      "points": [
+        "Building platform modules across data tooling, AI workflows, and software architecture."
+      ]
+    },
+    {
+      "period": "Nov 2025 - Present",
+      "role": "Data Engineer",
+      "org": "Enact Business Solution",
+      "type": "Professional Experience",
+      "points": [
+        "Built Python-based healthcare data pipelines across multiple clinical sources.",
+        "Standardized identifiers and timelines to produce integrated analysis-ready datasets.",
+        "Implemented end-to-end quality checks for missing values, duplicates, and consistency."
+      ]
+    },
+    {
+      "period": "Nov 2024 - Apr 2025",
+      "role": "Research Engineer (AI & Data Science)",
+      "org": "AIMS Lab, IRIIC, United International University",
+      "type": "Technical / Research Experience",
+      "points": [
+        "Contributed to AI healthcare systems including Jotno.AI and Susastho.AI.",
+        "Applied NLP and machine learning for symptom screening and risk assessment workflows.",
+        "Collaborated with multidisciplinary teams on implementation-oriented research."
+      ]
+    }
+  ],
+  "researchThemes": [
+    "Healthcare data integration and reliable analytical infrastructure",
+    "Survival modeling and interpretable clinical ML",
+    "Signal and system-level analysis for biomedical and engineering use-cases",
+    "Controller design and performance optimization in electrical drives",
+    "Retrieval-augmented AI tools for technical learning and decision support"
+  ],
+  "skillGroups": [
+    {
+      "title": "Programming & Data",
+      "items": [
+        "Python",
+        "MATLAB",
+        "C/C++",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "OpenPyXL"
+      ]
+    },
+    {
+      "title": "Simulation & Engineering Systems",
+      "items": [
+        "Simulink",
+        "Power Systems",
+        "Control Systems",
+        "Signal Processing",
+        "PMSM/FOC"
+      ]
+    },
+    {
+      "title": "AI & Platform Work",
+      "items": [
+        "RAG pipelines",
+        "LLM integration",
+        "Data validation",
+        "ETL design",
+        "Technical documentation"
+      ]
+    }
+  ],
+  "achievementItems": [
+    "OIC partial scholarship recipient for academic excellence at IUT.",
+    "Champion, 10th Mathematical Olympiad (Higher Secondary Group, Dinajpur).",
+    "Conference publication at ICECET 2023.",
+    "Director of Operations, Esonance 2023 (major university tech festival)."
+  ],
+  "education": [
+    {
+      "period": "Jan 2020 - Jun 2024",
+      "degree": "B.Sc. in Electrical and Electronic Engineering (CGPA: 3.72/4.00)",
+      "institution": "Islamic University of Technology (IUT)",
+      "details": [
+        "Relevant focus: AI/ML, biomedical signal processing, power electronics, control systems, power systems.",
+        "Undergraduate thesis: EV powertrain modeling and simulation."
+      ]
+    },
+    {
+      "period": "2019",
+      "degree": "Higher Secondary Certificate (GPA 5.00, General Grade Scholarship)",
+      "institution": "Dinajpur Govt. College, Dinajpur",
+      "details": [
+        "Science stream with strong mathematics and analytical foundation."
+      ]
+    },
+    {
+      "period": "2017",
+      "degree": "Secondary School Certificate (GPA 5.00)",
+      "institution": "Dinajpur Zilla School, Dinajpur",
+      "details": [
+        "Early academic distinction and Olympiad track record."
+      ]
+    }
+  ],
+  "training": [
+    {
+      "period": "Jun 2023",
+      "title": "Industrial Trainee",
+      "organization": "Institute of Nuclear Science and Technology",
+      "details": [
+        "Practical sessions on ITU TRIGA Mark-II training and research reactor operations."
+      ]
+    },
+    {
+      "period": "May 2023",
+      "title": "Industrial Trainee",
+      "organization": "Robi Axiata Limited",
+      "details": [
+        "Training in telecommunications network systems and communication design."
+      ]
+    },
+    {
+      "period": "May 2023",
+      "title": "Industrial Trainee",
+      "organization": "Bangladesh Power Development Board (BPDB)",
+      "details": [
+        "Hands-on exposure to steam, gas, and combined cycle power plant systems."
+      ]
+    }
+  ]
+}

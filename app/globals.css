@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a1020;
+  --surface: #121b30;
+  --foreground: #e8efff;
+  --muted: #9baac7;
+  --accent: #6ea4ff;
+  --accent-soft: #1f2f4d;
+  --border: #2b3b5d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.002em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  color: var(--foreground);
+}
+
+.site-shell {
+  min-height: 100dvh;
+  background:
+    radial-gradient(1120px 620px at 95% -8%, rgba(110, 164, 255, 0.2), transparent 60%),
+    radial-gradient(920px 520px at -10% 6%, rgba(65, 122, 214, 0.14), transparent 56%),
+    linear-gradient(180deg, #0a1122 0%, #0c1529 100%),
+    var(--background);
+}
+
+.glass {
+  background-color: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(8px) saturate(125%);
+}
+
+.top-ribbon {
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 55%, white);
+  background: linear-gradient(92deg, #1a3e72 0%, #1f4f8c 45%, #275f9e 100%);
+  color: #ffffff;
+}
+
+.section-title {
+  font-family: var(--font-serif), serif;
+  letter-spacing: -0.015em;
+}
+
+.measure {
+  max-width: 65ch;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 95%, #15233d) 0%, #111a30 100%);
+  border-radius: 18px;
+  box-shadow: 0 22px 42px -34px rgba(5, 10, 22, 0.88);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.accent-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--accent) 66%, #6fb0dc),
+    transparent
+  );
+}
+
+a,
+button,
+input,
+textarea {
+  outline-color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 70%, white);
+  outline-offset: 2px;
+}
+
+.hero-panel {
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, #172540);
+  border-radius: 18px;
+  background:
+    radial-gradient(105% 120% at 96% 0%, rgba(110, 164, 255, 0.22), transparent 52%),
+    linear-gradient(160deg, #141f37 0%, #121c32 100%);
+  box-shadow: 0 24px 44px -34px rgba(4, 10, 24, 0.95);
+}
+
+.section-shell {
+  border: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
+  border-radius: 20px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 88%, #16223d) 0%, #101a2f 100%);
+}
+
+.hero-ribbon {
+  border: 1px solid color-mix(in srgb, var(--accent) 60%, #7db2ff);
+  border-radius: 12px;
+  background: linear-gradient(92deg, #244a86 0%, #3568b2 52%, #4c84d6 100%);
+  color: #ffffff;
+}
+
+.nav-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
