@@ -1,162 +1,244 @@
-import Image from "next/image";
-import { CtaLink } from "@/components/cta-link";
-import { ExperienceCard } from "@/components/experience-card";
+﻿import Image from "next/image";
 import {
+  BadgeIcon,
   BrainIcon,
-  BriefcaseIcon,
-  CircuitIcon,
+  CollaborationIcon,
   DatabaseIcon,
-  SparkIcon,
+  StrategyIcon,
+  SystemsIcon,
   TrophyIcon,
+  WorkflowIcon,
 } from "@/components/logo-pack";
+import { CtaLink } from "@/components/cta-link";
+import { DomainVisual } from "@/components/domain-visual";
+import { ExperienceCard } from "@/components/experience-card";
+import { PortraitStage } from "@/components/portrait-stage";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { VisualList } from "@/components/visual-list";
 import { getPortfolioContent } from "@/lib/content-service";
+import { getSiteLang } from "@/lib/lang";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const { experience, featuredProjects, highlights, profile, technicalFocus } =
-    await getPortfolioContent();
-  const currentPositions = experience
-    .filter((item) => item.period.toLowerCase().includes("present"))
-    .slice(0, 3);
+  const { experience, featuredProjects, highlights, profile, technicalFocus, uiContent } = await getPortfolioContent();
+  const lang = await getSiteLang();
+  const displayName = lang === "bn" ? "à¦®à§‹à¦ƒ à¦®à¦¾à¦¹à¦«à§à¦œà§à¦² à¦‡à¦¸à¦²à¦¾à¦®" : "Md Mahfuzul Islam";
 
-  const profilePhoto = profile.photoPath || "/images/mahfuzul-islam.jpg";
-  const focusIcons = [DatabaseIcon, BrainIcon, CircuitIcon, SparkIcon];
-  const workStyle = [
-    {
-      title: "Frame the Technical Problem",
-      detail: "Define constraints, data quality risks, and expected outcomes before implementation.",
+  const t = {
+    viewProjects: lang === "bn" ? "à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿà¦¸ à¦¦à§‡à¦–à§à¦¨" : "View Projects",
+    downloadResume: lang === "bn" ? "à¦°à§‡à¦œà¦¿à¦‰à¦®à§‡ à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡" : "Download Resume",
+    profile: {
+      eyebrow: lang === "bn" ? "à¦ªà§à¦°à§‹à¦«à¦¾à¦‡à¦²" : "Profile",
+      title: lang === "bn" ? "à¦ªà§‡à¦¶à¦¾à¦—à¦¤ à¦ªà¦°à¦¿à¦šà¦¿à¦¤à¦¿" : "Current professional scope",
+      description:
+        lang === "bn"
+          ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦­à§‚à¦®à¦¿à¦•à¦¾, à¦•à¦¾à¦œà§‡à¦° à¦ªà¦°à¦¿à¦§à¦¿ à¦à¦¬à¦‚ à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦¦à¦¿à¦•à¦¨à¦¿à¦°à§à¦¦à§‡à¦¶à§‡à¦° à¦¸à¦‚à¦•à§à¦·à¦¿à¦ªà§à¦¤ à¦šà¦¿à¦¤à§à¦°à¥¤"
+          : "A focused view of my current execution areas across healthcare data, applied AI delivery, and platform engineering.",
     },
-    {
-      title: "Build Reproducible Systems",
-      detail: "Implement structured pipelines and modular components that are maintainable and testable.",
+    workstreams: {
+      eyebrow: lang === "bn" ? "à¦“à§Ÿà¦¾à¦°à§à¦•à¦¸à§à¦Ÿà§à¦°à¦¿à¦®à¦¸" : "Workstreams",
+      title: lang === "bn" ? "à¦®à§‚à¦² à¦•à¦¾à¦œà§‡à¦° à¦•à§à¦·à§‡à¦¤à§à¦°" : "Execution domains",
+      description:
+        lang === "bn"
+          ? "à¦šà¦²à¦®à¦¾à¦¨ à¦•à¦¾à¦œà§‡à¦° à¦ªà§à¦°à¦§à¦¾à¦¨ à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦Ÿà§à¦°à§à¦¯à¦¾à¦•à¥¤"
+          : "The technical tracks I am actively delivering.",
     },
-    {
-      title: "Validate and Iterate",
-      detail: "Use measurable checks, simulation/model feedback, and clear documentation to refine delivery.",
+    featured: {
+      eyebrow: lang === "bn" ? "à¦«à¦¿à¦šà¦¾à¦°à§à¦¡ à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿà¦¸" : "Featured Projects",
+      title: lang === "bn" ? "à¦¨à¦¿à¦°à§à¦¬à¦¾à¦šà¦¿à¦¤ à¦•à¦¾à¦œà§‡à¦° à¦¤à¦¾à¦²à¦¿à¦•à¦¾" : "Featured implementation portfolio",
+      description:
+        lang === "bn"
+          ? "à¦¡à§‡à¦Ÿà¦¾, à¦à¦†à¦‡ à¦à¦¬à¦‚ à¦¸à¦¿à¦®à§à¦²à§‡à¦¶à¦¨-à¦­à¦¿à¦¤à§à¦¤à¦¿à¦• à¦¨à¦¿à¦°à§à¦¬à¦¾à¦šà¦¿à¦¤ à¦•à¦¾à¦œà¥¤"
+          : "Selected projects where engineering depth, validation, and delivery quality are clearly demonstrated.",
+      viewAll: lang === "bn" ? "à¦¸à¦¬ à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨" : "View All Projects",
     },
-  ];
+    focus: {
+      eyebrow: lang === "bn" ? "à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦«à§‹à¦•à¦¾à¦¸" : "Technical Focus",
+      title: lang === "bn" ? "à¦ªà§à¦°à¦¯à§à¦•à§à¦¤à¦¿ à¦“ à¦—à¦¬à§‡à¦·à¦£à¦¾ à¦«à§‹à¦•à¦¾à¦¸" : "Technical and research directions",
+      description:
+        lang === "bn"
+          ? "à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦¨à¦«à§à¦°à¦¾, à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦®à¦à¦² à¦à¦¬à¦‚ à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦® à¦¬à¦¿à¦²à§à¦¡à¥¤"
+          : "Where I am currently investing technical depth across data systems, applied ML, and platform execution.",
+      explore: lang === "bn" ? "à¦°à¦¿à¦¸à¦¾à¦°à§à¦š à¦•à¦¾à¦œ à¦¦à§‡à¦–à§à¦¨" : "Explore Research Work",
+    },
+    positions: {
+      eyebrow: lang === "bn" ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦…à¦¬à¦¸à§à¦¥à¦¾à¦¨" : "Current Positions",
+      title: lang === "bn" ? "à¦¸à¦•à§à¦°à¦¿à§Ÿ à¦­à§‚à¦®à¦¿à¦•à¦¾" : "Active roles and responsibilities",
+      description:
+        lang === "bn"
+          ? "à¦‡à¦¨à§à¦¡à¦¾à¦¸à§à¦Ÿà§à¦°à¦¿ à¦“ à¦ªà§à¦°à§‹à¦¡à¦¾à¦•à§à¦Ÿ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à§Ÿà¦¾à¦°à¦¿à¦‚à§Ÿà§‡ à¦šà¦²à¦®à¦¾à¦¨ à¦¦à¦¾à§Ÿà¦¿à¦¤à§à¦¬à¦¸à¦®à§‚à¦¹à¥¤"
+          : "Current responsibilities across industry delivery, product engineering, and applied AI/data systems.",
+      full: lang === "bn" ? "à¦ªà§‚à¦°à§à¦£ à¦…à¦­à¦¿à¦œà§à¦žà¦¤à¦¾ à¦¦à§‡à¦–à§à¦¨" : "View Full Experience",
+    },
+    highlights: {
+      eyebrow: lang === "bn" ? "à¦¹à¦¾à¦‡à¦²à¦¾à¦‡à¦Ÿà¦¸" : "Highlights",
+      title: lang === "bn" ? "à¦¨à¦¿à¦°à§à¦¬à¦¾à¦šà¦¿à¦¤ à¦…à¦°à§à¦œà¦¨" : "Selected outcomes and impact",
+      collaborate: lang === "bn" ? "à¦¸à¦¹à¦¯à§‹à¦—à¦¿à¦¤à¦¾ à¦•à¦°à§à¦¨" : "Let's Collaborate",
+      about: lang === "bn" ? "à¦†à¦®à¦¾à¦° à¦¸à¦®à§à¦ªà¦°à§à¦•à§‡" : "Read About Me",
+    },
+    stats: {
+      featured: lang === "bn" ? "à¦«à¦¿à¦šà¦¾à¦°à§à¦¡" : "Featured",
+      focus: lang === "bn" ? "à¦«à§‹à¦•à¦¾à¦¸ à¦à¦°à¦¿à§Ÿà¦¾" : "Focus Areas",
+      roles: lang === "bn" ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦­à§‚à¦®à¦¿à¦•à¦¾" : "Current Roles",
+    },
+    scopeTitle: lang === "bn" ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦•à¦¾à¦œà§‡à¦° à¦ªà¦°à¦¿à¦§à¦¿" : "Current execution scope",
+    location: {
+      city: lang === "bn" ? "à¦¢à¦¾à¦•à¦¾, à¦¬à¦¾à¦‚à¦²à¦¾à¦¦à§‡à¦¶" : "Dhaka, Bangladesh",
+      note: lang === "bn" ? "à¦—à§à¦²à§‹à¦¬à¦¾à¦² à¦¸à¦¹à¦¯à§‹à¦—à¦¿à¦¤à¦¾à¦° à¦œà¦¨à§à¦¯ à¦ªà§à¦°à¦¸à§à¦¤à§à¦¤" : "Open to global collaboration",
+    },
+  };
+
+  const currentPositions = experience.filter((item) => item.period.toLowerCase().includes("present")).slice(0, 3);
+  const heroPhoto = profile.photoPath;
+  const focusIcons = [DatabaseIcon, BrainIcon, SystemsIcon, WorkflowIcon];
+  const roleBadges = currentPositions.map((item) => item.role).slice(0, 3);
 
   return (
-    <div className="space-y-16">
+    <div className="page-stack">
       <Reveal>
-        <section className="hero-panel grid gap-8 p-7 md:grid-cols-[1.15fr_0.85fr] md:p-10">
-          <div className="hero-ribbon col-span-full px-4 py-2 text-center text-xs font-semibold tracking-[0.08em]">
-            Personal Technical Portfolio  |  Data Engineering  |  Applied ML
-          </div>
-          <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">
-              Md. Mahfuzul Islam
-            </p>
-            <h1 className="section-title max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
-              {profile.identityLine}
-            </h1>
-            <p className="measure mt-4 max-w-2xl text-base text-muted md:text-lg">{profile.shortIntro}</p>
+        <section className="hero-panel home-hero grid md:grid-cols-[minmax(0,1.24fr)_minmax(250px,0.76fr)]">
+          <article className="home-hero__content flex h-full flex-col">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">{displayName}</p>
+            <h1 className="home-hero__title section-title">{profile.identityLine}</h1>
+            <p className="copy-text home-hero__intro">{profile.shortIntro}</p>
 
-            <div className="mt-6 flex flex-wrap gap-2 text-xs text-muted">
-              <span className="rounded-full border border-border bg-surface px-3 py-1">
-                Data Engineer, Enact Business Solution
+            <div className="home-hero__roles flex flex-wrap gap-2 text-xs text-muted">
+              {roleBadges.map((badge) => (
+                <span key={badge} className="chip">
+                  <BadgeIcon name="role" />
+                  {badge}
+                </span>
+              ))}
+            </div>
+
+            <div className="home-hero__companies flex flex-wrap items-center gap-2.5">
+              <span className="chip company-chip">
+                <Image src="/images/logos/enact-business-solutions-logo.jpg" alt="Enact Business Solutions logo" width={20} height={20} className="company-chip__logo" />
+                Enact Business Solutions
               </span>
-              <span className="rounded-full border border-border bg-surface px-3 py-1">
-                Co-Founder, AZM Labs Startup
-              </span>
-              <span className="rounded-full border border-border bg-surface px-3 py-1">
-                Software Engineer, AZM Labs Startup
+              <span className="chip company-chip">
+                <Image src="/images/azm-labs-logo.png" alt="AZM Labs logo" width={20} height={20} className="company-chip__logo" />
+                AZM Labs
               </span>
             </div>
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              <CtaLink href="/projects">View Projects</CtaLink>
+            <div className="section-actions home-hero__actions">
+              <CtaLink href="/projects">{t.viewProjects}</CtaLink>
               <CtaLink href={profile.resumePath} secondary external>
-                Download Resume
+                {t.downloadResume}
               </CtaLink>
               <CtaLink href={profile.github} secondary external>
                 GitHub
               </CtaLink>
             </div>
 
-            <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              <article className="rounded-2xl border border-border bg-surface px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.12em] text-muted">Featured</p>
-                <p className="mt-1 text-2xl font-semibold text-foreground">{featuredProjects.length}</p>
+            <div className="home-hero__stats mt-auto">
+              <article className="home-hero__stat">
+                <p className="meta-label">{t.stats.featured}</p>
+                <p className="home-hero__stat-value">{featuredProjects.length}</p>
               </article>
-              <article className="rounded-2xl border border-border bg-surface px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.12em] text-muted">Focus Areas</p>
-                <p className="mt-1 text-2xl font-semibold text-foreground">{technicalFocus.length}</p>
+              <article className="home-hero__stat">
+                <p className="meta-label">{t.stats.focus}</p>
+                <p className="home-hero__stat-value">{technicalFocus.length}</p>
               </article>
-              <article className="rounded-2xl border border-border bg-surface px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.12em] text-muted">Current Roles</p>
-                <p className="mt-1 text-2xl font-semibold text-foreground">
-                  {experience.filter((item) => item.period.includes("Present")).length}
-                </p>
+              <article className="home-hero__stat">
+                <p className="meta-label">{t.stats.roles}</p>
+                <p className="home-hero__stat-value">{currentPositions.length}</p>
               </article>
             </div>
-          </div>
+          </article>
 
-          <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-[340px] overflow-hidden rounded-2xl border border-border bg-surface p-2 shadow-[0_20px_40px_-28px_rgba(16,52,94,0.55)]">
-              <Image
-                src={profilePhoto}
-                alt="Portrait of Md. Mahfuzul Islam"
-                width={640}
-                height={760}
-                className="h-auto w-full rounded-xl object-cover"
-                priority
-              />
-              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-accent/20" />
-              <div className="absolute bottom-4 left-4 rounded-xl border border-border bg-surface/95 px-3 py-2 text-xs shadow-sm">
-                <p className="font-semibold text-foreground">Dhaka, Bangladesh</p>
-                <p className="text-muted">Open to global collaboration</p>
-              </div>
-            </div>
-          </div>
+          <PortraitStage
+            src={heroPhoto}
+            alt="Portrait of Md Mahfuzul Islam"
+            sizes="(max-width: 768px) 100vw, 480px"
+            caption={`${t.location.city} | ${t.location.note}`}
+            objectPosition="center 19%"
+            imageClassName="portrait-stage__media--blend"
+            className="portrait-stage--home home-hero__portrait"
+            blend
+            priority
+          />
         </section>
       </Reveal>
 
-      <section>
-        <Reveal>
-          <SectionHeading
-            eyebrow="Featured Projects"
-            title="Selected work across AI, data engineering, and simulation"
-            description="Personally built projects from public repositories and production-focused private work."
-            icon={<CircuitIcon className="h-8 w-8" />}
-          />
-        </Reveal>
-        <div className="section-shell p-5 md:p-6">
-          <div className="grid gap-5 md:grid-cols-2">
-            {featuredProjects.slice(0, 4).map((project, idx) => (
-              <Reveal key={project.title} delay={idx * 0.05}>
-                <ProjectCard project={project} compact />
+      <section className="section-block">
+        <div className="section-shell section-shell--with-heading">
+          <Reveal>
+            <SectionHeading eyebrow={t.profile.eyebrow} title={t.profile.title} description={t.profile.description} icon={<StrategyIcon className="h-8 w-8" />} />
+          </Reveal>
+          <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+            <article className="card card-pad">
+              <div className="space-y-4 text-sm leading-7 text-muted md:text-base">
+                {profile.shortIntro && <p>{profile.shortIntro}</p>}
+                {uiContent.home.profileNarrative[lang].map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </div>
+            </article>
+            <article className="card card-pad">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{t.scopeTitle}</p>
+              <div className="mt-4">
+                <VisualList items={uiContent.home.scope[lang]} imagePool={["/images/pipeline-depth.svg", "/images/ai-depth.svg", "/images/simulation-depth.svg"]} icon="settings" columns="one" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="section-shell section-shell--with-heading">
+          <Reveal>
+            <SectionHeading eyebrow={t.workstreams.eyebrow} title={t.workstreams.title} description={t.workstreams.description} icon={<WorkflowIcon className="h-8 w-8" />} />
+          </Reveal>
+          <div className="grid gap-5 md:grid-cols-3">
+            {uiContent.home.workstreams.map((item, idx) => (
+              <Reveal key={item.title.en} delay={idx * 0.06}>
+                <article className="card h-full card-pad">
+                  <DomainVisual variant={item.variant} lang={lang} />
+                  <h3 className="mt-5 text-lg font-semibold tracking-tight">{item.title[lang]}</h3>
+                  <p className="mt-2 text-sm text-muted">{item.detail[lang]}</p>
+                </article>
               </Reveal>
             ))}
           </div>
         </div>
-        <div className="mt-6">
-          <CtaLink href="/projects" secondary>
-            View All Projects
-          </CtaLink>
+      </section>
+
+      <section className="section-block">
+        <div className="section-shell section-shell--with-heading">
+          <Reveal>
+            <SectionHeading eyebrow={t.featured.eyebrow} title={t.featured.title} description={t.featured.description} icon={<SystemsIcon className="h-8 w-8" />} />
+          </Reveal>
+          <div className="grid gap-4 md:grid-cols-2">
+            {featuredProjects.slice(0, 4).map((project, idx) => (
+              <Reveal key={project.title} delay={idx * 0.05}>
+                <ProjectCard project={project} compact lang={lang} />
+              </Reveal>
+            ))}
+          </div>
+          <div className="section-actions">
+            <CtaLink href="/projects" secondary>
+              {t.featured.viewAll}
+            </CtaLink>
+          </div>
         </div>
       </section>
 
-      <section>
-        <Reveal>
-          <SectionHeading
-            eyebrow="Technical Focus"
-            title="Core technical focus"
-            description="Data infrastructure, applied machine learning, and engineering software."
-            icon={<DatabaseIcon className="h-8 w-8" />}
-          />
-        </Reveal>
-        <div className="section-shell p-5 md:p-6">
+      <section className="section-block">
+        <div className="section-shell section-shell--with-heading">
+          <Reveal>
+            <SectionHeading eyebrow={t.focus.eyebrow} title={t.focus.title} description={t.focus.description} icon={<StrategyIcon className="h-8 w-8" />} />
+          </Reveal>
           <div className="grid gap-4 md:grid-cols-2">
             {technicalFocus.map((focus, idx) => {
               const FocusIcon = focusIcons[idx];
               return (
                 <Reveal key={focus.title} delay={idx * 0.05}>
-                  <article className="card p-6">
+                  <article className="card h-full card-pad">
                     <div className="mb-3 flex items-center gap-3">
                       {FocusIcon ? <FocusIcon className="h-8 w-8" /> : null}
                       <h3 className="text-xl font-semibold tracking-tight">{focus.title}</h3>
@@ -167,79 +249,50 @@ export default async function HomePage() {
               );
             })}
           </div>
-        </div>
-        <div className="mt-6">
-          <CtaLink href="/research" secondary>
-            Explore Research Work
-          </CtaLink>
-        </div>
-      </section>
-
-      <section>
-        <Reveal>
-          <SectionHeading
-            eyebrow="How I Work"
-            title="Personal engineering workflow"
-            description="A practical execution approach from problem definition to validated delivery."
-            icon={<SparkIcon className="h-8 w-8" />}
-          />
-        </Reveal>
-        <div className="grid gap-4 md:grid-cols-3">
-          {workStyle.map((item, idx) => (
-            <Reveal key={item.title} delay={idx * 0.05}>
-              <article className="card p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                  0{idx + 1}
-                </p>
-                <h3 className="mt-2 text-lg font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-2 text-sm text-muted">{item.detail}</p>
-              </article>
-            </Reveal>
-          ))}
+          <div className="section-actions">
+            <CtaLink href="/research" secondary>
+              {t.focus.explore}
+            </CtaLink>
+          </div>
         </div>
       </section>
 
-      <section>
-        <Reveal>
-          <SectionHeading
-            eyebrow="Experience Snapshot"
-            title="Current positions"
-            icon={<BriefcaseIcon className="h-8 w-8" />}
-          />
-        </Reveal>
-        <div className="section-shell p-5 md:p-6">
-          <div className="grid gap-4">
+      <section className="section-block">
+        <div className="section-shell section-shell--with-heading">
+          <Reveal>
+            <SectionHeading eyebrow={t.positions.eyebrow} title={t.positions.title} description={t.positions.description} icon={<CollaborationIcon className="h-8 w-8" />} />
+          </Reveal>
+          <div className="timeline-rail">
             {currentPositions.map((item, idx) => (
               <Reveal key={`${item.role}-${item.period}`} delay={idx * 0.05}>
                 <ExperienceCard item={item} />
               </Reveal>
             ))}
           </div>
-        </div>
-        <div className="mt-6">
-          <CtaLink href="/experience" secondary>
-            View Full Experience
-          </CtaLink>
+          <div className="section-actions">
+            <CtaLink href="/experience" secondary>
+              {t.positions.full}
+            </CtaLink>
+          </div>
         </div>
       </section>
 
-      <section>
-        <Reveal>
-          <SectionHeading eyebrow="Highlights" title="Selected outcomes" icon={<TrophyIcon className="h-8 w-8" />} />
-        </Reveal>
-        <div className="card p-7">
-          <ul className="grid gap-3 md:grid-cols-2">
-            {highlights.slice(0, 4).map((item) => (
-              <li key={item} className="rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted">
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className="accent-line mt-7" />
-          <div className="mt-6 flex flex-wrap gap-3">
-            <CtaLink href="/contact">Let&apos;s Collaborate</CtaLink>
+      <section className="section-block">
+        <div className="section-shell section-shell--with-heading">
+          <Reveal>
+            <SectionHeading eyebrow={t.highlights.eyebrow} title={t.highlights.title} icon={<TrophyIcon className="h-8 w-8" />} />
+          </Reveal>
+          <VisualList items={highlights.slice(0, 4)} imagePool={[
+            "/images/pipeline-depth.svg",
+            "/images/ai-depth.svg",
+            "/images/simulation-depth.svg",
+            "/images/placeholders/project-ml.svg",
+          ]} icon="award" />
+          <div className="accent-line mt-2" />
+          <div className="section-actions mt-1">
+            <CtaLink href="/contact">{t.highlights.collaborate}</CtaLink>
             <CtaLink href="/about" secondary>
-              Read About Me
+              {t.highlights.about}
             </CtaLink>
           </div>
         </div>
@@ -247,3 +300,6 @@ export default async function HomePage() {
     </div>
   );
 }
+
+
+

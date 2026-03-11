@@ -27,6 +27,62 @@ function mergeWithDefaults(raw: unknown): PortfolioContent {
       ...defaultPortfolioContent.profile,
       ...(incoming.profile ?? {}),
     },
+    uiContent: {
+      ...defaultPortfolioContent.uiContent,
+      ...(incoming.uiContent ?? {}),
+      navbarRoleLine: {
+        ...defaultPortfolioContent.uiContent.navbarRoleLine,
+        ...(incoming.uiContent?.navbarRoleLine ?? {}),
+      },
+      home: {
+        ...defaultPortfolioContent.uiContent.home,
+        ...(incoming.uiContent?.home ?? {}),
+        profileNarrative: {
+          ...defaultPortfolioContent.uiContent.home.profileNarrative,
+          ...(incoming.uiContent?.home?.profileNarrative ?? {}),
+        },
+        scope: {
+          ...defaultPortfolioContent.uiContent.home.scope,
+          ...(incoming.uiContent?.home?.scope ?? {}),
+        },
+      },
+      about: {
+        ...defaultPortfolioContent.uiContent.about,
+        ...(incoming.uiContent?.about ?? {}),
+        biography: {
+          ...defaultPortfolioContent.uiContent.about.biography,
+          ...(incoming.uiContent?.about?.biography ?? {}),
+        },
+      },
+      research: {
+        ...defaultPortfolioContent.uiContent.research,
+        ...(incoming.uiContent?.research ?? {}),
+        technicalInterests: {
+          ...defaultPortfolioContent.uiContent.research.technicalInterests,
+          ...(incoming.uiContent?.research?.technicalInterests ?? {}),
+        },
+        explorations: {
+          ...defaultPortfolioContent.uiContent.research.explorations,
+          ...(incoming.uiContent?.research?.explorations ?? {}),
+        },
+      },
+      resume: {
+        ...defaultPortfolioContent.uiContent.resume,
+        ...(incoming.uiContent?.resume ?? {}),
+        summaryPoints: {
+          ...defaultPortfolioContent.uiContent.resume.summaryPoints,
+          ...(incoming.uiContent?.resume?.summaryPoints ?? {}),
+        },
+      },
+      contact: {
+        ...defaultPortfolioContent.uiContent.contact,
+        ...(incoming.uiContent?.contact ?? {}),
+        collaborationTopics: {
+          ...defaultPortfolioContent.uiContent.contact.collaborationTopics,
+          ...(incoming.uiContent?.contact?.collaborationTopics ?? {}),
+        },
+      },
+    },
     featuredProjects: Array.isArray(incoming.featuredProjects)
       ? incoming.featuredProjects
       : defaultPortfolioContent.featuredProjects,

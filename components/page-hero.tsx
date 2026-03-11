@@ -9,18 +9,20 @@ type PageHeroProps = {
 
 export function PageHero({ title, description, kicker, actions }: PageHeroProps) {
   return (
-    <section className="hero-panel mb-14 p-7 md:p-10">
-      {kicker ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-          {kicker}
-        </p>
-      ) : null}
-      <h1 className="section-title max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-        {title}
-      </h1>
-      <p className="measure mt-4 max-w-3xl text-base text-muted md:text-lg">{description}</p>
-      <div className="accent-line mt-6" />
-      {actions ? <div className="mt-7 flex flex-wrap gap-3">{actions}</div> : null}
+    <section className="hero-panel relative overflow-hidden p-[clamp(1rem,0.8rem+0.9vw,1.45rem)] md:p-[clamp(1.2rem,1rem+0.95vw,1.7rem)]">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:30px_30px] opacity-35" />
+      <div className="section-block relative max-w-4xl">
+        {kicker ? (
+          <div className="chip chip--accent max-w-full">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            <p className="truncate text-[11px] font-semibold uppercase tracking-[0.16em]">{kicker}</p>
+          </div>
+        ) : null}
+        <h1 className="section-title clamp-heading max-w-[23ch] leading-tight tracking-tight">{title}</h1>
+        <p className="copy-text">{description}</p>
+        <div className="accent-line" />
+        {actions ? <div className="section-actions">{actions}</div> : null}
+      </div>
     </section>
   );
 }

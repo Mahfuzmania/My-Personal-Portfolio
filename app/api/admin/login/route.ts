@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { assertLoginAllowed, registerLoginFailure, registerLoginSuccess } from "@/lib/auth-rate-limit";
 import { createSessionToken, setServerSession } from "@/lib/auth-session";
-import { verifyPassword } from "@/lib/auth-password";
+import { createAdminCsrfToken, setAdminCsrfCookie } from "@/lib/admin-csrf";
+import { verifyAdminCredentials } from "@/lib/admin-user-service";
 
 const loginSchema = z.object({
   username: z.string().min(3).max(64),
@@ -37,26 +38,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid login payload." }, { status: 400 });
   }
 
-  const adminUsername = process.env.ADMIN_USERNAME ?? "admin";
-  const adminHash = process.env.ADMIN_PASSWORD_HASH ?? "";
-
-  if (!adminHash || payload.username !== adminUsername) {
-    registerLoginFailure(ipKey);
-    return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
-  }
-
-  const validPassword = await verifyPassword(payload.password, adminHash);
-  if (!validPassword) {
+  const account = await verifyAdminCredentials(payload.username, payload.password);
+  if (!account) {
     registerLoginFailure(ipKey);
     return NextResponse.json({ error: "Invalid credentials." }, { status: 401 });
   }
 
   registerLoginSuccess(ipKey);
   const token = await createSessionToken({
-    userId: "local-admin",
-    username: adminUsername,
+    userId: account.id,
+    username: account.username,
+    role: account.role,
   });
   await setServerSession(token);
+  const csrfToken = await createAdminCsrfToken();
+  await setAdminCsrfCookie(csrfToken);
 
   return NextResponse.json({ ok: true });
 }

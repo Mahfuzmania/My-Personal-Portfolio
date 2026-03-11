@@ -1,0 +1,67 @@
+{
+  "EV Powertrain Simulation": {
+    "repo": "Mahfuzmania/EV-Powertrain-Simulation",
+    "pdfs": [
+      "Thesis report.pdf"
+    ],
+    "images": [
+      "public/images/projects/ev-powertrain-simulation/thesis-report-p3-1.jpeg",
+      "public/images/projects/ev-powertrain-simulation/thesis-report-p22-2.png"
+    ]
+  },
+  "Breast Cancer Survival Prediction": {
+    "repo": "Mahfuzmania/Breast-Cancer-Survival-Prediction",
+    "pdfs": [
+      "Final-report.pdf"
+    ],
+    "images": [
+      "public/images/projects/breast-cancer-survival-prediction/final-report-p7-1.png"
+    ]
+  },
+  "Anomaly Detection Using Gaussian Model": {
+    "repo": "Mahfuzmania/Anomaly-Detection-Using-Gaussian-Model",
+    "pdfs": [
+      "Instruction Manual.pdf",
+      "Presentation on Anomaly Detection.pdf"
+    ],
+    "images": [
+      "public/images/projects/anomaly-detection-using-gaussian-model/instruction-manual-p4-1.jpeg",
+      "public/images/projects/anomaly-detection-using-gaussian-model/instruction-manual-p2-2.jpeg",
+      "public/images/projects/anomaly-detection-using-gaussian-model/presentation-on-anomaly-detection-p1-1.jpeg",
+      "public/images/projects/anomaly-detection-using-gaussian-model/presentation-on-anomaly-detection-p2-2.jpeg"
+    ]
+  },
+  "ECG Signal Denoising with Wiener Filtering": {
+    "repo": "Mahfuzmania/ECG-Signal-Denoising-Wiener-Filtering",
+    "pdfs": [
+      "Project Codes.pdf",
+      "Project Report.pdf"
+    ],
+    "images": [
+      "public/images/projects/ecg-signal-denoising-with-wiener-filtering/project-codes-p1-1.jpeg",
+      "public/images/projects/ecg-signal-denoising-with-wiener-filtering/project-codes-p2-2.jpeg",
+      "public/images/projects/ecg-signal-denoising-with-wiener-filtering/project-report-p2-1.jpg",
+      "public/images/projects/ecg-signal-denoising-with-wiener-filtering/project-report-p4-2.jpg"
+    ]
+  },
+  "Image Thresholding for Background Removal": {
+    "repo": "Mahfuzmania/Image-Thresholding-for-Background-Removal",
+    "pdfs": [
+      "DSP_ProjectReport.pdf"
+    ],
+    "images": [
+      "public/images/projects/image-thresholding-for-background-removal/dsp_projectreport-p6-1.png",
+      "public/images/projects/image-thresholding-for-background-removal/dsp_projectreport-p5-2.png"
+    ]
+  },
+  "Bluetooth Interfacing with 8051": {
+    "repo": "Mahfuzmania/Bluetooth-Interfacing-8051-Final",
+    "pdfs": [
+      "Report.pdf"
+    ],
+    "images": [
+      "public/images/projects/bluetooth-interfacing-with-8051/report-p22-1.jpeg",
+      "public/images/projects/bluetooth-interfacing-with-8051/report-p1-2.jpeg"
+    ]
+  }
+}

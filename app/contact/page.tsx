@@ -1,141 +1,146 @@
+﻿import Image from "next/image";
+import type { ReactNode } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { GithubIcon, LinkedInIcon, MailIcon } from "@/components/logo-pack";
+import { ContactQuickMessageForm } from "@/components/contact-quick-message-form";
+import { FacebookIcon, GithubIcon, LinkedInIcon, MailIcon, SparkIcon } from "@/components/logo-pack";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
+import { SectionHeading } from "@/components/section-heading";
+import { VisualList } from "@/components/visual-list";
 import { getPortfolioContent } from "@/lib/content-service";
+import { getSiteLang } from "@/lib/lang";
 
 export const dynamic = "force-dynamic";
 
+type ContactRowProps = {
+  icon: ReactNode;
+  label: string;
+  value: ReactNode;
+};
+
+function ContactRow({ icon, label, value }: ContactRowProps) {
+  return (
+    <div className="contact-row">
+      <span className="mt-0.5 text-foreground">{icon}</span>
+      <div>
+        <span className="contact-row__label">{label}</span>
+        <div className="contact-row__value text-[0.98rem] leading-7">{value}</div>
+      </div>
+    </div>
+  );
+}
+
+function formatPublicUrl(url: string) {
+  try {
+    const parsed = new URL(url);
+    return `${parsed.hostname.replace(/^www\./, "")}${parsed.pathname.replace(/\/$/, "")}`;
+  } catch {
+    return url;
+  }
+}
+
 export default async function ContactPage() {
-  const { profile } = await getPortfolioContent();
-  const profilePhoto = profile.photoPath || "/images/mahfuzul-islam.jpg";
-  const collaborationTopics = [
-    "Healthcare data engineering and integration pipelines",
-    "Applied machine learning and survival/risk modeling",
-    "Engineering simulation and control-oriented analysis",
-    "Technical product development for research and software teams",
-  ];
+  const { profile, uiContent } = await getPortfolioContent();
+  const lang = await getSiteLang();
+  const coverPhoto = profile.photoPath;
+  const collaborationTopics = uiContent.contact.collaborationTopics[lang];
+  const contactVisuals = ["/images/pipeline-depth.svg", "/images/ai-depth.svg", "/images/simulation-depth.svg", "/images/placeholders/project-data.svg"];
 
   return (
-    <div className="space-y-12">
+    <div className="page-stack">
       <Reveal>
         <PageHero
-          kicker="Contact"
-          title="Open to collaboration in data engineering, AI systems, and technical research"
-          description="This is a personal profile. I am open to roles, research collaboration, and technical product work."
+          kicker={lang === "bn" ? "যোগাযোগ" : "Contact"}
+          title={lang === "bn" ? "টেকনিক্যাল সহযোগিতার জন্য উন্মুক্ত" : "Available for technical collaboration"}
+          description={
+            lang === "bn"
+              ? "ডেটা ইঞ্জিনিয়ারিং, গবেষণা সহযোগিতা এবং implementation-focused সফটওয়্যার প্রজেক্টে কাজের জন্য উন্মুক্ত।"
+              : "Open to healthcare data engineering, applied AI implementation, and platform-focused technical collaboration."
+          }
         />
       </Reveal>
 
-      <section className="section-shell p-5 md:p-6">
-        <div className="grid gap-5 md:grid-cols-2">
-          <article className="card p-7">
-            <h2 className="section-title text-2xl font-semibold">Direct Contact</h2>
-            <div className="mt-4 overflow-hidden rounded-xl border border-border">
-              <Image
-                src={profilePhoto}
-                alt="Md. Mahfuzul Islam"
-                width={860}
-                height={460}
-                className="h-40 w-full object-cover"
+      <section className="grid gap-4 md:grid-cols-[1fr_1fr] md:items-start">
+        <Reveal>
+          <article className="card h-fit overflow-hidden p-0">
+            <div className="contact-media-frame">
+              <Image src={coverPhoto} alt="Md Mahfuzul Islam" fill className="contact-media-image contact-media-image--face" sizes="(max-width: 768px) 100vw, 620px" />
+            </div>
+            <div className="card-pad-lg">
+              <SectionHeading
+                eyebrow={lang === "bn" ? "সরাসরি যোগাযোগ" : "Direct Contact"}
+                title={lang === "bn" ? "আপনার প্রজেক্ট নিয়ে কথা বলি" : "Let's discuss your technical scope"}
+                description={
+                  lang === "bn"
+                    ? "সমস্যার ধরন, টিম কনটেক্সট এবং প্রত্যাশিত ফলাফল শেয়ার করুন।"
+                    : "Share your project context, constraints, and expected outcomes."
+                }
+                icon={<SparkIcon className="h-8 w-8" />}
               />
-            </div>
-            <div className="mt-5 space-y-3 text-sm text-muted">
-              <p>
-                <span className="inline-flex items-center gap-2 font-semibold text-foreground">
-                  <MailIcon className="h-7 w-7" />
-                  Email:
-                </span>{" "}
-                <a href={`mailto:${profile.email}`} className="hover:text-accent">
-                  {profile.email}
-                </a>
-              </p>
-              <p>
-                <span className="font-semibold text-foreground">Alternative Email:</span>{" "}
-                <a href={`mailto:${profile.secondaryEmail}`} className="hover:text-accent">
-                  {profile.secondaryEmail}
-                </a>
-              </p>
-              <p>
-                <span className="inline-flex items-center gap-2 font-semibold text-foreground">
-                  <GithubIcon className="h-7 w-7" />
-                  GitHub:
-                </span>{" "}
-                <Link href={profile.github} target="_blank" rel="noreferrer" className="hover:text-accent">
-                  {profile.github}
-                </Link>
-              </p>
-              <p>
-                <span className="inline-flex items-center gap-2 font-semibold text-foreground">
-                  <LinkedInIcon className="h-7 w-7" />
-                  LinkedIn:
-                </span>{" "}
-                <Link href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent">
-                  {profile.linkedin}
-                </Link>
-              </p>
-            </div>
-            <div className="accent-line my-5" />
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-                Collaboration Focus
-              </p>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
-                {collaborationTopics.map((topic) => (
-                  <li key={topic}>{topic}</li>
-                ))}
-              </ul>
+              <div className="space-y-3">
+                <ContactRow
+                  icon={<MailIcon className="h-6 w-6" />}
+                  label={lang === "bn" ? "প্রাইমারি ইমেইল" : "Primary Email"}
+                  value={<span className="font-mono break-all">{profile.email}</span>}
+                />
+                <ContactRow
+                  icon={<MailIcon className="h-6 w-6" />}
+                  label={lang === "bn" ? "অল্টারনেট ইমেইল" : "Alternative Email"}
+                  value={<span className="font-mono break-all">{profile.secondaryEmail}</span>}
+                />
+                <ContactRow
+                  icon={<GithubIcon className="h-6 w-6" />}
+                  label="GitHub"
+                  value={
+                    <Link href={profile.github} target="_blank" rel="noreferrer" className="hover:text-accent">
+                      {formatPublicUrl(profile.github)}
+                    </Link>
+                  }
+                />
+                <ContactRow
+                  icon={<LinkedInIcon className="h-6 w-6" />}
+                  label="LinkedIn"
+                  value={
+                    <Link href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent">
+                      {formatPublicUrl(profile.linkedin)}
+                    </Link>
+                  }
+                />
+                <ContactRow
+                  icon={<FacebookIcon className="h-6 w-6" />}
+                  label="Facebook"
+                  value={
+                    <Link href={profile.facebook} target="_blank" rel="noreferrer" className="hover:text-accent">
+                      {formatPublicUrl(profile.facebook)}
+                    </Link>
+                  }
+                />
+              </div>
             </div>
           </article>
+        </Reveal>
 
-          <article className="card p-7">
-            <h2 className="section-title text-2xl font-semibold">Quick Message</h2>
+        <section className="section-shell">
+          <article className="card h-fit card-pad-lg">
+            <h2 className="section-title text-2xl font-semibold">{lang === "bn" ? "দ্রুত বার্তা" : "Quick Message"}</h2>
             <p className="mt-3 text-sm text-muted">
-              Share a concise message about your role, project, or research context.
+              {lang === "bn"
+                ? "আপনার প্রজেক্টের স্কোপ, টিম কনটেক্সট এবং সম্ভাব্য টাইমলাইন লিখে পাঠান।"
+                : "Send a brief outlining your scope, team context, and expected timeline."}
             </p>
-            <form className="mt-5 space-y-3">
-              <label className="block">
-                <span className="mb-1 block text-sm text-muted">Name</span>
-                <input
-                  id="name"
-                  type="text"
-                  autoComplete="name"
-                  className="w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm outline-none transition focus:border-accent/50"
-                  placeholder="Your name"
-                  required
-                />
-              </label>
-              <label className="block">
-                <span className="mb-1 block text-sm text-muted">Email</span>
-                <input
-                  id="email"
-                  type="email"
-                  autoComplete="email"
-                  className="w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm outline-none transition focus:border-accent/50"
-                  placeholder="name@email.com"
-                  required
-                />
-              </label>
-              <label className="block">
-                <span className="mb-1 block text-sm text-muted">Message</span>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm outline-none transition focus:border-accent/50"
-                  placeholder="Tell me about your project or collaboration idea."
-                  required
-                />
-              </label>
-              <button
-                type="button"
-                className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
-              >
-                Send Message
-              </button>
-            </form>
+            <p className="mt-1 text-xs text-muted">{lang === "bn" ? "ছবি অথবা PDF ফাইল সহ বার্তা পাঠাতে পারবেন (সর্বোচ্চ ৩টি)।" : "You can attach images or PDFs (up to 3 files)."}</p>
+            <ContactQuickMessageForm toEmail={profile.email} lang={lang} />
+            <div className="accent-line my-6" />
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{lang === "bn" ? "সহযোগিতার ফোকাস" : "Collaboration Areas"}</p>
+              <div className="mt-3">
+                <VisualList items={collaborationTopics} imagePool={contactVisuals} icon="spark" columns="one" />
+              </div>
+            </div>
           </article>
-        </div>
+        </section>
       </section>
     </div>
   );
 }
+

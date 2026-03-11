@@ -1,0 +1,46 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">RAG Intelligence Stack</title>
+  <desc id="desc">Modern visual for applied AI retrieval stack.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1a33"/>
+      <stop offset="52%" stop-color="#123965"/>
+      <stop offset="100%" stop-color="#24598e"/>
+    </linearGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#255287" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#17375d" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+
+  <circle cx="360" cy="382" r="186" fill="#14345e" stroke="#89c8ff" stroke-opacity="0.44" stroke-width="2"/>
+  <circle cx="360" cy="382" r="114" fill="#1f4a7d" stroke="#9ed4ff" stroke-opacity="0.4"/>
+  <circle cx="360" cy="382" r="40" fill="#9fd5ff"/>
+
+  <rect x="620" y="128" width="470" height="152" rx="20" fill="url(#pane)" stroke="#89c7ff" stroke-opacity="0.44"/>
+  <rect x="620" y="304" width="470" height="152" rx="20" fill="url(#pane)" stroke="#89c7ff" stroke-opacity="0.44"/>
+  <rect x="620" y="480" width="470" height="152" rx="20" fill="url(#pane)" stroke="#89c7ff" stroke-opacity="0.44"/>
+
+  <g fill="none" stroke="#97d2ff" stroke-width="3" stroke-linecap="round" stroke-opacity="0.84">
+    <path d="M520 238L620 204"/>
+    <path d="M520 382H620"/>
+    <path d="M520 526L620 560"/>
+  </g>
+
+  <g fill="#e4f3ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="24" font-weight="600">
+    <text x="674" y="198">Textbook Parsing</text>
+    <text x="674" y="374">Retrieval + Reasoning</text>
+    <text x="674" y="550">Citation + Explainability</text>
+    <text x="294" y="388">Core Model</text>
+  </g>
+
+  <g fill="#9fceff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="14" letter-spacing="0.35">
+    <text x="674" y="226">Chunking, embedding, index refresh</text>
+    <text x="674" y="402">Grounded response and context routing</text>
+    <text x="674" y="578">Traceable outputs in bilingual format</text>
+  </g>
+
+  <rect x="620" y="654" width="420" height="48" rx="12" fill="#0b223d" fill-opacity="0.8" stroke="#85c4ff" stroke-opacity="0.4"/>
+  <text x="650" y="685" fill="#ecf7ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="24" font-weight="700">Explainable Bilingual Output</text>
+</svg>

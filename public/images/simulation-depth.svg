@@ -1,0 +1,59 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Simulation Signal Loop</title>
+  <desc id="desc">Modern visual for engineering simulation performance workflow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1a31"/>
+      <stop offset="52%" stop-color="#12355d"/>
+      <stop offset="100%" stop-color="#245787"/>
+    </linearGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#244f83" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#16355a" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+
+  <rect x="78" y="90" width="1044" height="580" rx="24" fill="#0f2442" fill-opacity="0.55" stroke="#87c5ff" stroke-opacity="0.3"/>
+  <rect x="124" y="142" width="388" height="476" rx="20" fill="url(#pane)" stroke="#89c7ff" stroke-opacity="0.42"/>
+  <rect x="562" y="142" width="500" height="216" rx="20" fill="url(#pane)" stroke="#89c7ff" stroke-opacity="0.42"/>
+  <rect x="562" y="402" width="500" height="216" rx="20" fill="url(#pane)" stroke="#89c7ff" stroke-opacity="0.42"/>
+
+  <g fill="none" stroke="#95d0ff" stroke-width="4" stroke-linecap="round" stroke-opacity="0.82">
+    <path d="M160 546L214 496L270 520L324 424L378 458L432 344L478 382"/>
+  </g>
+
+  <g fill="#95d0ff">
+    <circle cx="214" cy="496" r="5"/>
+    <circle cx="270" cy="520" r="5"/>
+    <circle cx="324" cy="424" r="5"/>
+    <circle cx="378" cy="458" r="5"/>
+    <circle cx="432" cy="344" r="5"/>
+    <circle cx="478" cy="382" r="5"/>
+  </g>
+
+  <g fill="#e3f3ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="24" font-weight="600">
+    <text x="150" y="202">Simulation Signals</text>
+    <text x="598" y="220">Controller Parameters</text>
+    <text x="598" y="478">Performance Outcomes</text>
+  </g>
+
+  <g fill="#9fceff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="14" letter-spacing="0.35">
+    <text x="150" y="232">Plant state, speed response, disturbance profile</text>
+    <text x="598" y="248">PI tuning, constraints, model assumptions</text>
+    <text x="598" y="506">Efficiency, settling time, stability score</text>
+  </g>
+
+  <g fill="#84c4ff" fill-opacity="0.46">
+    <rect x="598" y="272" width="430" height="14" rx="7"/>
+    <rect x="598" y="300" width="360" height="14" rx="7"/>
+    <rect x="598" y="328" width="390" height="14" rx="7"/>
+
+    <rect x="598" y="532" width="430" height="14" rx="7"/>
+    <rect x="598" y="560" width="360" height="14" rx="7"/>
+    <rect x="598" y="588" width="390" height="14" rx="7"/>
+  </g>
+
+  <rect x="562" y="676" width="410" height="48" rx="12" fill="#0b223d" fill-opacity="0.8" stroke="#84c3ff" stroke-opacity="0.4"/>
+  <text x="592" y="707" fill="#ecf7ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="24" font-weight="700">MATLAB/Simulink Analysis</text>
+</svg>

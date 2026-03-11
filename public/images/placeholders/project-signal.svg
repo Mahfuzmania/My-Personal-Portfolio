@@ -1,0 +1,50 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Signal Processing Placeholder</title>
+  <desc id="desc">Stylized signal and image processing visual.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1c36"/>
+      <stop offset="55%" stop-color="#1a3a63"/>
+      <stop offset="100%" stop-color="#306196"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#224b7f" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#153359" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <rect x="76" y="110" width="774" height="462" rx="24" fill="url(#glass)" stroke="#82c1ff" stroke-opacity="0.42"/>
+  <rect x="896" y="110" width="308" height="220" rx="24" fill="url(#glass)" stroke="#82c1ff" stroke-opacity="0.42"/>
+  <rect x="896" y="352" width="308" height="220" rx="24" fill="url(#glass)" stroke="#82c1ff" stroke-opacity="0.42"/>
+
+  <g fill="none" stroke="#99d2ff" stroke-width="3" stroke-linecap="round" stroke-opacity="0.85">
+    <path d="M110 386c52 0 52-128 104-128s52 128 104 128 52-128 104-128 52 128 104 128 52-128 104-128 52 128 104 128"/>
+    <path d="M110 438c52 0 52-76 104-76s52 76 104 76 52-76 104-76 52 76 104 76 52-76 104-76 52 76 104 76" stroke-opacity="0.42"/>
+  </g>
+
+  <g fill="#dff1ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="22" font-weight="600">
+    <text x="112" y="176">Signal Reconstruction</text>
+    <text x="930" y="168">Image Masking</text>
+    <text x="930" y="412">Frequency Domain</text>
+  </g>
+
+  <g fill="#9fcfff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="14" letter-spacing="0.4">
+    <text x="112" y="206">Filtering, denoising, spectral cleanup</text>
+    <text x="930" y="196">Threshold bands and region extraction</text>
+    <text x="930" y="440">Energy map and transform diagnostics</text>
+  </g>
+
+  <g fill="#83c4ff" fill-opacity="0.46">
+    <rect x="930" y="228" width="246" height="14" rx="7"/>
+    <rect x="930" y="254" width="198" height="14" rx="7"/>
+    <rect x="930" y="280" width="228" height="14" rx="7"/>
+
+    <rect x="930" y="470" width="250" height="14" rx="7"/>
+    <rect x="930" y="496" width="202" height="14" rx="7"/>
+    <rect x="930" y="522" width="218" height="14" rx="7"/>
+  </g>
+
+  <rect x="76" y="590" width="486" height="52" rx="14" fill="#0a213b" fill-opacity="0.8" stroke="#7fc0ff" stroke-opacity="0.38"/>
+  <text x="104" y="624" fill="#ebf6ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="27" font-weight="700">Signal / Image Processing</text>
+</svg>

@@ -1,0 +1,51 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Embedded Systems Placeholder</title>
+  <desc id="desc">Stylized microcontroller and peripheral board visual.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1b31"/>
+      <stop offset="55%" stop-color="#153557"/>
+      <stop offset="100%" stop-color="#2c5a82"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f446f" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#16314f" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <rect x="118" y="108" width="1044" height="466" rx="26" fill="url(#board)" stroke="#83c3ff" stroke-opacity="0.42"/>
+  <rect x="368" y="198" width="544" height="286" rx="18" fill="#122a47" stroke="#93cdff" stroke-opacity="0.4"/>
+  <rect x="474" y="250" width="332" height="182" rx="16" fill="#1d4066" stroke="#9bd2ff" stroke-opacity="0.44"/>
+
+  <g fill="none" stroke="#8fcbff" stroke-linecap="round" stroke-opacity="0.68">
+    <path d="M300 238H368" stroke-width="3"/>
+    <path d="M300 284H368" stroke-width="3"/>
+    <path d="M300 330H368" stroke-width="3"/>
+    <path d="M300 376H368" stroke-width="3"/>
+    <path d="M300 422H368" stroke-width="3"/>
+
+    <path d="M912 238H980" stroke-width="3"/>
+    <path d="M912 284H980" stroke-width="3"/>
+    <path d="M912 330H980" stroke-width="3"/>
+    <path d="M912 376H980" stroke-width="3"/>
+    <path d="M912 422H980" stroke-width="3"/>
+
+    <path d="M160 176h798" stroke-width="1.6" stroke-opacity="0.26"/>
+    <path d="M160 506h798" stroke-width="1.6" stroke-opacity="0.26"/>
+  </g>
+
+  <g fill="#e1f2ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="23" font-weight="600">
+    <text x="404" y="232">Embedded Control Board</text>
+    <text x="504" y="302">MCU + Serial Interface</text>
+    <text x="504" y="352">Bluetooth + Peripheral Routing</text>
+  </g>
+
+  <g fill="#9dceff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="14" letter-spacing="0.35">
+    <text x="404" y="262">Signal IO, command parsing, state management</text>
+    <text x="504" y="380">Relay, buzzer, LCD, and actuator outputs</text>
+  </g>
+
+  <rect x="118" y="590" width="420" height="52" rx="14" fill="#0a1f36" fill-opacity="0.8" stroke="#81c0ff" stroke-opacity="0.38"/>
+  <text x="146" y="624" fill="#e8f5ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="27" font-weight="700">Embedded / Systems Work</text>
+</svg>

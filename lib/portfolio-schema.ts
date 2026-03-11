@@ -13,6 +13,7 @@ export const projectSchema = z.object({
   title: z.string().min(1),
   summary: z.string().min(1),
   detail: z.string().optional(),
+  imagePath: z.string().min(1).optional(),
   stack: z.array(z.string().min(1)),
   category: projectCategory,
   tags: z.array(z.string().min(1)),
@@ -33,9 +34,53 @@ const profileSchema = z.object({
   secondaryEmail: z.string().email(),
   github: z.string().url(),
   linkedin: z.string().url(),
+  facebook: z.string().url(),
   resumePath: z.string().min(1),
   cvPath: z.string().min(1),
-  assessmentPath: z.string().min(1),
+});
+
+const localizedTextSchema = z.object({
+  en: z.string().min(1),
+  bn: z.string().min(1),
+});
+
+const localizedTextListSchema = z.object({
+  en: z.array(z.string().min(1)),
+  bn: z.array(z.string().min(1)),
+});
+
+const workstreamSchema = z.object({
+  title: localizedTextSchema,
+  detail: localizedTextSchema,
+  variant: z.enum(["data", "ai", "simulation", "platform"]),
+});
+
+const contextCardSchema = z.object({
+  title: localizedTextSchema,
+  detail: localizedTextSchema,
+});
+
+const uiContentSchema = z.object({
+  navbarRoleLine: localizedTextSchema,
+  home: z.object({
+    workstreams: z.array(workstreamSchema),
+    profileNarrative: localizedTextListSchema,
+    scope: localizedTextListSchema,
+  }),
+  about: z.object({
+    biography: localizedTextSchema,
+    contextCards: z.array(contextCardSchema),
+  }),
+  research: z.object({
+    technicalInterests: localizedTextListSchema,
+    explorations: localizedTextListSchema,
+  }),
+  resume: z.object({
+    summaryPoints: localizedTextListSchema,
+  }),
+  contact: z.object({
+    collaborationTopics: localizedTextListSchema,
+  }),
 });
 
 const focusSchema = z.object({
@@ -72,6 +117,7 @@ const skillGroupSchema = z.object({
 
 export const portfolioContentSchema = z.object({
   profile: profileSchema,
+  uiContent: uiContentSchema,
   featuredProjects: z.array(projectSchema),
   projects: z.array(projectSchema),
   technicalFocus: z.array(focusSchema),

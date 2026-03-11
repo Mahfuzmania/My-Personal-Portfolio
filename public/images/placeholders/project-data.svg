@@ -1,0 +1,65 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Data Engineering Placeholder</title>
+  <desc id="desc">Stylized healthcare data pipeline visual.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1730"/>
+      <stop offset="55%" stop-color="#0f2a52"/>
+      <stop offset="100%" stop-color="#15457e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b3f72" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#102949" stop-opacity="0.92"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(970 120) rotate(125) scale(500 390)">
+      <stop stop-color="#7bc0ff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#7bc0ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#8ec2ff" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#020812" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="94" y="120" width="290" height="156" rx="20" fill="url(#card)" stroke="#6eaef7" stroke-opacity="0.45"/>
+    <rect x="494" y="120" width="290" height="156" rx="20" fill="url(#card)" stroke="#6eaef7" stroke-opacity="0.45"/>
+    <rect x="894" y="120" width="290" height="156" rx="20" fill="url(#card)" stroke="#6eaef7" stroke-opacity="0.45"/>
+
+    <rect x="94" y="360" width="430" height="170" rx="22" fill="url(#card)" stroke="#6eaef7" stroke-opacity="0.4"/>
+    <rect x="574" y="360" width="610" height="170" rx="22" fill="url(#card)" stroke="#6eaef7" stroke-opacity="0.4"/>
+  </g>
+
+  <g fill="none" stroke="#89c4ff" stroke-width="3" stroke-linecap="round" stroke-opacity="0.75">
+    <path d="M384 198H494"/>
+    <path d="M784 198H894"/>
+    <path d="M239 276V360"/>
+    <path d="M639 276V360"/>
+    <path d="M1039 276V360"/>
+    <path d="M524 445H574"/>
+  </g>
+
+  <g fill="#d9ecff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="24" font-weight="600" letter-spacing="0.2">
+    <text x="128" y="178">Source Ingestion</text>
+    <text x="528" y="178">Quality Validation</text>
+    <text x="928" y="178">Schema Harmonization</text>
+    <text x="128" y="426">Clinical Data Lake</text>
+    <text x="608" y="426">Analytics-ready Feature Views</text>
+  </g>
+
+  <g fill="#9cccff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="15" letter-spacing="0.5">
+    <text x="128" y="214">Oracle exports, lab sheets, registry feeds</text>
+    <text x="528" y="214">Missing values, duplicates, ID reconciliation</text>
+    <text x="928" y="214">Standard format, timeline alignment, metadata</text>
+    <text x="128" y="458">Patient-level trusted records with audit logs</text>
+    <text x="608" y="458">Dashboards, cohort analysis, reporting pipelines</text>
+  </g>
+
+  <rect x="92" y="582" width="470" height="52" rx="14" fill="#0a1c35" fill-opacity="0.75" stroke="#79b9ff" stroke-opacity="0.35"/>
+  <text x="118" y="616" fill="#e7f3ff" font-family="'Segoe UI', Tahoma, sans-serif" font-size="28" font-weight="700">Data Engineering Pipeline</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "local-admin",
+      "username": "mahfuzulislam@iut-dhaka.edu",
+      "role": "owner",
+      "active": true,
+      "passwordHash": "$argon2id$v=19$m=19456,t=2,p=1$OLK9GDLTt3woXqmIVsox6g$aSOzdwpeyuTjEb8rBRHUxvkl1RITMxffDWlYIoxsjBY",
+      "createdAt": "2026-03-12T00:00:00.000Z",
+      "updatedAt": "2026-03-12T00:00:00.000Z"
+    }
+  ]
+}

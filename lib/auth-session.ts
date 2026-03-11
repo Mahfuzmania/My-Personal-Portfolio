@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 type SessionPayload = JWTPayload & {
   sub: string;
   username: string;
+  role?: string;
 };
 
 export const SESSION_COOKIE_NAME = "admin_session";
@@ -16,8 +17,8 @@ function getSessionSecret() {
   return new TextEncoder().encode(secret);
 }
 
-export async function createSessionToken(payload: { userId: string; username: string }) {
-  return new SignJWT({ username: payload.username })
+export async function createSessionToken(payload: { userId: string; username: string; role: string }) {
+  return new SignJWT({ username: payload.username, role: payload.role })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(payload.userId)
     .setIssuedAt()
@@ -42,7 +43,14 @@ export async function getServerSession() {
   if (!token) {
     return null;
   }
-  return verifySessionToken(token);
+  const session = await verifySessionToken(token);
+  if (!session) {
+    return null;
+  }
+  return {
+    ...session,
+    role: session.role ?? "owner",
+  };
 }
 
 export async function setServerSession(token: string) {

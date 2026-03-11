@@ -1,16 +1,6 @@
 import type { ReactNode } from "react";
-import {
-  Brain,
-  Briefcase,
-  CircuitBoard,
-  Database,
-  Github,
-  GraduationCap,
-  Linkedin,
-  Mail,
-  Sparkles,
-  Trophy,
-} from "lucide-react";
+import { IconBrandFacebookFilled, IconBrandGithubFilled, IconBrandLinkedinFilled } from "@tabler/icons-react";
+import { UiIcon, type UiIconName } from "@/components/ui-icon";
 
 type IconProps = {
   className?: string;
@@ -18,102 +8,117 @@ type IconProps = {
 
 function IconFrame({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <span
-      className={`inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-accent-soft text-accent shadow-[0_8px_16px_-12px_rgba(8,14,30,0.9)] ${className}`}
-      aria-hidden
-    >
+    <span className={`icon-frame ${className}`.trim()} aria-hidden>
       {children}
     </span>
   );
 }
 
-export function BrandMark({ className = "" }: IconProps) {
+function SurfaceIcon({ name, className = "" }: { name: UiIconName; className?: string }) {
   return (
-    <span
-      className={`inline-flex h-8 w-8 items-center justify-center rounded-md bg-accent text-xs font-bold tracking-[0.12em] text-white ${className}`}
-      aria-label="AZM brand mark"
-    >
-      AZ
-    </span>
+    <IconFrame className={className}>
+      <UiIcon name={name} className="h-[56%] w-[56%]" />
+    </IconFrame>
+  );
+}
+
+function BrandMark({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return (
+    <IconFrame className={className}>
+      {children}
+    </IconFrame>
   );
 }
 
 export function GithubIcon({ className = "" }: IconProps) {
   return (
-    <IconFrame className={className}>
-      <Github className="h-4.5 w-4.5" />
-    </IconFrame>
+    <BrandMark className={className}>
+      <IconBrandGithubFilled className="h-[56%] w-[56%]" stroke={1.9} />
+    </BrandMark>
   );
 }
 
 export function LinkedInIcon({ className = "" }: IconProps) {
   return (
-    <IconFrame className={className}>
-      <Linkedin className="h-4.5 w-4.5" />
-    </IconFrame>
+    <BrandMark className={`text-[#0A66C2] ${className}`.trim()}>
+      <IconBrandLinkedinFilled className="h-[56%] w-[56%]" stroke={1.9} />
+    </BrandMark>
+  );
+}
+
+export function FacebookIcon({ className = "" }: IconProps) {
+  return (
+    <BrandMark className={`text-[#1877F2] ${className}`.trim()}>
+      <IconBrandFacebookFilled className="h-[56%] w-[56%]" stroke={1.9} />
+    </BrandMark>
   );
 }
 
 export function MailIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <Mail className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="mail" className={className} />;
 }
 
 export function DatabaseIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <Database className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="data" className={className} />;
 }
 
 export function BrainIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <Brain className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="analytics" className={className} />;
 }
 
 export function CircuitIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <CircuitBoard className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="simulation" className={className} />;
 }
 
 export function BriefcaseIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <Briefcase className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="briefcase" className={className} />;
 }
 
 export function GraduationIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <GraduationCap className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="education" className={className} />;
 }
 
 export function TrophyIcon({ className = "" }: IconProps) {
-  return (
-    <IconFrame className={className}>
-      <Trophy className="h-4.5 w-4.5" />
-    </IconFrame>
-  );
+  return <SurfaceIcon name="award" className={className} />;
 }
 
 export function SparkIcon({ className = "" }: IconProps) {
+  return <SurfaceIcon name="spark" className={className} />;
+}
+
+export function WorkflowIcon({ className = "" }: IconProps) {
+  return <SurfaceIcon name="settings" className={className} />;
+}
+
+export function StrategyIcon({ className = "" }: IconProps) {
+  return <SurfaceIcon name="analytics" className={className} />;
+}
+
+export function SystemsIcon({ className = "" }: IconProps) {
+  return <SurfaceIcon name="layers" className={className} />;
+}
+
+export function CollaborationIcon({ className = "" }: IconProps) {
+  return <SurfaceIcon name="link" className={className} />;
+}
+
+type BadgeIconName = "role" | "company" | "focus" | "workflow" | "location";
+
+const BADGE_ICON_MAP: Record<BadgeIconName, UiIconName> = {
+  role: "briefcase",
+  company: "layers",
+  focus: "analytics",
+  workflow: "settings",
+  location: "location",
+};
+
+export function BadgeIcon({ name, className = "" }: { name: BadgeIconName; className?: string }) {
   return (
-    <IconFrame className={className}>
-      <Sparkles className="h-4.5 w-4.5" />
-    </IconFrame>
+    <span
+      className={`inline-flex h-[18px] w-[18px] items-center justify-center rounded-full border border-accent/35 bg-accent-soft/80 text-accent ${className}`}
+      aria-hidden
+    >
+      <UiIcon name={BADGE_ICON_MAP[name]} className="text-[10px]" />
+    </span>
   );
 }

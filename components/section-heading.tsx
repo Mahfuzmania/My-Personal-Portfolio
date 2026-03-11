@@ -7,28 +7,20 @@ type SectionHeadingProps = {
   icon?: ReactNode;
 };
 
-export function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  icon,
-}: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, description, icon }: SectionHeadingProps) {
   return (
-    <div className="mb-8 max-w-3xl">
+    <div className="section-block max-w-[56rem]">
       {eyebrow ? (
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-          {eyebrow}
-        </p>
+        <div className="chip chip--accent max-w-full">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <p className="truncate text-xs font-semibold uppercase tracking-[0.16em]">{eyebrow}</p>
+        </div>
       ) : null}
-      <div className="flex items-center gap-3">
-        {icon ? <span className="shrink-0">{icon}</span> : null}
-        <h2 className="section-title text-3xl font-semibold leading-tight tracking-tight md:text-4xl">
-          {title}
-        </h2>
+      <div className="flex items-start gap-2.5">
+        {icon ? <span className="mt-0.5 shrink-0 opacity-95">{icon}</span> : null}
+        <h2 className="section-title clamp-heading max-w-[24ch] leading-tight tracking-tight">{title}</h2>
       </div>
-      {description ? (
-        <p className="measure mt-3 text-base text-muted">{description}</p>
-      ) : null}
+      {description ? <p className="copy-text max-w-[62ch]">{description}</p> : null}
     </div>
   );
 }
