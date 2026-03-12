@@ -32,6 +32,9 @@ export function Footer({ profile }: FooterProps) {
           <Link href="/contact" className="inline-flex items-center gap-2 transition hover:text-accent">
             Contact
           </Link>
+          <Link href="/sitemap.xml" className="inline-flex items-center gap-2 transition hover:text-accent">
+            Sitemap
+          </Link>
           <Link href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-accent">
             <GithubIcon className="h-6 w-6" />
             GitHub

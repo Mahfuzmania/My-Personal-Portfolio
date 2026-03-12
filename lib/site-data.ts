@@ -1,4 +1,6 @@
-﻿export type ProjectCategory =
+﻿import { repairMojibakeDeep } from "@/lib/mojibake";
+
+export type ProjectCategory =
   | "AI / Intelligent Systems"
   | "Data Engineering"
   | "Machine Learning & Analytics"
@@ -52,6 +54,11 @@ export type WorkstreamVisual = {
   variant: "data" | "ai" | "simulation" | "platform";
 };
 
+export type LocalizedCard = {
+  title: LocalizedText;
+  detail: LocalizedText;
+};
+
 export type UiContent = {
   navbarRoleLine: LocalizedText;
   home: {
@@ -61,10 +68,8 @@ export type UiContent = {
   };
   about: {
     biography: LocalizedText;
-    contextCards: Array<{
-      title: LocalizedText;
-      detail: LocalizedText;
-    }>;
+    contextCards: LocalizedCard[];
+    professionalFocus: LocalizedCard[];
   };
   research: {
     technicalInterests: LocalizedTextList;
@@ -138,7 +143,7 @@ export const navItems = [
   { href: "/contact", label: "Contact" },
 ];
 
-export const defaultPortfolioContent: PortfolioContent = {
+const defaultPortfolioContentBase: PortfolioContent = {
   profile: {
     name: "Md Mahfuzul Islam",
     identityLine:
@@ -230,7 +235,7 @@ export const defaultPortfolioContent: PortfolioContent = {
         {
           title: {
             en: "Enact Business Solutions",
-            bn: "Enact Business Solutions",
+            bn: "\u098f\u09a8\u0985\u09cd\u09af\u09be\u0995\u09cd\u099f Business Solutions",
           },
           detail: {
             en: "Working as a Data Engineer on healthcare data integration, quality control, and analytics-ready data architecture.",
@@ -240,11 +245,33 @@ export const defaultPortfolioContent: PortfolioContent = {
         {
           title: {
             en: "AZM Labs",
-            bn: "AZM Labs",
+            bn: "\u098f\u099c\u09c7\u09a1\u098f\u09ae Labs",
           },
           detail: {
             en: "Serving as Co-Founder and Software Engineer to shape technical direction and build practical AI and data systems.",
             bn: "Co-Founder ÃƒÂ Ã‚Â¦Ã‚ÂÃƒÂ Ã‚Â¦Ã‚Â¬ÃƒÂ Ã‚Â¦Ã¢â‚¬Å¡ Software Engineer ÃƒÂ Ã‚Â¦Ã‚Â¹ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã‚Â¸ÃƒÂ Ã‚Â§Ã¢â‚¬Â¡ÃƒÂ Ã‚Â¦Ã‚Â¬ÃƒÂ Ã‚Â§Ã¢â‚¬Â¡ ÃƒÂ Ã‚Â¦Ã‚ÂªÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã‚Â°ÃƒÂ Ã‚Â§Ã¢â‚¬Â¹ÃƒÂ Ã‚Â¦Ã‚Â¡ÃƒÂ Ã‚Â¦Ã‚Â¾ÃƒÂ Ã‚Â¦Ã¢â‚¬Â¢ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã…Â¸ ÃƒÂ Ã‚Â¦Ã‚Â¦ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã¢â‚¬Â¢ÃƒÂ Ã‚Â¦Ã‚Â¨ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã‚Â°ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã‚Â¦ÃƒÂ Ã‚Â§Ã¢â‚¬Â¡ÃƒÂ Ã‚Â¦Ã‚Â¶ ÃƒÂ Ã‚Â¦Ã¢â‚¬Å“ ÃƒÂ Ã‚Â¦Ã‚Â¬ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã‚Â¯ÃƒÂ Ã‚Â¦Ã‚Â¬ÃƒÂ Ã‚Â¦Ã‚Â¹ÃƒÂ Ã‚Â¦Ã‚Â¾ÃƒÂ Ã‚Â¦Ã‚Â°ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã¢â‚¬Â¢ AI/Data ÃƒÂ Ã‚Â¦Ã‚Â¸ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã‚Â¸ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã…Â¸ÃƒÂ Ã‚Â§Ã¢â‚¬Â¡ÃƒÂ Ã‚Â¦Ã‚Â® ÃƒÂ Ã‚Â¦Ã‚Â¨ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã‚Â°ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã‚Â®ÃƒÂ Ã‚Â¦Ã‚Â¾ÃƒÂ Ã‚Â¦Ã‚Â£ÃƒÂ Ã‚Â§Ã¢â‚¬Â¡ ÃƒÂ Ã‚Â¦Ã‚Â¨ÃƒÂ Ã‚Â§Ã¢â‚¬Â¡ÃƒÂ Ã‚Â¦Ã‚Â¤ÃƒÂ Ã‚Â§Ã†â€™ÃƒÂ Ã‚Â¦Ã‚Â¤ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã‚Â¬ ÃƒÂ Ã‚Â¦Ã‚Â¦ÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¦Ã…Â¡ÃƒÂ Ã‚Â§Ã‚ÂÃƒÂ Ã‚Â¦Ã¢â‚¬ÂºÃƒÂ Ã‚Â¦Ã‚Â¿ÃƒÂ Ã‚Â¥Ã‚Â¤",
+          },
+        },
+      ],
+      professionalFocus: [
+        {
+          title: {
+            en: "Enact Business Solutions: Healthcare Data Delivery",
+            bn: "\u098f\u09a8\u0985\u09cd\u09af\u09be\u0995\u09cd\u099f Business Solutions: \u09b9\u09c7\u09b2\u09a5\u0995\u09c7\u09df\u09be\u09b0 \u09a1\u09c7\u099f\u09be \u09a1\u09c7\u09b2\u09bf\u09ad\u09be\u09b0\u09bf",
+          },
+          detail: {
+            en: "Building analytics-ready healthcare data pipelines with quality validation, reconciliation, and secure handling standards.",
+            bn: "\u09b9\u09c7\u09b2\u09a5\u0995\u09c7\u09df\u09be\u09b0 \u09a1\u09c7\u099f\u09be pipeline \u09a4\u09c8\u09b0\u09bf, \u09ae\u09be\u09a8 \u09af\u09be\u099a\u09be\u0987, reconciliation \u098f\u09ac\u0982 \u09a8\u09bf\u09b0\u09be\u09aa\u09a6 handling \u09a8\u09bf\u09b6\u09cd\u099a\u09bf\u09a4 \u0995\u09b0\u09be\u0964",
+          },
+        },
+        {
+          title: {
+            en: "AZM Labs: Product and Platform Engineering",
+            bn: "\u098f\u099c\u09c7\u09a1\u098f\u09ae Labs: \u09aa\u09cd\u09b0\u09cb\u09a1\u09be\u0995\u09cd\u099f \u0993 \u09aa\u09cd\u09b2\u09cd\u09af\u09be\u099f\u09ab\u09b0\u09cd\u09ae \u0987\u099e\u09cd\u099c\u09bf\u09a8\u09bf\u09df\u09be\u09b0\u09bf\u0982",
+          },
+          detail: {
+            en: "Leading architecture, implementation, and shipping of practical AI and data products with admin-managed operations.",
+            bn: "\u09ac\u09be\u09b8\u09cd\u09a4\u09ac\u09a7\u09b0\u09cd\u09ae\u09c0 AI \u0993 \u09a1\u09c7\u099f\u09be \u09aa\u09cd\u09b0\u09cb\u09a1\u09be\u0995\u09cd\u099f\u09c7\u09b0 architecture, implementation \u098f\u09ac\u0982 delivery-\u098f \u09a8\u09c7\u09a4\u09c3\u09a4\u09cd\u09ac \u09a6\u09c7\u0993\u09df\u09be\u0964",
           },
         },
       ],
@@ -530,16 +557,24 @@ export const defaultPortfolioContent: PortfolioContent = {
   ],
   skillGroups: [
     {
-      title: "Programming & Data",
-      items: ["Python", "MATLAB", "C/C++", "Pandas", "NumPy", "Scikit-learn", "OpenPyXL"],
+      title: "Backend and Platform Engineering",
+      items: [
+        "Node.js Runtime",
+        "Next.js Route Handlers",
+        "TypeScript",
+        "REST API Design",
+        "Role-Based Admin",
+        "CMS Workflows",
+        "JSON/Content Persistence",
+      ],
     },
     {
-      title: "Simulation & Engineering Systems",
-      items: ["Simulink", "Power Systems", "Control Systems", "Signal Processing", "PMSM/FOC"],
+      title: "Security and Reliability",
+      items: ["Argon2", "JOSE JWT", "Session Cookies", "CSRF Protection", "Rate Limiting", "Zod Validation", "API Route Guarding"],
     },
     {
-      title: "AI & Platform Work",
-      items: ["RAG pipelines", "LLM integration", "Data validation", "ETL design", "Technical documentation"],
+      title: "Data, AI, and Simulation",
+      items: ["Python", "Pandas", "OpenPyXL", "RAG Pipelines", "MATLAB", "Simulink", "Control Systems", "Survival Analysis"],
     },
   ],
   achievementItems: [
@@ -550,8 +585,8 @@ export const defaultPortfolioContent: PortfolioContent = {
   ],
 };
 
-defaultPortfolioContent.projects = [
-  ...defaultPortfolioContent.featuredProjects,
+defaultPortfolioContentBase.projects = [
+  ...defaultPortfolioContentBase.featuredProjects,
   {
     title: "Anomaly Detection Using Gaussian Model",
     summary:
@@ -631,6 +666,5 @@ defaultPortfolioContent.projects = [
   },
 ];
 
-
-
+export const defaultPortfolioContent: PortfolioContent = repairMojibakeDeep(defaultPortfolioContentBase, "bnOnly");
 

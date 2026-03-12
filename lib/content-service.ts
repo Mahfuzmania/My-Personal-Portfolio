@@ -2,6 +2,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import { promises as fs } from "fs";
 import path from "path";
 import { portfolioContentSchema } from "@/lib/portfolio-schema";
+import { repairMojibakeDeep } from "@/lib/mojibake";
 import { defaultPortfolioContent, type PortfolioContent } from "@/lib/site-data";
 
 const contentDir = path.join(process.cwd(), "data");
@@ -53,6 +54,9 @@ function mergeWithDefaults(raw: unknown): PortfolioContent {
           ...defaultPortfolioContent.uiContent.about.biography,
           ...(incoming.uiContent?.about?.biography ?? {}),
         },
+        professionalFocus: Array.isArray(incoming.uiContent?.about?.professionalFocus)
+          ? incoming.uiContent.about.professionalFocus
+          : defaultPortfolioContent.uiContent.about.professionalFocus,
       },
       research: {
         ...defaultPortfolioContent.uiContent.research,
@@ -128,15 +132,18 @@ export async function getPortfolioContent(): Promise<PortfolioContent> {
 
   try {
     const raw = await fs.readFile(contentFile, "utf-8");
-    const parsed = JSON.parse(raw);
-    return portfolioContentSchema.parse(mergeWithDefaults(parsed));
+    const parsed = JSON.parse(raw.replace(/^\uFEFF/, ""));
+    const merged = mergeWithDefaults(parsed);
+    const repaired = repairMojibakeDeep(merged, "bnOnly");
+    return portfolioContentSchema.parse(repaired);
   } catch {
-    return defaultPortfolioContent;
+    return repairMojibakeDeep(defaultPortfolioContent, "bnOnly");
   }
 }
 
 export async function savePortfolioContent(nextContent: PortfolioContent) {
-  const validated = portfolioContentSchema.parse(nextContent);
+  const repaired = repairMojibakeDeep(nextContent, "bnOnly");
+  const validated = portfolioContentSchema.parse(repaired);
   await ensureContentFile();
   await fs.writeFile(contentFile, JSON.stringify(validated, null, 2), "utf-8");
   return validated;

@@ -70,6 +70,7 @@ const uiContentSchema = z.object({
   about: z.object({
     biography: localizedTextSchema,
     contextCards: z.array(contextCardSchema),
+    professionalFocus: z.array(contextCardSchema),
   }),
   research: z.object({
     technicalInterests: localizedTextListSchema,

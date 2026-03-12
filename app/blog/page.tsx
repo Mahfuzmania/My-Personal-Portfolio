@@ -7,6 +7,7 @@ import { CtaLink } from "@/components/cta-link";
 import { SeoJsonLd } from "@/components/seo-jsonld";
 import { UiIcon } from "@/components/ui-icon";
 import { getSiteLang } from "@/lib/lang";
+import { repairMojibakeText } from "@/lib/mojibake";
 import { buildAbsoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -78,9 +79,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           )}
 
           <div className="section-actions">
-            <CtaLink href="/contact">{lang === "bn" ? "à¦¯à§‹à¦—à¦¾à¦¯à§‹à¦— à¦•à¦°à§à¦¨" : "Start a Conversation"}</CtaLink>
+            <CtaLink href="/contact">{lang === "bn" ? repairMojibakeText("à¦¯à§‹à¦—à¦¾à¦¯à§‹à¦— à¦•à¦°à§à¦¨") : "Start a Conversation"}</CtaLink>
             <CtaLink href="/projects" secondary>
-              {lang === "bn" ? "à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨" : "View Projects"}
+              {lang === "bn" ? repairMojibakeText("à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨") : "View Projects"}
             </CtaLink>
           </div>
         </div>
@@ -94,19 +95,19 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                 <UiIcon name="book" className="text-[18px]" />
               </div>
               <h2 className="section-title mt-4 text-2xl font-semibold tracking-tight">
-                {lang === "bn" ? "à¦•à§‹à¦¨à§‹ à¦ªà§à¦°à¦•à¦¾à¦¶à¦¿à¦¤ à¦ªà§‹à¦¸à§à¦Ÿ à¦¨à§‡à¦‡" : "No published posts yet"}
+                {lang === "bn" ? repairMojibakeText("à¦•à§‹à¦¨à§‹ à¦ªà§à¦°à¦•à¦¾à¦¶à¦¿à¦¤ à¦ªà§‹à¦¸à§à¦Ÿ à¦¨à§‡à¦‡") : "No published posts yet"}
               </h2>
               <p className="mt-2 text-sm text-muted">
                 {lang === "bn"
-                  ? "à¦ªà§à¦°à¦¥à¦® à¦ªà§‹à¦¸à§à¦Ÿ à¦ªà§à¦°à¦•à¦¾à¦¶à§‡à¦° à¦ªà¦° à¦à¦–à¦¾à¦¨à§‡ à¦¤à¦¾à¦²à¦¿à¦•à¦¾ à¦¦à§‡à¦–à¦¾ à¦¯à¦¾à¦¬à§‡à¥¤"
+                  ? repairMojibakeText("à¦ªà§à¦°à¦¥à¦® à¦ªà§‹à¦¸à§à¦Ÿ à¦ªà§à¦°à¦•à¦¾à¦¶à§‡à¦° à¦ªà¦° à¦à¦–à¦¾à¦¨à§‡ à¦¤à¦¾à¦²à¦¿à¦•à¦¾ à¦¦à§‡à¦–à¦¾ à¦¯à¦¾à¦¬à§‡à¥¤")
                   : "Published articles will appear here once the first post goes live."}
               </p>
               <div className="section-actions mt-4">
                 <CtaLink href="/projects" secondary>
-                  {lang === "bn" ? "à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨" : "Browse Projects"}
+                  {lang === "bn" ? repairMojibakeText("à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨") : "Browse Projects"}
                 </CtaLink>
                 <Link href="/admin/blog" className="chip hover:border-accent/45 hover:text-foreground">
-                  {lang === "bn" ? "à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨ à¦¬à§à¦²à¦— à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¾à¦°" : "Open Admin Blog Manager"}
+                  {lang === "bn" ? repairMojibakeText("à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨ à¦¬à§à¦²à¦— à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¾à¦°") : "Open Admin Blog Manager"}
                 </Link>
               </div>
             </article>

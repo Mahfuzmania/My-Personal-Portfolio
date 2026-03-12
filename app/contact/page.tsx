@@ -60,85 +60,91 @@ export default async function ContactPage() {
         />
       </Reveal>
 
-      <section className="grid gap-4 md:grid-cols-[1fr_1fr] md:items-start">
-        <Reveal>
-          <article className="card h-fit overflow-hidden p-0">
-            <div className="contact-media-frame">
-              <Image src={coverPhoto} alt="Md Mahfuzul Islam" fill className="contact-media-image contact-media-image--face" sizes="(max-width: 768px) 100vw, 620px" />
-            </div>
-            <div className="card-pad-lg">
-              <SectionHeading
-                eyebrow={lang === "bn" ? "সরাসরি যোগাযোগ" : "Direct Contact"}
-                title={lang === "bn" ? "আপনার প্রজেক্ট নিয়ে কথা বলি" : "Let's discuss your technical scope"}
-                description={
-                  lang === "bn"
-                    ? "সমস্যার ধরন, টিম কনটেক্সট এবং প্রত্যাশিত ফলাফল শেয়ার করুন।"
-                    : "Share your project context, constraints, and expected outcomes."
-                }
-                icon={<SparkIcon className="h-8 w-8" />}
-              />
-              <div className="space-y-3">
-                <ContactRow
-                  icon={<MailIcon className="h-6 w-6" />}
-                  label={lang === "bn" ? "প্রাইমারি ইমেইল" : "Primary Email"}
-                  value={<span className="font-mono break-all">{profile.email}</span>}
-                />
-                <ContactRow
-                  icon={<MailIcon className="h-6 w-6" />}
-                  label={lang === "bn" ? "অল্টারনেট ইমেইল" : "Alternative Email"}
-                  value={<span className="font-mono break-all">{profile.secondaryEmail}</span>}
-                />
-                <ContactRow
-                  icon={<GithubIcon className="h-6 w-6" />}
-                  label="GitHub"
-                  value={
-                    <Link href={profile.github} target="_blank" rel="noreferrer" className="hover:text-accent">
-                      {formatPublicUrl(profile.github)}
-                    </Link>
-                  }
-                />
-                <ContactRow
-                  icon={<LinkedInIcon className="h-6 w-6" />}
-                  label="LinkedIn"
-                  value={
-                    <Link href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent">
-                      {formatPublicUrl(profile.linkedin)}
-                    </Link>
-                  }
-                />
-                <ContactRow
-                  icon={<FacebookIcon className="h-6 w-6" />}
-                  label="Facebook"
-                  value={
-                    <Link href={profile.facebook} target="_blank" rel="noreferrer" className="hover:text-accent">
-                      {formatPublicUrl(profile.facebook)}
-                    </Link>
-                  }
-                />
+      <section className="section-shell">
+        <div className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
+          <Reveal>
+            <article className="card overflow-hidden p-0">
+              <div className="contact-media-frame">
+                <Image src={coverPhoto} alt="Md Mahfuzul Islam" fill className="contact-media-image contact-media-image--face" sizes="(max-width: 1024px) 100vw, 580px" />
               </div>
-            </div>
-          </article>
-        </Reveal>
+              <div className="card-pad-lg">
+                <SectionHeading
+                  eyebrow={lang === "bn" ? "সরাসরি যোগাযোগ" : "Direct Contact"}
+                  title={lang === "bn" ? "আপনার প্রজেক্ট প্ল্যান নিয়ে আলোচনা করি" : "Let's align on your project scope"}
+                  description={
+                    lang === "bn"
+                      ? "ডেটা প্ল্যাটফর্ম, AI workflow, অথবা admin-managed website delivery নিয়ে কাজ শুরু করতে কনটেক্সট শেয়ার করুন।"
+                      : "Share your project context, delivery goals, and constraints across data platforms, AI workflows, or admin-managed websites."
+                  }
+                  icon={<SparkIcon className="h-8 w-8" />}
+                />
+                <div className="space-y-3">
+                  <ContactRow
+                    icon={<MailIcon className="h-6 w-6" />}
+                    label={lang === "bn" ? "প্রাইমারি ইমেইল" : "Primary Email"}
+                    value={<span className="font-mono break-all">{profile.email}</span>}
+                  />
+                  <ContactRow
+                    icon={<MailIcon className="h-6 w-6" />}
+                    label={lang === "bn" ? "অল্টারনেট ইমেইল" : "Alternative Email"}
+                    value={<span className="font-mono break-all">{profile.secondaryEmail}</span>}
+                  />
+                  <ContactRow
+                    icon={<GithubIcon className="h-6 w-6" />}
+                    label="GitHub"
+                    value={
+                      <Link href={profile.github} target="_blank" rel="noreferrer" className="hover:text-accent">
+                        {formatPublicUrl(profile.github)}
+                      </Link>
+                    }
+                  />
+                  <ContactRow
+                    icon={<LinkedInIcon className="h-6 w-6" />}
+                    label="LinkedIn"
+                    value={
+                      <Link href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-accent">
+                        {formatPublicUrl(profile.linkedin)}
+                      </Link>
+                    }
+                  />
+                  <ContactRow
+                    icon={<FacebookIcon className="h-6 w-6" />}
+                    label="Facebook"
+                    value={
+                      <Link href={profile.facebook} target="_blank" rel="noreferrer" className="hover:text-accent">
+                        {formatPublicUrl(profile.facebook)}
+                      </Link>
+                    }
+                  />
+                </div>
+              </div>
+            </article>
+          </Reveal>
 
-        <section className="section-shell">
-          <article className="card h-fit card-pad-lg">
-            <h2 className="section-title text-2xl font-semibold">{lang === "bn" ? "দ্রুত বার্তা" : "Quick Message"}</h2>
-            <p className="mt-3 text-sm text-muted">
-              {lang === "bn"
-                ? "আপনার প্রজেক্টের স্কোপ, টিম কনটেক্সট এবং সম্ভাব্য টাইমলাইন লিখে পাঠান।"
-                : "Send a brief outlining your scope, team context, and expected timeline."}
-            </p>
-            <p className="mt-1 text-xs text-muted">{lang === "bn" ? "ছবি অথবা PDF ফাইল সহ বার্তা পাঠাতে পারবেন (সর্বোচ্চ ৩টি)।" : "You can attach images or PDFs (up to 3 files)."}</p>
-            <ContactQuickMessageForm toEmail={profile.email} lang={lang} />
-            <div className="accent-line my-6" />
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{lang === "bn" ? "সহযোগিতার ফোকাস" : "Collaboration Areas"}</p>
-              <div className="mt-3">
-                <VisualList items={collaborationTopics} imagePool={contactVisuals} icon="spark" columns="one" />
+          <Reveal delay={0.05}>
+            <article className="card card-pad-lg">
+              <h2 className="section-title text-2xl font-semibold">{lang === "bn" ? "দ্রুত বার্তা" : "Quick Message"}</h2>
+              <p className="mt-3 text-sm text-muted">
+                {lang === "bn"
+                  ? "আপনার প্রজেক্টের scope, team context, delivery stage, এবং expected timeline লিখে পাঠান।"
+                  : "Send a brief outlining your scope, team context, delivery stage, and expected timeline."}
+              </p>
+              <p className="mt-1 text-xs text-muted">
+                {lang === "bn"
+                  ? "ছবি অথবা PDF সহ বার্তা পাঠাতে পারবেন (সর্বোচ্চ ৩টি attachment)।"
+                  : "You can attach images or PDFs (up to 3 files)."}
+              </p>
+              <ContactQuickMessageForm toEmail={profile.email} lang={lang} />
+              <div className="accent-line my-6" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{lang === "bn" ? "সহযোগিতার ফোকাস" : "Collaboration Areas"}</p>
+                <div className="mt-3">
+                  <VisualList items={collaborationTopics} imagePool={contactVisuals} icon="spark" columns="one" />
+                </div>
               </div>
-            </div>
-          </article>
-        </section>
+            </article>
+          </Reveal>
+        </div>
       </section>
     </div>
   );

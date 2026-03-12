@@ -81,6 +81,18 @@ body {
 html[data-lang="bn"] body {
   font-family: var(--font-bn), var(--font-sans), sans-serif;
   letter-spacing: 0;
+  line-height: 1.78;
+  font-size: clamp(0.95rem, 0.2vw + 0.93rem, 1.01rem);
+}
+
+html[data-lang="bn"] .section-title,
+html[data-lang="bn"] .clamp-heading,
+html[data-lang="bn"] h1,
+html[data-lang="bn"] h2,
+html[data-lang="bn"] h3,
+html[data-lang="bn"] h4 {
+  font-family: var(--font-bn), var(--font-sans), sans-serif;
+  letter-spacing: 0;
 }
 
 html {
@@ -138,11 +150,16 @@ html {
 }
 
 .copy-text {
-  max-width: min(68ch, 100%);
+  max-width: min(62ch, 100%);
   font-size: clamp(0.93rem, 0.52vw + 0.87rem, 1.02rem);
   line-height: 1.62;
   color: color-mix(in srgb, var(--foreground) 88%, var(--muted));
   overflow-wrap: anywhere;
+}
+
+html[data-lang="bn"] .copy-text {
+  max-width: min(56ch, 100%);
+  line-height: 1.84;
 }
 
 .measure {
@@ -353,7 +370,7 @@ textarea:focus-visible {
 }
 
 .section-shell--with-heading .copy-text {
-  max-width: min(72ch, 100%);
+  max-width: min(64ch, 100%);
 }
 
 .section-shell--with-heading .section-actions {
@@ -406,6 +423,19 @@ textarea:focus-visible {
 
 .portrait-stage--about {
   --stage-max-width: clamp(235px, 32vw, 380px);
+}
+
+.portrait-stage--about-fixed {
+  max-width: 100%;
+  width: 100%;
+}
+
+.portrait-stage--about-fixed .portrait-stage__frame {
+  padding: 0.34rem;
+}
+
+.portrait-stage--about-fixed .portrait-stage__media-shell {
+  aspect-ratio: 4 / 5;
 }
 
 .portrait-stage--home,
@@ -539,6 +569,12 @@ textarea:focus-visible {
   object-position: center 16%;
 }
 
+.portrait-stage__media--about {
+  transform: scale(1.03) translateY(0.01rem);
+  object-position: center 15%;
+  filter: saturate(1.03) contrast(1.03);
+}
+
 .portrait-stage__vignette {
   position: absolute;
   inset: 0;
@@ -644,8 +680,9 @@ textarea:focus-visible {
 
 .contact-media-frame {
   position: relative;
-  aspect-ratio: 4 / 5;
-  min-height: clamp(320px, 55svh, 540px);
+  aspect-ratio: 5 / 6;
+  min-height: clamp(300px, 42vw, 520px);
+  max-height: 560px;
   width: 100%;
   border-bottom: 1px solid color-mix(in srgb, var(--border) 88%, transparent);
   background:
@@ -655,13 +692,13 @@ textarea:focus-visible {
 
 .contact-media-image {
   object-fit: cover;
-  object-position: center 14%;
-  filter: saturate(1.04) contrast(1.02);
+  object-position: center 18%;
+  filter: saturate(1.03) contrast(1.01);
 }
 
 .contact-media-image--face {
-  object-position: center 16%;
-  transform: scale(1.07);
+  object-position: center 18%;
+  transform: scale(1.02);
 }
 
 .hero-ribbon {
@@ -962,6 +999,18 @@ textarea:focus-visible {
   .company-chip__logo--lg {
     width: 24px;
     height: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-media-frame {
+    aspect-ratio: 4 / 5;
+    min-height: clamp(280px, 52vw, 460px);
+  }
+
+  .contact-media-image--face {
+    object-position: center 15%;
+    transform: scale(1.01);
   }
 }
 

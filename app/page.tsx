@@ -17,17 +17,19 @@ import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { VisualList } from "@/components/visual-list";
+import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
+import { repairMojibakeDeep, repairMojibakeText } from "@/lib/mojibake";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const { experience, featuredProjects, highlights, profile, technicalFocus, uiContent } = await getPortfolioContent();
   const lang = await getSiteLang();
-  const displayName = lang === "bn" ? "à¦®à§‹à¦ƒ à¦®à¦¾à¦¹à¦«à§à¦œà§à¦² à¦‡à¦¸à¦²à¦¾à¦®" : "Md Mahfuzul Islam";
+  const displayName = lang === "bn" ? repairMojibakeText("à¦®à§‹à¦ƒ à¦®à¦¾à¦¹à¦«à§à¦œà§à¦² à¦‡à¦¸à¦²à¦¾à¦®") : "Md Mahfuzul Islam";
 
-  const t = {
+  const t = repairMojibakeDeep({
     viewProjects: lang === "bn" ? "à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿà¦¸ à¦¦à§‡à¦–à§à¦¨" : "View Projects",
     downloadResume: lang === "bn" ? "à¦°à§‡à¦œà¦¿à¦‰à¦®à§‡ à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡" : "Download Resume",
     profile: {
@@ -89,12 +91,18 @@ export default async function HomePage() {
       city: lang === "bn" ? "à¦¢à¦¾à¦•à¦¾, à¦¬à¦¾à¦‚à¦²à¦¾à¦¦à§‡à¦¶" : "Dhaka, Bangladesh",
       note: lang === "bn" ? "à¦—à§à¦²à§‹à¦¬à¦¾à¦² à¦¸à¦¹à¦¯à§‹à¦—à¦¿à¦¤à¦¾à¦° à¦œà¦¨à§à¦¯ à¦ªà§à¦°à¦¸à§à¦¤à§à¦¤" : "Open to global collaboration",
     },
-  };
+  });
 
   const currentPositions = experience.filter((item) => item.period.toLowerCase().includes("present")).slice(0, 3);
   const heroPhoto = profile.photoPath;
   const focusIcons = [DatabaseIcon, BrainIcon, SystemsIcon, WorkflowIcon];
-  const roleBadges = currentPositions.map((item) => item.role).slice(0, 3);
+  const tr = (value: string) => normalizeBnUiText(value, lang);
+  const heroTitle =
+    lang === "bn"
+      ? "স্বাস্থ্যসেবা ডেটা অবকাঠামো, অ্যাপ্লাইড এআই ও ইঞ্জিনিয়ারিং সিস্টেম ডেলিভারির বাস্তবমুখী নির্মাতা"
+      : profile.identityLine;
+  const heroIntro = lang === "bn" ? tr(uiContent.home.profileNarrative.bn[0] ?? profile.shortIntro) : profile.shortIntro;
+  const roleBadges = currentPositions.map((item) => tr(item.role)).slice(0, 3);
 
   return (
     <div className="page-stack">
@@ -102,8 +110,8 @@ export default async function HomePage() {
         <section className="hero-panel home-hero grid md:grid-cols-[minmax(0,1.24fr)_minmax(250px,0.76fr)]">
           <article className="home-hero__content flex h-full flex-col">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent">{displayName}</p>
-            <h1 className="home-hero__title section-title">{profile.identityLine}</h1>
-            <p className="copy-text home-hero__intro">{profile.shortIntro}</p>
+            <h1 className="home-hero__title section-title">{heroTitle}</h1>
+            <p className="copy-text home-hero__intro">{heroIntro}</p>
 
             <div className="home-hero__roles flex flex-wrap gap-2 text-xs text-muted">
               {roleBadges.map((badge) => (
@@ -117,11 +125,11 @@ export default async function HomePage() {
             <div className="home-hero__companies flex flex-wrap items-center gap-2.5">
               <span className="chip company-chip">
                 <Image src="/images/logos/enact-business-solutions-logo.jpg" alt="Enact Business Solutions logo" width={20} height={20} className="company-chip__logo" />
-                Enact Business Solutions
+                {tr("Enact Business Solutions")}
               </span>
               <span className="chip company-chip">
                 <Image src="/images/azm-labs-logo.png" alt="AZM Labs logo" width={20} height={20} className="company-chip__logo" />
-                AZM Labs
+                {tr("AZM Labs")}
               </span>
             </div>
 
@@ -173,16 +181,15 @@ export default async function HomePage() {
           <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr] md:items-start">
             <article className="card card-pad">
               <div className="space-y-4 text-sm leading-7 text-muted md:text-base">
-                {profile.shortIntro && <p>{profile.shortIntro}</p>}
                 {uiContent.home.profileNarrative[lang].map((line) => (
-                  <p key={line}>{line}</p>
+                  <p key={line}>{tr(line)}</p>
                 ))}
               </div>
             </article>
             <article className="card card-pad">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{t.scopeTitle}</p>
               <div className="mt-4">
-                <VisualList items={uiContent.home.scope[lang]} imagePool={["/images/pipeline-depth.svg", "/images/ai-depth.svg", "/images/simulation-depth.svg"]} icon="settings" columns="one" />
+                <VisualList items={uiContent.home.scope[lang].map(tr)} imagePool={["/images/pipeline-depth.svg", "/images/ai-depth.svg", "/images/simulation-depth.svg"]} icon="settings" columns="one" />
               </div>
             </article>
           </div>
@@ -199,8 +206,8 @@ export default async function HomePage() {
               <Reveal key={item.title.en} delay={idx * 0.06}>
                 <article className="card h-full card-pad">
                   <DomainVisual variant={item.variant} lang={lang} />
-                  <h3 className="mt-5 text-lg font-semibold tracking-tight">{item.title[lang]}</h3>
-                  <p className="mt-2 text-sm text-muted">{item.detail[lang]}</p>
+                  <h3 className="mt-5 text-lg font-semibold tracking-tight">{tr(item.title[lang])}</h3>
+                  <p className="mt-2 text-sm text-muted">{tr(item.detail[lang])}</p>
                 </article>
               </Reveal>
             ))}
@@ -243,7 +250,7 @@ export default async function HomePage() {
                       {FocusIcon ? <FocusIcon className="h-8 w-8" /> : null}
                       <h3 className="text-xl font-semibold tracking-tight">{focus.title}</h3>
                     </div>
-                    <p className="text-sm text-muted">{focus.detail}</p>
+                    <p className="text-sm text-muted">{tr(focus.detail)}</p>
                   </article>
                 </Reveal>
               );
@@ -282,7 +289,7 @@ export default async function HomePage() {
           <Reveal>
             <SectionHeading eyebrow={t.highlights.eyebrow} title={t.highlights.title} icon={<TrophyIcon className="h-8 w-8" />} />
           </Reveal>
-          <VisualList items={highlights.slice(0, 4)} imagePool={[
+          <VisualList items={highlights.slice(0, 4).map(tr)} imagePool={[
             "/images/pipeline-depth.svg",
             "/images/ai-depth.svg",
             "/images/simulation-depth.svg",

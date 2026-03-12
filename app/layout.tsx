@@ -2,6 +2,7 @@
 import { Hind_Siliguri, Manrope, Source_Serif_4 } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
 import { getSiteUrl } from "@/lib/seo";
@@ -93,7 +94,7 @@ export default async function RootLayout({
           >
             Skip to content
           </a>
-          <Navbar profile={content.profile} lang={lang} roleLine={content.uiContent.navbarRoleLine[lang]} />
+          <Navbar profile={content.profile} lang={lang} roleLine={normalizeBnUiText(content.uiContent.navbarRoleLine[lang], lang)} />
           <main id="main-content" className="layout-container pb-16 pt-2 md:pt-2">
             {children}
           </main>
