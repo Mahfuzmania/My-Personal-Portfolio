@@ -27,20 +27,22 @@ export function DomainEvidenceFrame({
   const metric = content.metric[lang];
 
   return (
-    <article className={className}>
-      <div className="grid gap-4 md:grid-cols-[minmax(260px,0.95fr)_minmax(0,1.05fr)] md:items-start">
-        <DomainVisual variant={variant} lang={lang} mode="media" />
-        <div className="min-w-0">
+    <article className={`${className} domain-evidence-frame`.trim()}>
+      <div className="domain-evidence-frame__grid grid gap-3.5 md:grid-cols-[minmax(340px,1.14fr)_minmax(0,0.86fr)] md:items-stretch">
+        <div className="domain-evidence-frame__figure">
+          <DomainVisual variant={variant} lang={lang} mode="media" />
+        </div>
+        <div className="domain-evidence-frame__content min-w-0">
           <h3 className="text-lg font-semibold tracking-tight md:text-xl">{tr(title ?? content.title[lang])}</h3>
           {description ? <p className="mt-2 text-sm text-muted md:text-base">{tr(description)}</p> : null}
-          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          <div className="domain-evidence-frame__rows mt-3 grid gap-2 sm:grid-cols-2">
             {rows.map((row) => (
-              <span key={`${variant}-${row}`} className="rounded-xl border border-border bg-surface/70 px-3 py-2 text-sm text-muted">
+              <span key={`${variant}-${row}`} className="domain-evidence-frame__row rounded-xl border border-border bg-surface/70 px-3 py-2 text-sm text-muted">
                 {tr(row)}
               </span>
             ))}
           </div>
-          <p className="mt-3 rounded-xl border border-accent/24 bg-surface/70 px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted">{tr(metric)}</p>
+          <p className="domain-evidence-frame__metric mt-3 rounded-xl border border-accent/24 bg-surface/70 px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.08em] text-muted">{tr(metric)}</p>
         </div>
       </div>
     </article>

@@ -77,7 +77,7 @@ export function ProjectCard({ project, compact = false, lang = "en" }: ProjectCa
       {figureImage ? (
         <div className={`relative overflow-hidden rounded-2xl border border-border bg-surface/60 ${compact ? "aspect-[16/10]" : "aspect-[16/9]"}`}>
           <Image src={figureImage} alt={`${project.title} evidence visual`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 560px" />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/22 via-transparent to-transparent" />
         </div>
       ) : null}
 
@@ -189,4 +189,3 @@ export function ProjectCard({ project, compact = false, lang = "en" }: ProjectCa
     </article>
   );
 }
-
