@@ -865,10 +865,27 @@ textarea:focus-visible {
 }
 
 .domain-evidence-frame {
-  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+  --domain-accent: var(--accent);
+  border-color: color-mix(in srgb, var(--domain-accent) 30%, var(--border));
   background:
     linear-gradient(180deg, color-mix(in srgb, #ffffff 2.5%, transparent), transparent 32%),
     linear-gradient(180deg, color-mix(in srgb, var(--surface) 94%, transparent), color-mix(in srgb, var(--surface) 88%, transparent));
+}
+
+.domain-evidence-frame--data {
+  --domain-accent: #67a7ff;
+}
+
+.domain-evidence-frame--ai {
+  --domain-accent: #4fd0c7;
+}
+
+.domain-evidence-frame--platform {
+  --domain-accent: #92a6ff;
+}
+
+.domain-evidence-frame--simulation {
+  --domain-accent: #75bcff;
 }
 
 .domain-evidence-frame__figure {
@@ -884,17 +901,23 @@ textarea:focus-visible {
   align-content: start;
 }
 
-.domain-evidence-frame__rows {
-  align-items: stretch;
+.domain-evidence-frame__proof {
+  border-top: 1px solid color-mix(in srgb, var(--domain-accent) 24%, var(--border));
+  padding-top: 0.72rem;
 }
 
 .domain-evidence-frame__row {
   display: inline-flex;
   align-items: center;
+  border-color: color-mix(in srgb, var(--domain-accent) 28%, var(--border));
+  background: color-mix(in srgb, var(--surface) 86%, transparent);
   line-height: 1.45;
 }
 
 .domain-evidence-frame__metric {
+  border-color: color-mix(in srgb, var(--domain-accent) 35%, var(--border));
+  background: color-mix(in srgb, var(--domain-accent) 8%, var(--surface));
+  color: color-mix(in srgb, var(--domain-accent) 60%, var(--foreground));
   letter-spacing: 0.072em;
 }
 
@@ -1089,6 +1112,10 @@ textarea:focus-visible {
   .domain-media .domain-visual__media {
     min-height: 176px;
   }
+
+  .domain-evidence-frame__row {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1105,6 +1132,11 @@ textarea:focus-visible {
   .domain-evidence-frame__figure .domain-media .domain-visual__media {
     flex: 1 1 auto;
     min-height: 100%;
+  }
+
+  .domain-evidence-frame__row {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 220px;
   }
 }
 
