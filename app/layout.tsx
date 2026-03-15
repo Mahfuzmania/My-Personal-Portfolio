@@ -60,6 +60,11 @@ export const metadata: Metadata = {
     description:
       "Personal portfolio of Md Mahfuzul Islam featuring data engineering, applied AI systems, secure platform delivery, and simulation-led technical work.",
   },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    shortcut: ["/icon.png"],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export const dynamic = "force-dynamic";
