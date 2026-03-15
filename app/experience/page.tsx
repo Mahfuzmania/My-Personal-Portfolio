@@ -1,5 +1,5 @@
 ﻿import Image from "next/image";
-import { DomainVisual } from "@/components/domain-visual";
+import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { BriefcaseIcon, GraduationIcon, SparkIcon, TrophyIcon } from "@/components/logo-pack";
 import { ExperienceCard } from "@/components/experience-card";
 import { PageHero } from "@/components/page-hero";
@@ -106,9 +106,18 @@ export default async function ExperiencePage() {
           </div>
 
           <div className="panel-grid">
-            <article className="card h-fit card-pad">
-              <DomainVisual variant="data" lang={lang} />
-            </article>
+            <DomainEvidenceFrame
+              variant="data"
+              lang={lang}
+              title={lang === "bn" ? "ডেটা ইঞ্জিনিয়ারিং এক্সিকিউশন প্যাটার্ন" : "Data engineering execution pattern"}
+              description={
+                lang === "bn"
+                  ? "সোর্স ইন্টিগ্রেশন থেকে ভ্যালিডেশন-রেডি আউটপুট পর্যন্ত রিপিটেবল ডেলিভারি স্টেপ।"
+                  : "Repeatable delivery steps from source integration to validation-ready output."
+              }
+              rowsLimit={4}
+              className="card card-pad h-full"
+            />
 
             <article className="card card-pad">
               <div className="inline-flex items-center gap-2">

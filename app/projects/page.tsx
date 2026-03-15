@@ -1,14 +1,12 @@
-﻿import { DomainVisual } from "@/components/domain-visual";
+﻿import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { PageHero } from "@/components/page-hero";
-import { BadgeIcon, StrategyIcon, WorkflowIcon } from "@/components/logo-pack";
+import { StrategyIcon, WorkflowIcon } from "@/components/logo-pack";
 import { ProjectsBrowser } from "@/components/projects-browser";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
-import { repairMojibakeText } from "@/lib/mojibake";
 
 export const dynamic = "force-dynamic";
 
@@ -17,15 +15,13 @@ export default async function ProjectsPage() {
   const lang = await getSiteLang();
   const visibleFeaturedProjects = featuredProjects.filter((project) => project.publishState !== "draft" && project.visibility !== "private");
   const visibleProjects = projects.filter((project) => project.publishState !== "draft" && project.visibility !== "private");
-  const tr = (value: string) => normalizeBnUiText(repairMojibakeText(value), lang);
-
   const t = {
     hero: {
       kicker: lang === "bn" ? "প্রজেক্টস" : "Projects",
       title:
         lang === "bn"
           ? "এআই, ডেটা ইঞ্জিনিয়ারিং এবং সিমুলেশন-কেন্দ্রিক ব্যক্তিগত প্রজেক্ট পোর্টফোলিও"
-          : "Healthcare data, applied AI, platform engineering, and simulation projects",
+          : "Data engineering, applied AI, platform engineering, and simulation projects",
       description:
         lang === "bn"
           ? "পাবলিক রিপোজিটরি এবং প্রাইভেট ইমপ্লিমেন্টেশন থেকে বাছাই করা কাজ।"
@@ -72,29 +68,13 @@ export default async function ProjectsPage() {
       </Reveal>
 
       <section className="section-shell">
-        <div className="grid gap-4 md:grid-cols-[1fr_1fr] md:items-start">
+        <div className="grid gap-4">
           <Reveal>
-            <article className="card h-full card-pad">
-              <DomainVisual variant="data" lang={lang} />
-              <p className="mt-4 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.16em] text-accent">
-                <BadgeIcon name="focus" />
-                {t.lens.label}
-              </p>
-              <h2 className="section-title mt-2 text-2xl font-semibold tracking-tight">{t.lens.title}</h2>
-              <p className="mt-3 text-sm text-muted">{tr(t.lens.description)}</p>
-            </article>
+            <DomainEvidenceFrame variant="data" lang={lang} title={t.lens.title} description={t.lens.description} rowsLimit={4} />
           </Reveal>
 
           <Reveal>
-            <article className="card h-full card-pad">
-              <DomainVisual variant="platform" lang={lang} />
-              <p className="mt-4 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.16em] text-accent">
-                <BadgeIcon name="workflow" />
-                {t.types.label}
-              </p>
-              <h2 className="section-title mt-2 text-2xl font-semibold tracking-tight">{t.types.title}</h2>
-              <p className="mt-3 text-sm text-muted">{tr(t.types.description)}</p>
-            </article>
+            <DomainEvidenceFrame variant="platform" lang={lang} title={t.types.title} description={t.types.description} rowsLimit={4} />
           </Reveal>
         </div>
       </section>

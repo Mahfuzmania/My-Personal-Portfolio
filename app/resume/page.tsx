@@ -1,20 +1,37 @@
 ﻿import { CtaLink } from "@/components/cta-link";
-import { DomainVisual } from "@/components/domain-visual";
+import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { BrandIcon } from "@/components/brand-icon";
 import { BriefcaseIcon, DatabaseIcon } from "@/components/logo-pack";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { VisualList } from "@/components/visual-list";
+import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
+import { repairMojibakeText } from "@/lib/mojibake";
 
 export const dynamic = "force-dynamic";
 
 export default async function ResumePage() {
   const { profile, skillGroups, uiContent } = await getPortfolioContent();
   const lang = await getSiteLang();
-  const summaryPoints = uiContent.resume.summaryPoints[lang];
+  const tr = (value: string) => normalizeBnUiText(repairMojibakeText(value), lang);
+  const summaryPoints = uiContent.resume.summaryPoints[lang].map((item) => tr(item));
   const resumeVisuals = ["/images/pipeline-depth.svg", "/images/ai-depth.svg", "/images/placeholders/project-ml.svg"];
+  const skillGroupTitleBn: Record<string, string> = {
+    "Backend and Platform Engineering": "ব্যাকএন্ড ও প্ল্যাটফর্ম ইঞ্জিনিয়ারিং",
+    "Security and Reliability": "নিরাপত্তা ও নির্ভরযোগ্যতা",
+    "Data, AI, and Simulation": "ডেটা, এআই ও সিমুলেশন",
+  };
+
+  const localizedSkillGroups =
+    lang === "bn"
+      ? skillGroups.map((group) => ({
+          ...group,
+          title: skillGroupTitleBn[group.title] ?? tr(group.title),
+          items: group.items.map((item) => tr(item)),
+        }))
+      : skillGroups;
 
   return (
     <div className="page-stack">
@@ -48,25 +65,34 @@ export default async function ResumePage() {
             </div>
           </article>
 
-          <article className="card h-fit card-pad">
-            <DomainVisual variant="data" lang={lang} />
-          </article>
+          <DomainEvidenceFrame
+            variant="data"
+            lang={lang}
+            title={lang === "bn" ? "ডেলিভারি প্রুফ ফ্রেম" : "Delivery proof frame"}
+            description={
+              lang === "bn"
+                ? "ডেটা ইনজেশন, স্ট্যান্ডার্ডাইজেশন, ভ্যালিডেশন এবং প্রোডাকশন-রেডি হ্যান্ডঅফ ফ্লো।"
+                : "Data ingestion, standardization, validation, and production-ready handoff flow."
+            }
+            rowsLimit={4}
+            className="card card-pad h-full"
+          />
         </div>
       </section>
 
       <section className="section-shell">
         <div className="grid gap-4 md:grid-cols-3">
-          {skillGroups.map((group) => (
+          {localizedSkillGroups.map((group) => (
             <article key={group.title} className="card h-full card-pad">
               <div className="mb-3 flex items-center gap-2">
                 <DatabaseIcon className="h-7 w-7" />
-                <h3 className="text-lg font-semibold">{group.title}</h3>
+                <h3 className="text-lg font-semibold">{tr(group.title)}</h3>
               </div>
               <ul className="flex flex-wrap gap-2 text-sm text-muted">
                 {group.items.map((item) => (
                   <li key={item} className="chip">
                     <BrandIcon label={item} className="text-[13px]" />
-                    {item}
+                    {tr(item)}
                   </li>
                 ))}
               </ul>

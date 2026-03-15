@@ -1,5 +1,5 @@
 ﻿import Image from "next/image";
-import { DomainVisual } from "@/components/domain-visual";
+import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { BrainIcon, CircuitIcon, DatabaseIcon } from "@/components/logo-pack";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
@@ -129,11 +129,20 @@ export default async function ResearchPage() {
         <Reveal>
           <SectionHeading eyebrow={t.explorations.eyebrow} title={t.explorations.title} icon={<CircuitIcon className="h-8 w-8" />} />
         </Reveal>
-        <div className="grid gap-4 md:grid-cols-[1fr_1fr] md:items-stretch">
+        <div className="grid gap-4 md:grid-cols-[1fr_1fr] md:items-start">
           <Reveal>
-            <article className="card h-fit card-pad">
-              <DomainVisual variant="simulation" lang={lang} />
-            </article>
+            <DomainEvidenceFrame
+              variant="simulation"
+              lang={lang}
+              title={lang === "bn" ? "সিমুলেশন ও কন্ট্রোল প্রমাণ" : "Simulation and control evidence"}
+              description={
+                lang === "bn"
+                  ? "মডেল সেটআপ, টিউনিং এবং রেসপন্স কার্ভ ব্যবহার করে ইঞ্জিনিয়ারিং ট্রেডঅফ যাচাই করা হয়েছে।"
+                  : "Model setup, controller tuning, and response curves are used to validate engineering tradeoffs."
+              }
+              rowsLimit={4}
+              className="card card-pad h-full"
+            />
           </Reveal>
           <div className="card h-full card-pad">
             <VisualList items={explorations} imagePool={researchVisuals} icon="link" columns="one" />

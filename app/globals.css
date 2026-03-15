@@ -721,6 +721,14 @@ textarea:focus-visible {
   padding: 12px;
 }
 
+.domain-visual--media-only {
+  padding: 10px;
+}
+
+.domain-visual--media-only .domain-visual__media {
+  min-height: 208px;
+}
+
 .domain-visual__media {
   position: relative;
   overflow: hidden;
@@ -1000,6 +1008,10 @@ textarea:focus-visible {
   .company-chip__logo--lg {
     width: 24px;
     height: 24px;
+  }
+
+  .domain-visual--media-only .domain-visual__media {
+    min-height: 176px;
   }
 }
 
