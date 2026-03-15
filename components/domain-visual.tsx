@@ -24,7 +24,7 @@ type VisualConfig = {
 const content: Record<DomainVisualProps["variant"], VisualConfig> = {
   data: {
     title: {
-      en: "Healthcare Data Flow",
+      en: "Clinical Data Standardization Flow",
       bn: "হেলথকেয়ার ডেটা ফ্লো",
     },
     icon: "data",
@@ -34,19 +34,19 @@ const content: Record<DomainVisualProps["variant"], VisualConfig> = {
       bn: "হেলথকেয়ার ডেটা পাইপলাইন আর্কিটেকচার ভিজ্যুয়াল",
     },
     rows: [
-      { en: "Oracle Exports", bn: "Oracle Export" },
-      { en: "Lab Sheets", bn: "Lab Sheets" },
-      { en: "ID + Date Harmonization", bn: "ID + Date Harmonization" },
-      { en: "Unified Clinical Dataset", bn: "Unified Clinical Dataset" },
+      { en: "Source Intake: Oracle + Lab Sheets", bn: "সোর্স ইনটেক: Oracle + ল্যাব শিট" },
+      { en: "Cleaning: IDs, Dates, Missing Values", bn: "ক্লিনিং: আইডি, তারিখ, মিসিং ভ্যালু" },
+      { en: "Validation: Rule Checks + Reconciliation", bn: "ভ্যালিডেশন: রুল চেক + রিকনসিলিয়েশন" },
+      { en: "Output: Analysis-ready Unified Dataset", bn: "আউটপুট: বিশ্লেষণ-রেডি ইউনিফায়েড ডেটাসেট" },
     ],
     metric: {
-      en: "70k+ patients | 1M+ lab records",
+      en: "Evidence: 70k+ patients integrated with quality gates",
       bn: "70k+ রোগী | 1M+ ল্যাব রেকর্ড",
     },
   },
   ai: {
     title: {
-      en: "RAG Intelligence Stack",
+      en: "RAG Retrieval-to-Answer Pipeline",
       bn: "RAG ইন্টেলিজেন্স স্ট্যাক",
     },
     icon: "ai",
@@ -56,20 +56,20 @@ const content: Record<DomainVisualProps["variant"], VisualConfig> = {
       bn: "এআই ও RAG পাইপলাইন ভিজ্যুয়াল",
     },
     rows: [
-      { en: "Textbook Parsing", bn: "Textbook Parsing" },
-      { en: "Retrieval Layer", bn: "Retrieval Layer" },
-      { en: "Grounded Response", bn: "Grounded Response" },
-      { en: "Citation Support", bn: "Citation Support" },
+      { en: "Ingestion: Technical Docs and Textbooks", bn: "ইনজেশন: টেকনিক্যাল ডকুমেন্ট ও টেক্সটবুক" },
+      { en: "Chunking + Retrieval (BM25/Vector)", bn: "চাঙ্কিং + রিট্রিভাল (BM25/Vector)" },
+      { en: "Grounded Response with Citations", bn: "সাইটেশনসহ গ্রাউন্ডেড রেসপন্স" },
+      { en: "Bilingual Output Control", bn: "দ্বিভাষিক আউটপুট কন্ট্রোল" },
     ],
     metric: {
-      en: "Bilingual support with explainable outputs",
-      bn: "Explainable আউটপুটসহ bilingual support",
+      en: "Evidence: citation-backed technical answers",
+      bn: "ব্যাখ্যাযোগ্য আউটপুটসহ দ্বিভাষিক সাপোর্ট",
     },
   },
   simulation: {
     title: {
-      en: "Simulation Signal Loop",
-      bn: "Simulation Signal Loop",
+      en: "Simulation and Control Evidence",
+      bn: "সিমুলেশন সিগন্যাল লুপ",
     },
     icon: "simulation",
     image: "/images/simulation-depth.svg",
@@ -78,19 +78,19 @@ const content: Record<DomainVisualProps["variant"], VisualConfig> = {
       bn: "ইঞ্জিনিয়ারিং সিমুলেশন ফ্লো ভিজ্যুয়াল",
     },
     rows: [
-      { en: "Plant Modeling", bn: "Plant Modeling" },
-      { en: "Controller Tuning", bn: "Controller Tuning" },
-      { en: "Efficiency Curves", bn: "Efficiency Curves" },
-      { en: "Range/Performance Tradeoff", bn: "Range/Performance Tradeoff" },
+      { en: "Model Setup: Plant + Constraints", bn: "মডেল সেটআপ: প্ল্যান্ট + কনস্ট্রেইন্ট" },
+      { en: "Controller Tuning Comparison", bn: "কন্ট্রোলার টিউনিং তুলনা" },
+      { en: "Response Curves and Settling Analysis", bn: "রেসপন্স কার্ভ ও সেটলিং অ্যানালাইসিস" },
+      { en: "Tradeoff: Efficiency vs Dynamic Response", bn: "ট্রেড-অফ: এফিশিয়েন্সি বনাম ডাইনামিক রেসপন্স" },
     ],
     metric: {
-      en: "MATLAB/Simulink performance analysis",
-      bn: "MATLAB/Simulink performance analysis",
+      en: "Evidence: MATLAB/Simulink response plots",
+      bn: "MATLAB/Simulink ভিত্তিক পারফরম্যান্স বিশ্লেষণ",
     },
   },
   platform: {
     title: {
-      en: "Admin Platform Loop",
+      en: "Secure CMS Publishing Workflow",
       bn: "অ্যাডমিন প্ল্যাটফর্ম লুপ",
     },
     icon: "settings",
@@ -100,14 +100,14 @@ const content: Record<DomainVisualProps["variant"], VisualConfig> = {
       bn: "অ্যাডমিন-ম্যানেজড প্ল্যাটফর্ম ওয়ার্কফ্লো ভিজ্যুয়াল",
     },
     rows: [
-      { en: "Admin Login + Session", bn: "Admin Login + Session" },
-      { en: "Role-Based Access", bn: "Role-Based Access" },
-      { en: "Content Form Editor", bn: "Content Form Editor" },
-      { en: "Tracking + Export", bn: "Tracking + Export" },
+      { en: "Role Login + Session Controls", bn: "রোল লগইন + সেশন কন্ট্রোল" },
+      { en: "Draft, Review, Publish Lifecycle", bn: "ড্রাফট, রিভিউ, পাবলিশ লাইফসাইকেল" },
+      { en: "Section-level Content Management", bn: "সেকশন-লেভেল কন্টেন্ট ম্যানেজমেন্ট" },
+      { en: "Operational Tracking + Inbox", bn: "অপারেশনাল ট্র্যাকিং + ইনবক্স" },
     ],
     metric: {
-      en: "Bilingual CMS with secure content operations",
-      bn: "নিরাপদ কনটেন্ট অপারেশনসহ bilingual CMS",
+      en: "Evidence: secure admin-managed public platforms",
+      bn: "নিরাপদ কনটেন্ট অপারেশনসহ দ্বিভাষিক CMS",
     },
   },
 };

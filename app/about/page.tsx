@@ -18,6 +18,7 @@ import { VisualList } from "@/components/visual-list";
 import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
+import { repairMojibakeDeep } from "@/lib/mojibake";
 
 export const dynamic = "force-dynamic";
 
@@ -64,50 +65,52 @@ export default async function AboutPage() {
       }))
     : skillGroups;
   const tr = (value: string) => normalizeBnUiText(value, lang);
-  const t = {
+  const t = repairMojibakeDeep({
     hero: {
       kicker: isBn ? "প্রোফাইল" : "Profile",
-      title: isBn ? "\u09a1\u09c7\u099f\u09be \u0987\u099e\u09cd\u099c\u09bf\u09a8\u09bf\u09df\u09be\u09b0 \u098f\u09ac\u0982 \u09ac\u09be\u09b8\u09cd\u09a4\u09ac\u09be\u09df\u09a8\u09ae\u09c1\u0996\u09c0 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09a8\u09bf\u09b0\u09cd\u09ae\u09be\u09a4\u09be" : "Data Engineer and implementation-focused systems builder",
+      title: isBn ? "\u09a1\u09c7\u099f\u09be \u0987\u099e\u09cd\u099c\u09bf\u09a8\u09bf\u09df\u09be\u09b0 \u098f\u09ac\u0982 \u09ac\u09be\u09b8\u09cd\u09a4\u09ac\u09be\u09df\u09a8\u09ae\u09c1\u0996\u09c0 \u09b8\u09bf\u09b8\u09cd\u099f\u09c7\u09ae \u09a8\u09bf\u09b0\u09cd\u09ae\u09be\u09a4\u09be" : "Data Engineer and applied AI systems builder",
       description: isBn
         ? "আমি ইঞ্জিনিয়ারিং শৃঙ্খলা ও পরিমাপযোগ্য ডেলিভারির ভিত্তিতে deploy-ready হেলথকেয়ার ডেটা ও এআই সিস্টেম তৈরি করি।"
-        : "I build deployment-ready healthcare data and AI systems grounded in engineering discipline and measurable delivery.",
+        : "I build reliable data and AI systems for real operations, with secure platform workflows and simulation-backed engineering depth.",
     },
     bio: {
       eyebrow: isBn ? "প্রফেশনাল প্রোফাইল" : "Professional Profile",
       title: isBn ? "জীবনী" : "Biography",
-      description: isBn ? "পটভূমি, কাজের প্রেক্ষাপট, এবং বর্তমান প্রযুক্তিগত দিকনির্দেশ।" : "Background, delivery context, and current technical direction.",
+      description: isBn ? "পটভূমি, কাজের প্রেক্ষাপট, এবং বর্তমান প্রযুক্তিগত দিকনির্দেশ।" : "Background, execution context, and how academic training maps to production delivery.",
     },
     roles: {
       eyebrow: isBn ? "বর্তমান প্রেক্ষাপট" : "Current Context",
       title: isBn ? "বর্তমান ভূমিকা" : "Current Roles",
-      description: isBn ? "ইন্ডাস্ট্রি ডেলিভারি এবং প্রোডাক্ট ইঞ্জিনিয়ারিংয়ের দায়িত্ব কীভাবে ভাগ করা আছে।" : "How my responsibilities are split across industry delivery and product engineering work.",
+      description: isBn ? "ইন্ডাস্ট্রি ডেলিভারি এবং প্রোডাক্ট ইঞ্জিনিয়ারিংয়ের দায়িত্ব কীভাবে ভাগ করা আছে।" : "How responsibilities are split across data delivery, platform engineering, and applied AI implementation.",
     },
     strengths: {
       eyebrow: isBn ? "প্রযুক্তিগত শক্তি" : "Technical Strengths",
-      title: isBn ? "কার্যসম্পাদন সক্ষমতার ক্ষেত্র" : "Execution capability areas",
+      title: isBn ? "কার্যসম্পাদন সক্ষমতার ক্ষেত্র" : "Execution capability stack",
       description: isBn ? "প্রতিদিনের প্রযুক্তিগত কাজ ও ডেলিভারিতে যেসব সক্ষমতার ওপর আমি নির্ভর করি।" : "Capability areas I rely on for day-to-day technical execution and delivery.",
     },
     philosophy: {
       eyebrow: isBn ? "কাজের দর্শন" : "Working Philosophy",
-      title: isBn ? "আমার কাজের কার্যকর নীতিমালা" : "Execution principles behind my work",
+      title: isBn ? "আমার কাজের কার্যকর নীতিমালা" : "Principles used to keep systems production-safe",
       description: isBn ? "সিস্টেমকে ব্যবহারযোগ্য, নির্ভরযোগ্য, এবং পরিমাপযোগ্য রাখতে আমি যে মানদণ্ড অনুসরণ করি।" : "The standards I use to keep systems practical, reliable, and measurable.",
     },
     focus: {
       eyebrow: isBn ? "\u09aa\u09c7\u09b6\u09be\u0997\u09a4 \u09ab\u09cb\u0995\u09be\u09b8" : "Professional Focus",
-      title: isBn ? "দুটি সক্রিয় ফোকাস ট্র্যাক" : "Two active focus tracks",
+      title: isBn ? "দুটি সক্রিয় ফোকাস ট্র্যাক" : "Primary and secondary focus tracks",
       description: isBn ? "Enact Business Solutions ও AZM Labs-এ আমার ফোকাস ক্ষেত্রের স্পষ্ট বিভাজন।" : "Clear separation of my focus areas at Enact Business Solutions and AZM Labs.",
     },
     academic: {
       label: isBn ? "একাডেমিক পটভূমি" : "Academic Background",
-      title: "B.Sc. in Electrical and Electronic Engineering, Islamic University of Technology",
+      title: isBn
+        ? "ইসলামিক ইউনিভার্সিটি অব টেকনোলজি থেকে ইলেকট্রিক্যাল অ্যান্ড ইলেকট্রনিক ইঞ্জিনিয়ারিংয়ে স্নাতক"
+        : "B.Sc. in Electrical and Electronic Engineering, Islamic University of Technology",
       detail: isBn
         ? "কন্ট্রোল সিস্টেম ও সিগন্যাল প্রসেসিং ভিত্তির ওপর নির্মিত; এখন প্রোডাকশন ডেটা ইঞ্জিনিয়ারিং ও অ্যাপ্লাইড এআই ডেলিভারিতে মনোযোগী।"
-        : "Built on control systems and signal processing fundamentals, now focused on production data engineering and applied AI execution.",
+        : "Built on control systems and signal processing fundamentals, now applied to production data engineering, secure platform delivery, and applied AI execution.",
       cv: isBn ? "সিভি দেখুন" : "View CV",
       labelItems: [isBn ? "ডেটা ইঞ্জিনিয়ারিং" : "Data Engineering", isBn ? "অ্যাপ্লাইড এমএল" : "Applied ML", isBn ? "সিস্টেমস বিল্ড" : "Systems Build"],
     },
     achievements: isBn ? "টি অর্জন তালিকাভুক্ত আছে।" : "achievements recorded.",
-  };
+  });
 
   const companyLogos: Record<string, string> = {
     "Enact Business Solutions": "/images/logos/enact-business-solutions-logo.jpg",
@@ -258,3 +261,5 @@ export default async function AboutPage() {
     </div>
   );
 }
+
+

@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from "next";
-import Link from "next/link";
 import { getServerSession } from "@/lib/auth-session";
 import { getAllBlogPosts, getPublicBlogPosts } from "@/lib/blog-service";
 import { BlogPostCard } from "@/components/blog-post-card";
@@ -7,15 +6,14 @@ import { CtaLink } from "@/components/cta-link";
 import { SeoJsonLd } from "@/components/seo-jsonld";
 import { UiIcon } from "@/components/ui-icon";
 import { getSiteLang } from "@/lib/lang";
-import { repairMojibakeText } from "@/lib/mojibake";
 import { buildAbsoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog | Md Mahfuzul Islam",
-  description: "Technical notes on healthcare data engineering, applied AI, and production-oriented software systems.",
+  description: "Technical notes on data engineering, applied AI, secure platforms, and production-oriented software systems.",
   openGraph: {
     title: "Blog | Md Mahfuzul Islam",
-    description: "Technical notes on healthcare data engineering, applied AI, and production-oriented software systems.",
+    description: "Technical notes on data engineering, applied AI, secure platforms, and production-oriented software systems.",
     url: buildAbsoluteUrl("/blog"),
     type: "website",
   },
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Blog | Md Mahfuzul Islam",
-    description: "Technical notes on healthcare data engineering, applied AI, and production-oriented software systems.",
+    description: "Technical notes on data engineering, applied AI, secure platforms, and production-oriented software systems.",
   },
 };
 
@@ -41,47 +39,95 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const visiblePosts = posts.filter((post) => post.lang === lang);
   const publishedCount = visiblePosts.filter((post) => post.status === "published").length;
 
+  const t = {
+    hero: {
+      kicker: lang === "bn" ? "টেকনিক্যাল নোটস" : "Technical Notes",
+      preview: lang === "bn" ? "প্রিভিউ মোড" : "Preview Mode",
+      title: lang === "bn" ? "বাস্তব প্রজেক্ট থেকে ইঞ্জিনিয়ারিং নোটস" : "Engineering Notes from Real Projects",
+      description:
+        lang === "bn"
+          ? "ডেটা ইঞ্জিনিয়ারিং, অ্যাপ্লাইড এআই এবং সফটওয়্যার ডেলিভারির বাস্তব কাজ থেকে নেওয়া নোট।"
+          : "Field notes from real implementation work in data engineering, applied AI, and software delivery.",
+      topics:
+        lang === "bn"
+          ? ["ডেটা ইঞ্জিনিয়ারিং", "অ্যাপ্লাইড এআই", "ব্যাকএন্ড ও প্ল্যাটফর্ম"]
+          : ["Data Engineering", "Applied AI", "Backend & Platform"],
+    },
+    stats: {
+      visible: lang === "bn" ? "দৃশ্যমান পোস্ট" : "Visible Posts",
+      published: lang === "bn" ? "প্রকাশিত" : "Published",
+      language: lang === "bn" ? "ভাষা" : "Language",
+    },
+    previewActive: lang === "bn" ? "প্রিভিউ মোড চালু আছে। ড্রাফট এবং শিডিউলড পোস্ট দেখানো হচ্ছে।" : "Preview mode is active. Draft and scheduled posts are included.",
+    ctaPrimary: lang === "bn" ? "যোগাযোগ করুন" : "Start a Conversation",
+    ctaSecondary: lang === "bn" ? "প্রজেক্ট দেখুন" : "View Projects",
+    emptyTitle: lang === "bn" ? "প্রকাশনা স্পেস প্রস্তুত" : "Publication space is ready",
+    emptyText:
+      lang === "bn"
+        ? "ডেটা ইঞ্জিনিয়ারিং, অ্যাপ্লাইড এআই এবং প্ল্যাটফর্ম ডেলিভারি নিয়ে যাচাইকৃত টেকনিক্যাল নোট শীঘ্রই প্রকাশ করা হবে।"
+        : "Curated technical writing on data systems, applied AI workflows, and secure platform delivery is being prepared.",
+    emptySubtext:
+      lang === "bn"
+        ? "প্রথম প্রকাশনার আগে প্রজেক্ট কেস স্টাডি দেখতে পারেন।"
+        : "Until the first post is published, project case studies remain available.",
+    upcomingTopics:
+      lang === "bn"
+        ? ["হেলথকেয়ার ডেটা কোয়ালিটি চেকপয়েন্ট", "RAG মূল্যায়ন ডিজাইন", "নিরাপদ CMS পাবলিশিং ওয়ার্কফ্লো"]
+        : ["Healthcare Data Quality Checkpoints", "RAG Evaluation Design", "Secure CMS Publishing Workflow"],
+    browseProjects: lang === "bn" ? "প্রজেক্ট ব্রাউজ করুন" : "Browse Projects",
+  };
+
   return (
     <div className="page-stack">
       <section className="hero-panel">
         <div className="section-block p-[clamp(1rem,0.8rem+0.8vw,1.4rem)] md:p-[clamp(1.2rem,0.95rem+0.9vw,1.65rem)]">
           <div className="flex flex-wrap gap-2">
-            <p className="chip chip--accent text-xs font-semibold uppercase tracking-[0.16em]">Technical Notes</p>
-            {wantsPreview ? <span className="chip">Preview Mode</span> : null}
+            <p className="chip chip--accent text-xs font-semibold uppercase tracking-[0.16em]">{t.hero.kicker}</p>
+            {wantsPreview && session ? <span className="chip">{t.hero.preview}</span> : null}
           </div>
 
-          <h1 className="section-title clamp-heading max-w-[16ch] font-semibold">Engineering Notes from Real Projects</h1>
-          <p className="measure max-w-3xl text-base text-muted md:text-lg">
-            Field notes from real implementation work in data engineering, applied AI, and software delivery.
-          </p>
+          <h1 className="section-title clamp-heading max-w-[18ch] font-medium">{t.hero.title}</h1>
+          <p className="measure max-w-3xl text-base text-muted md:text-lg">{t.hero.description}</p>
+
+          <div className="flex flex-wrap gap-2">
+            {t.hero.topics.map((topic) => (
+              <span key={topic} className="chip">
+                <UiIcon name="spark" className="text-[13px]" />
+                {topic}
+              </span>
+            ))}
+          </div>
 
           <div className="grid gap-3 sm:grid-cols-3">
             <article className="card p-3.5">
-              <p className="meta-label">Visible Posts</p>
+              <p className="meta-label flex items-center gap-1.5">
+                <UiIcon name="book" className="text-[14px]" />
+                {t.stats.visible}
+              </p>
               <p className="mt-1 text-xl font-semibold">{visiblePosts.length}</p>
             </article>
             <article className="card p-3.5">
-              <p className="meta-label">Published</p>
+              <p className="meta-label flex items-center gap-1.5">
+                <UiIcon name="document" className="text-[14px]" />
+                {t.stats.published}
+              </p>
               <p className="mt-1 text-xl font-semibold">{publishedCount}</p>
             </article>
             <article className="card p-3.5">
-              <p className="meta-label">Language</p>
-              <p className="mt-1 text-xl font-semibold">{lang.toUpperCase()}</p>
+              <p className="meta-label flex items-center gap-1.5">
+                <UiIcon name="language" className="text-[14px]" />
+                {t.stats.language}
+              </p>
+              <p className="mt-1 text-xl font-semibold">{lang === "bn" ? "বাংলা" : "English"}</p>
             </article>
           </div>
 
-          {wantsPreview ? (
-            <p className="text-xs text-muted">Preview mode is active. Draft and scheduled posts are included.</p>
-          ) : (
-            <p className="text-xs text-muted">
-              Need drafts? Add <code className="rounded bg-surface px-2 py-0.5">&amp;preview=1</code> after admin login.
-            </p>
-          )}
+          {wantsPreview && session ? <p className="text-xs text-muted">{t.previewActive}</p> : null}
 
           <div className="section-actions">
-            <CtaLink href="/contact">{lang === "bn" ? repairMojibakeText("à¦¯à§‹à¦—à¦¾à¦¯à§‹à¦— à¦•à¦°à§à¦¨") : "Start a Conversation"}</CtaLink>
+            <CtaLink href="/contact">{t.ctaPrimary}</CtaLink>
             <CtaLink href="/projects" secondary>
-              {lang === "bn" ? repairMojibakeText("à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨") : "View Projects"}
+              {t.ctaSecondary}
             </CtaLink>
           </div>
         </div>
@@ -94,21 +140,21 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-accent/35 bg-accent-soft text-accent">
                 <UiIcon name="book" className="text-[18px]" />
               </div>
-              <h2 className="section-title mt-4 text-2xl font-semibold tracking-tight">
-                {lang === "bn" ? repairMojibakeText("à¦•à§‹à¦¨à§‹ à¦ªà§à¦°à¦•à¦¾à¦¶à¦¿à¦¤ à¦ªà§‹à¦¸à§à¦Ÿ à¦¨à§‡à¦‡") : "No published posts yet"}
-              </h2>
-              <p className="mt-2 text-sm text-muted">
-                {lang === "bn"
-                  ? repairMojibakeText("à¦ªà§à¦°à¦¥à¦® à¦ªà§‹à¦¸à§à¦Ÿ à¦ªà§à¦°à¦•à¦¾à¦¶à§‡à¦° à¦ªà¦° à¦à¦–à¦¾à¦¨à§‡ à¦¤à¦¾à¦²à¦¿à¦•à¦¾ à¦¦à§‡à¦–à¦¾ à¦¯à¦¾à¦¬à§‡à¥¤")
-                  : "Published articles will appear here once the first post goes live."}
-              </p>
+              <h2 className="section-title mt-4 text-2xl font-semibold tracking-tight">{t.emptyTitle}</h2>
+              <p className="mt-2 text-sm text-muted">{t.emptyText}</p>
+              <p className="mt-1 text-sm text-muted">{t.emptySubtext}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {t.upcomingTopics.map((topic) => (
+                  <span key={topic} className="chip chip--accent">
+                    <UiIcon name="spark" className="text-[12px]" />
+                    {topic}
+                  </span>
+                ))}
+              </div>
               <div className="section-actions mt-4">
                 <CtaLink href="/projects" secondary>
-                  {lang === "bn" ? repairMojibakeText("à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨") : "Browse Projects"}
+                  {t.browseProjects}
                 </CtaLink>
-                <Link href="/admin/blog" className="chip hover:border-accent/45 hover:text-foreground">
-                  {lang === "bn" ? repairMojibakeText("à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨ à¦¬à§à¦²à¦— à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¾à¦°") : "Open Admin Blog Manager"}
-                </Link>
               </div>
             </article>
           ) : null}
@@ -122,9 +168,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               publishedAt={post.publishedAt}
               tags={post.tags}
               status={post.status}
+              lang={lang}
               accent={
                 <span className="inline-flex items-center gap-2 rounded-full border border-border bg-accent-soft px-2.5 py-1 text-xs text-accent">
-                  {post.lang.toUpperCase()}
+                  {post.lang === "bn" ? "বাংলা" : "EN"}
                 </span>
               }
             />
@@ -138,10 +185,9 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           "@type": "Blog",
           name: "Md Mahfuzul Islam Blog",
           url: buildAbsoluteUrl("/blog"),
-          description: "Notes on healthcare data engineering, applied AI, and delivery-focused systems work.",
+          description: "Notes on data engineering, applied AI, and delivery-focused systems work.",
         }}
       />
     </div>
   );
 }
-

@@ -11,6 +11,7 @@ import type {
   PortfolioContent,
   Project,
   ProjectCategory,
+  ProjectFigureType,
   SkillGroup,
   TrainingItem,
   WorkstreamVisual,
@@ -48,12 +49,25 @@ const sectionConfig: Array<{ key: EditorSection; label: string; description: str
 const inputClass = "mt-1 w-full rounded-xl border border-border bg-surface px-3 py-2.5 text-sm outline-none transition focus:border-accent/60";
 const panelClass = "rounded-2xl border border-border bg-surface/70 p-4";
 const projectCategories: ProjectCategory[] = [
-  "AI / Intelligent Systems",
   "Data Engineering",
-  "Machine Learning & Analytics",
-  "Engineering Simulation",
+  "Applied AI Systems",
+  "Clinical ML / Predictive Analytics",
+  "Simulation / Energy Systems",
+  "Control Systems / Simulation",
+  "Platform Engineering / CMS Systems",
   "Signal / Image Processing",
   "Embedded / Systems Work",
+];
+
+const projectFigureTypes: ProjectFigureType[] = [
+  "healthcare-data-flow",
+  "rag-retrieval-workflow",
+  "cms-publishing-workflow",
+  "simulation-tradeoff-chart",
+  "control-response-curve",
+  "clinical-ml-pipeline",
+  "signal-processing-pipeline",
+  "embedded-system-diagram",
 ];
 
 function cloneContent(value: PortfolioContent): PortfolioContent {
@@ -86,9 +100,19 @@ function sanitizeProject(project: Project): Project {
   return {
     ...project,
     title: project.title.trim(),
+    slug: sanitizeOptional(project.slug),
     summary: project.summary.trim(),
+    shortSummary: sanitizeOptional(project.shortSummary),
     detail: sanitizeOptional(project.detail),
+    challenge: sanitizeOptional(project.challenge),
+    solution: sanitizeOptional(project.solution),
+    outcomes: sanitizeList(project.outcomes),
+    provenCapability: sanitizeOptional(project.provenCapability),
     imagePath: sanitizeOptional(project.imagePath),
+    figureImage: sanitizeOptional(project.figureImage),
+    metrics: sanitizeList(project.metrics),
+    proofAssets: sanitizeList(project.proofAssets),
+    links: sanitizeList(project.links),
     stack: project.stack.map((item) => item.trim()).filter(Boolean),
     tags: project.tags.map((item) => item.trim()).filter(Boolean),
     impact: sanitizeOptional(project.impact),
@@ -115,15 +139,28 @@ function createEmptyLocalizedCard(): LocalizedCard {
 function createEmptyProject(): Project {
   return {
     title: "",
+    slug: "",
     summary: "",
+    shortSummary: "",
     detail: "",
+    challenge: "",
+    solution: "",
+    outcomes: [],
+    provenCapability: "",
     imagePath: "",
+    figureType: "healthcare-data-flow",
+    figureImage: "",
+    metrics: [],
+    proofAssets: [],
+    links: [],
     stack: [],
     category: "Data Engineering",
     tags: [],
     impact: "",
     contributions: [],
     featured: false,
+    publishState: "published",
+    visibility: "public",
     repoUrl: "",
     privateRepo: false,
   };
@@ -299,26 +336,63 @@ function ProjectListEditor({ title, description, projects, onChange }: ProjectLi
       <div className="space-y-3">
         {projects.map((project, idx) => (
           <article key={`${title}-${idx}`} className="rounded-xl border border-border bg-surface/55 p-3">
-            <div className="grid gap-3 md:grid-cols-2">
+            <div className="grid gap-3 md:grid-cols-3">
               <label className="text-sm">Title<input value={project.title} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, title: event.target.value })))} className={inputClass} /></label>
+              <label className="text-sm">Slug<input value={project.slug ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, slug: event.target.value || undefined })))} className={inputClass} /></label>
               <label className="text-sm">Category
                 <select value={project.category} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, category: event.target.value as ProjectCategory })))} className={inputClass}>
                   {projectCategories.map((category) => <option key={category} value={category}>{category}</option>)}
                 </select>
               </label>
             </div>
-            <label className="mt-3 block text-sm">Summary<textarea rows={3} value={project.summary} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, summary: event.target.value })))} className={inputClass} /></label>
             <div className="mt-3 grid gap-3 md:grid-cols-2">
-              <label className="text-sm">Detail<textarea rows={4} value={project.detail ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, detail: event.target.value || undefined })))} className={inputClass} /></label>
+              <label className="text-sm">Summary<textarea rows={3} value={project.summary} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, summary: event.target.value })))} className={inputClass} /></label>
+              <label className="text-sm">Short Summary<textarea rows={3} value={project.shortSummary ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, shortSummary: event.target.value || undefined })))} className={inputClass} /></label>
+            </div>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              <label className="text-sm">Challenge / Problem<textarea rows={4} value={project.challenge ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, challenge: event.target.value || undefined })))} className={inputClass} /></label>
+              <label className="text-sm">Solution / What Was Built<textarea rows={4} value={project.solution ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, solution: event.target.value || undefined })))} className={inputClass} /></label>
+            </div>
+            <label className="mt-3 block text-sm">Detail (Legacy / Extended Narrative)<textarea rows={4} value={project.detail ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, detail: event.target.value || undefined })))} className={inputClass} /></label>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
               <div className="grid gap-3">
                 <label className="text-sm">Image Path<input value={project.imagePath ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, imagePath: event.target.value || undefined })))} className={inputClass} /></label>
+                <label className="text-sm">Figure Image (filename or /path)<input value={project.figureImage ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, figureImage: event.target.value || undefined })))} className={inputClass} /></label>
+                <label className="text-sm">Figure Type
+                  <select value={project.figureType ?? "healthcare-data-flow"} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, figureType: event.target.value as ProjectFigureType })))} className={inputClass}>
+                    {projectFigureTypes.map((figureType) => <option key={figureType} value={figureType}>{figureType}</option>)}
+                  </select>
+                </label>
                 <label className="text-sm">Impact<textarea rows={2} value={project.impact ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, impact: event.target.value || undefined })))} className={inputClass} /></label>
+              </div>
+              <div className="grid gap-3">
+                <label className="text-sm">Capability Proven<textarea rows={2} value={project.provenCapability ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, provenCapability: event.target.value || undefined })))} className={inputClass} /></label>
                 <label className="text-sm">Repo URL<input value={project.repoUrl ?? ""} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, repoUrl: event.target.value || undefined })))} className={inputClass} /></label>
+                <label className="text-sm">Publish State
+                  <select value={project.publishState ?? "published"} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, publishState: event.target.value as Project["publishState"] })))} className={inputClass}>
+                    <option value="published">published</option>
+                    <option value="draft">draft</option>
+                  </select>
+                </label>
+                <label className="text-sm">Visibility
+                  <select value={project.visibility ?? "public"} onChange={(event) => onChange(updateItem(projects, idx, (item) => ({ ...item, visibility: event.target.value as Project["visibility"] })))} className={inputClass}>
+                    <option value="public">public</option>
+                    <option value="private">private</option>
+                  </select>
+                </label>
               </div>
             </div>
             <div className="mt-3 grid gap-3 md:grid-cols-2">
               <StringListEditor label="Stack" values={project.stack} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, stack: next })))} addLabel="Add Stack" placeholder="e.g. Next.js" />
               <StringListEditor label="Tags" values={project.tags} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, tags: next })))} addLabel="Add Tag" placeholder="e.g. Data Quality" />
+            </div>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              <StringListEditor label="Outcomes" values={project.outcomes ?? []} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, outcomes: next.length ? next : undefined })))} addLabel="Add Outcome" placeholder="Outcome line" />
+              <StringListEditor label="Metrics" values={project.metrics ?? []} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, metrics: next.length ? next : undefined })))} addLabel="Add Metric" placeholder="e.g. 70k+ patient rows processed" />
+            </div>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              <StringListEditor label="Proof Assets" values={project.proofAssets ?? []} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, proofAssets: next.length ? next : undefined })))} addLabel="Add Proof Asset" placeholder="e.g. Validation report snapshot" />
+              <StringListEditor label="Links" values={project.links ?? []} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, links: next.length ? next : undefined })))} addLabel="Add Link" placeholder="https://..." />
             </div>
             <div className="mt-3">
               <StringListEditor label="Contributions" values={project.contributions ?? []} onChange={(next) => onChange(updateItem(projects, idx, (item) => ({ ...item, contributions: next.length ? next : undefined })))} addLabel="Add Contribution" placeholder="Contribution line" />

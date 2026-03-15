@@ -1,5 +1,5 @@
-﻿import type { Metadata } from "next";
-import { Hind_Siliguri, Manrope, Source_Serif_4 } from "next/font/google";
+import type { Metadata } from "next";
+import { Lora, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { normalizeBnUiText } from "@/lib/bn-localize";
@@ -9,20 +9,25 @@ import { getSiteUrl } from "@/lib/seo";
 import { SeoJsonLd } from "@/components/seo-jsonld";
 import "./globals.css";
 
-const manrope = Manrope({
+const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const sourceSerif = Source_Serif_4({
+const lora = Lora({
   variable: "--font-serif",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
 });
 
-const hindSiliguri = Hind_Siliguri({
+const notoSerifBengali = Noto_Serif_Bengali({
   variable: "--font-bn",
   subsets: ["bengali"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 const siteUrl = getSiteUrl();
@@ -34,11 +39,11 @@ export const metadata: Metadata = {
     default: "Md Mahfuzul Islam | Data Engineer and Applied AI Systems Builder",
   },
   description:
-    "Personal portfolio of Md Mahfuzul Islam featuring healthcare data engineering, applied AI systems, and simulation-led engineering delivery.",
+    "Personal portfolio of Md Mahfuzul Islam featuring data engineering, applied AI systems, secure platform delivery, and simulation-led technical work.",
   openGraph: {
     title: "Md Mahfuzul Islam | Data Engineer and Applied AI Systems Builder",
     description:
-      "Personal portfolio of Md Mahfuzul Islam featuring healthcare data engineering, applied AI systems, and simulation-led engineering delivery.",
+      "Personal portfolio of Md Mahfuzul Islam featuring data engineering, applied AI systems, secure platform delivery, and simulation-led technical work.",
     type: "website",
     siteName: "Md Mahfuzul Islam",
     images: [
@@ -53,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Md Mahfuzul Islam | Data Engineer and Applied AI Systems Builder",
     description:
-      "Personal portfolio of Md Mahfuzul Islam featuring healthcare data engineering, applied AI systems, and simulation-led engineering delivery.",
+      "Personal portfolio of Md Mahfuzul Islam featuring data engineering, applied AI systems, secure platform delivery, and simulation-led technical work.",
   },
 };
 
@@ -86,7 +91,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className={`${manrope.variable} ${sourceSerif.variable} ${hindSiliguri.variable} antialiased`}>
+      <body className={`${plusJakartaSans.variable} ${lora.variable} ${notoSerifBengali.variable} antialiased`}>
         <div className="site-shell">
           <a
             href="#main-content"
@@ -117,4 +122,5 @@ export default async function RootLayout({
     </html>
   );
 }
+
 

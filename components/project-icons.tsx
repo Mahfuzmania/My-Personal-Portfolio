@@ -1,13 +1,18 @@
 ﻿import type { UiIconName } from "@/components/ui-icon";
 import type { ProjectCategory } from "@/lib/site-data";
 
-const categoryIcons: Record<ProjectCategory, UiIconName> = {
-  "AI / Intelligent Systems": "ai",
+const categoryIcons: Partial<Record<ProjectCategory, UiIconName>> = {
   "Data Engineering": "data",
-  "Machine Learning & Analytics": "analytics",
-  "Engineering Simulation": "simulation",
+  "Applied AI Systems": "ai",
+  "Clinical ML / Predictive Analytics": "analytics",
+  "Simulation / Energy Systems": "simulation",
+  "Control Systems / Simulation": "simulation",
+  "Platform Engineering / CMS Systems": "settings",
   "Signal / Image Processing": "signal",
   "Embedded / Systems Work": "embedded",
+  "AI / Intelligent Systems": "ai",
+  "Machine Learning & Analytics": "analytics",
+  "Engineering Simulation": "simulation",
 };
 
 export function getProjectCategoryIcon(category: ProjectCategory): UiIconName {

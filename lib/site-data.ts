@@ -1,24 +1,55 @@
 ﻿import { repairMojibakeDeep } from "@/lib/mojibake";
 
 export type ProjectCategory =
-  | "AI / Intelligent Systems"
   | "Data Engineering"
-  | "Machine Learning & Analytics"
-  | "Engineering Simulation"
+  | "Applied AI Systems"
+  | "Clinical ML / Predictive Analytics"
+  | "Simulation / Energy Systems"
+  | "Control Systems / Simulation"
+  | "Platform Engineering / CMS Systems"
   | "Signal / Image Processing"
-  | "Embedded / Systems Work";
+  | "Embedded / Systems Work"
+  | "AI / Intelligent Systems"
+  | "Machine Learning & Analytics"
+  | "Engineering Simulation";
+
+export type ProjectFigureType =
+  | "healthcare-data-flow"
+  | "rag-retrieval-workflow"
+  | "cms-publishing-workflow"
+  | "simulation-tradeoff-chart"
+  | "control-response-curve"
+  | "clinical-ml-pipeline"
+  | "signal-processing-pipeline"
+  | "embedded-system-diagram";
+
+export type ProjectPublishState = "draft" | "published";
+export type ProjectVisibility = "public" | "private";
 
 export type Project = {
   title: string;
+  slug?: string;
   summary: string;
+  shortSummary?: string;
   detail?: string;
+  challenge?: string;
+  solution?: string;
+  outcomes?: string[];
+  provenCapability?: string;
   imagePath?: string;
+  figureType?: ProjectFigureType;
+  figureImage?: string;
+  metrics?: string[];
+  proofAssets?: string[];
+  links?: string[];
   stack: string[];
   category: ProjectCategory;
   tags: string[];
   impact?: string;
   contributions?: string[];
   featured?: boolean;
+  publishState?: ProjectPublishState;
+  visibility?: ProjectVisibility;
   repoUrl?: string;
   privateRepo?: boolean;
 };

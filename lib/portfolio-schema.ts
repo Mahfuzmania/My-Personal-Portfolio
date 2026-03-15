@@ -1,25 +1,54 @@
 import { z } from "zod";
 
 const projectCategory = z.enum([
-  "AI / Intelligent Systems",
   "Data Engineering",
-  "Machine Learning & Analytics",
-  "Engineering Simulation",
+  "Applied AI Systems",
+  "Clinical ML / Predictive Analytics",
+  "Simulation / Energy Systems",
+  "Control Systems / Simulation",
+  "Platform Engineering / CMS Systems",
   "Signal / Image Processing",
   "Embedded / Systems Work",
+  "AI / Intelligent Systems",
+  "Machine Learning & Analytics",
+  "Engineering Simulation",
+]);
+
+const projectFigureType = z.enum([
+  "healthcare-data-flow",
+  "rag-retrieval-workflow",
+  "cms-publishing-workflow",
+  "simulation-tradeoff-chart",
+  "control-response-curve",
+  "clinical-ml-pipeline",
+  "signal-processing-pipeline",
+  "embedded-system-diagram",
 ]);
 
 export const projectSchema = z.object({
   title: z.string().min(1),
+  slug: z.string().min(1).optional(),
   summary: z.string().min(1),
+  shortSummary: z.string().min(1).optional(),
   detail: z.string().optional(),
+  challenge: z.string().optional(),
+  solution: z.string().optional(),
+  outcomes: z.array(z.string().min(1)).optional(),
+  provenCapability: z.string().optional(),
   imagePath: z.string().min(1).optional(),
+  figureType: projectFigureType.optional(),
+  figureImage: z.string().min(1).optional(),
+  metrics: z.array(z.string().min(1)).optional(),
+  proofAssets: z.array(z.string().min(1)).optional(),
+  links: z.array(z.string().min(1)).optional(),
   stack: z.array(z.string().min(1)),
   category: projectCategory,
   tags: z.array(z.string().min(1)),
   impact: z.string().optional(),
   contributions: z.array(z.string().min(1)).optional(),
   featured: z.boolean().optional(),
+  publishState: z.enum(["draft", "published"]).optional(),
+  visibility: z.enum(["public", "private"]).optional(),
   repoUrl: z.string().url().optional(),
   privateRepo: z.boolean().optional(),
 });

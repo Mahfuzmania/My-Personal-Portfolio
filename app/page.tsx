@@ -20,78 +20,78 @@ import { VisualList } from "@/components/visual-list";
 import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
-import { repairMojibakeDeep, repairMojibakeText } from "@/lib/mojibake";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const { experience, featuredProjects, highlights, profile, technicalFocus, uiContent } = await getPortfolioContent();
   const lang = await getSiteLang();
-  const displayName = lang === "bn" ? repairMojibakeText("à¦®à§‹à¦ƒ à¦®à¦¾à¦¹à¦«à§à¦œà§à¦² à¦‡à¦¸à¦²à¦¾à¦®") : "Md Mahfuzul Islam";
+  const visibleFeaturedProjects = featuredProjects.filter((project) => project.publishState !== "draft" && project.visibility !== "private");
+  const displayName = lang === "bn" ? "মোঃ মাহফুজুল ইসলাম" : "Md Mahfuzul Islam";
 
-  const t = repairMojibakeDeep({
-    viewProjects: lang === "bn" ? "à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿà¦¸ à¦¦à§‡à¦–à§à¦¨" : "View Projects",
-    downloadResume: lang === "bn" ? "à¦°à§‡à¦œà¦¿à¦‰à¦®à§‡ à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡" : "Download Resume",
+  const t = {
+    viewProjects: lang === "bn" ? "প্রজেক্টস দেখুন" : "View Projects",
+    downloadResume: lang === "bn" ? "রেজিউমে ডাউনলোড" : "Download Resume",
     profile: {
-      eyebrow: lang === "bn" ? "à¦ªà§à¦°à§‹à¦«à¦¾à¦‡à¦²" : "Profile",
-      title: lang === "bn" ? "à¦ªà§‡à¦¶à¦¾à¦—à¦¤ à¦ªà¦°à¦¿à¦šà¦¿à¦¤à¦¿" : "Current professional scope",
+      eyebrow: lang === "bn" ? "প্রোফাইল" : "Profile",
+      title: lang === "bn" ? "পেশাগত পরিচিতি" : "What I build and operate",
       description:
         lang === "bn"
-          ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦­à§‚à¦®à¦¿à¦•à¦¾, à¦•à¦¾à¦œà§‡à¦° à¦ªà¦°à¦¿à¦§à¦¿ à¦à¦¬à¦‚ à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦¦à¦¿à¦•à¦¨à¦¿à¦°à§à¦¦à§‡à¦¶à§‡à¦° à¦¸à¦‚à¦•à§à¦·à¦¿à¦ªà§à¦¤ à¦šà¦¿à¦¤à§à¦°à¥¤"
-          : "A focused view of my current execution areas across healthcare data, applied AI delivery, and platform engineering.",
+          ? "বর্তমান ভূমিকা, কাজের পরিধি এবং টেকনিক্যাল দিকনির্দেশের সংক্ষিপ্ত চিত্র।"
+          : "A focused view of current execution across data systems, applied AI, secure CMS operations, and engineering analysis.",
     },
     workstreams: {
-      eyebrow: lang === "bn" ? "à¦“à§Ÿà¦¾à¦°à§à¦•à¦¸à§à¦Ÿà§à¦°à¦¿à¦®à¦¸" : "Workstreams",
-      title: lang === "bn" ? "à¦®à§‚à¦² à¦•à¦¾à¦œà§‡à¦° à¦•à§à¦·à§‡à¦¤à§à¦°" : "Execution domains",
+      eyebrow: lang === "bn" ? "ওয়ার্কস্ট্রিমস" : "Workstreams",
+      title: lang === "bn" ? "মূল কাজের ক্ষেত্র" : "Primary and supporting domains",
       description:
         lang === "bn"
-          ? "à¦šà¦²à¦®à¦¾à¦¨ à¦•à¦¾à¦œà§‡à¦° à¦ªà§à¦°à¦§à¦¾à¦¨ à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦Ÿà§à¦°à§à¦¯à¦¾à¦•à¥¤"
-          : "The technical tracks I am actively delivering.",
+          ? "চলমান কাজের প্রধান টেকনিক্যাল ট্র্যাক।"
+          : "Data engineering and applied AI are primary; platform security and simulation work provide technical depth.",
     },
     featured: {
-      eyebrow: lang === "bn" ? "à¦«à¦¿à¦šà¦¾à¦°à§à¦¡ à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿà¦¸" : "Featured Projects",
-      title: lang === "bn" ? "à¦¨à¦¿à¦°à§à¦¬à¦¾à¦šà¦¿à¦¤ à¦•à¦¾à¦œà§‡à¦° à¦¤à¦¾à¦²à¦¿à¦•à¦¾" : "Featured implementation portfolio",
+      eyebrow: lang === "bn" ? "ফিচার্ড প্রজেক্টস" : "Featured Projects",
+      title: lang === "bn" ? "নির্বাচিত কাজের তালিকা" : "Execution proof across domains",
       description:
         lang === "bn"
-          ? "à¦¡à§‡à¦Ÿà¦¾, à¦à¦†à¦‡ à¦à¦¬à¦‚ à¦¸à¦¿à¦®à§à¦²à§‡à¦¶à¦¨-à¦­à¦¿à¦¤à§à¦¤à¦¿à¦• à¦¨à¦¿à¦°à§à¦¬à¦¾à¦šà¦¿à¦¤ à¦•à¦¾à¦œà¥¤"
-          : "Selected projects where engineering depth, validation, and delivery quality are clearly demonstrated.",
-      viewAll: lang === "bn" ? "à¦¸à¦¬ à¦ªà§à¦°à¦œà§‡à¦•à§à¦Ÿ à¦¦à§‡à¦–à§à¦¨" : "View All Projects",
+          ? "ডেটা, এআই এবং সিমুলেশন-ভিত্তিক নির্বাচিত কাজ।"
+          : "Projects are presented with problem, build approach, outcome, and evidence type to show delivery quality without marketing noise.",
+      viewAll: lang === "bn" ? "সব প্রজেক্ট দেখুন" : "View All Projects",
     },
     focus: {
-      eyebrow: lang === "bn" ? "à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦«à§‹à¦•à¦¾à¦¸" : "Technical Focus",
-      title: lang === "bn" ? "à¦ªà§à¦°à¦¯à§à¦•à§à¦¤à¦¿ à¦“ à¦—à¦¬à§‡à¦·à¦£à¦¾ à¦«à§‹à¦•à¦¾à¦¸" : "Technical and research directions",
+      eyebrow: lang === "bn" ? "ক্ষমতা ম্যাপ" : "Capability Map",
+      title: lang === "bn" ? "প্রযুক্তি ও গবেষণা ফোকাস" : "Technical capability map",
       description:
         lang === "bn"
-          ? "à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦¨à¦«à§à¦°à¦¾, à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦®à¦à¦² à¦à¦¬à¦‚ à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦® à¦¬à¦¿à¦²à§à¦¡à¥¤"
-          : "Where I am currently investing technical depth across data systems, applied ML, and platform execution.",
-      explore: lang === "bn" ? "à¦°à¦¿à¦¸à¦¾à¦°à§à¦š à¦•à¦¾à¦œ à¦¦à§‡à¦–à§à¦¨" : "Explore Research Work",
+          ? "ডেটা ইনফ্রা, অ্যাপ্লাইড এমএল এবং সিস্টেম নির্মাণ।"
+          : "How data engineering, applied AI systems, platform security, and research simulation connect in production work.",
+      explore: lang === "bn" ? "রিসার্চ কাজ দেখুন" : "Explore Research Work",
     },
     positions: {
-      eyebrow: lang === "bn" ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦…à¦¬à¦¸à§à¦¥à¦¾à¦¨" : "Current Positions",
-      title: lang === "bn" ? "à¦¸à¦•à§à¦°à¦¿à§Ÿ à¦­à§‚à¦®à¦¿à¦•à¦¾" : "Active roles and responsibilities",
+      eyebrow: lang === "bn" ? "বর্তমান অবস্থান" : "Current Positions",
+      title: lang === "bn" ? "সক্রিয় ভূমিকা" : "Active roles and responsibilities",
       description:
         lang === "bn"
-          ? "à¦‡à¦¨à§à¦¡à¦¾à¦¸à§à¦Ÿà§à¦°à¦¿ à¦“ à¦ªà§à¦°à§‹à¦¡à¦¾à¦•à§à¦Ÿ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à§Ÿà¦¾à¦°à¦¿à¦‚à§Ÿà§‡ à¦šà¦²à¦®à¦¾à¦¨ à¦¦à¦¾à§Ÿà¦¿à¦¤à§à¦¬à¦¸à¦®à§‚à¦¹à¥¤"
-          : "Current responsibilities across industry delivery, product engineering, and applied AI/data systems.",
-      full: lang === "bn" ? "à¦ªà§‚à¦°à§à¦£ à¦…à¦­à¦¿à¦œà§à¦žà¦¤à¦¾ à¦¦à§‡à¦–à§à¦¨" : "View Full Experience",
+          ? "ইন্ডাস্ট্রি ও প্রোডাক্ট ইঞ্জিনিয়ারিংয়ে চলমান দায়িত্বসমূহ।"
+          : "Current responsibilities across data delivery, applied AI implementation, and secure product platform execution.",
+      full: lang === "bn" ? "পূর্ণ অভিজ্ঞতা দেখুন" : "View Full Experience",
     },
     highlights: {
-      eyebrow: lang === "bn" ? "à¦¹à¦¾à¦‡à¦²à¦¾à¦‡à¦Ÿà¦¸" : "Highlights",
-      title: lang === "bn" ? "à¦¨à¦¿à¦°à§à¦¬à¦¾à¦šà¦¿à¦¤ à¦…à¦°à§à¦œà¦¨" : "Selected outcomes and impact",
-      collaborate: lang === "bn" ? "à¦¸à¦¹à¦¯à§‹à¦—à¦¿à¦¤à¦¾ à¦•à¦°à§à¦¨" : "Let's Collaborate",
-      about: lang === "bn" ? "à¦†à¦®à¦¾à¦° à¦¸à¦®à§à¦ªà¦°à§à¦•à§‡" : "Read About Me",
+      eyebrow: lang === "bn" ? "হাইলাইটস" : "Highlights",
+      title: lang === "bn" ? "নির্বাচিত অর্জন" : "Selected outcomes",
+      collaborate: lang === "bn" ? "সহযোগিতা করুন" : "Let's Collaborate",
+      about: lang === "bn" ? "আমার সম্পর্কে" : "Read About Me",
     },
     stats: {
-      featured: lang === "bn" ? "à¦«à¦¿à¦šà¦¾à¦°à§à¦¡" : "Featured",
-      focus: lang === "bn" ? "à¦«à§‹à¦•à¦¾à¦¸ à¦à¦°à¦¿à§Ÿà¦¾" : "Focus Areas",
-      roles: lang === "bn" ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦­à§‚à¦®à¦¿à¦•à¦¾" : "Current Roles",
+      featured: lang === "bn" ? "ফিচার্ড" : "Featured",
+      focus: lang === "bn" ? "ফোকাস এরিয়া" : "Focus Areas",
+      roles: lang === "bn" ? "বর্তমান ভূমিকা" : "Current Roles",
     },
-    scopeTitle: lang === "bn" ? "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦•à¦¾à¦œà§‡à¦° à¦ªà¦°à¦¿à¦§à¦¿" : "Current execution scope",
+    scopeTitle: lang === "bn" ? "বর্তমান কাজের পরিধি" : "Execution priorities",
     location: {
-      city: lang === "bn" ? "à¦¢à¦¾à¦•à¦¾, à¦¬à¦¾à¦‚à¦²à¦¾à¦¦à§‡à¦¶" : "Dhaka, Bangladesh",
-      note: lang === "bn" ? "à¦—à§à¦²à§‹à¦¬à¦¾à¦² à¦¸à¦¹à¦¯à§‹à¦—à¦¿à¦¤à¦¾à¦° à¦œà¦¨à§à¦¯ à¦ªà§à¦°à¦¸à§à¦¤à§à¦¤" : "Open to global collaboration",
+      city: lang === "bn" ? "ঢাকা, বাংলাদেশ" : "Dhaka, Bangladesh",
+      note: lang === "bn" ? "গ্লোবাল সহযোগিতার জন্য প্রস্তুত" : "Open to global collaboration",
     },
-  });
+  };
 
   const currentPositions = experience.filter((item) => item.period.toLowerCase().includes("present")).slice(0, 3);
   const heroPhoto = profile.photoPath;
@@ -99,9 +99,9 @@ export default async function HomePage() {
   const tr = (value: string) => normalizeBnUiText(value, lang);
   const heroTitle =
     lang === "bn"
-      ? "স্বাস্থ্যসেবা ডেটা অবকাঠামো, অ্যাপ্লাইড এআই ও ইঞ্জিনিয়ারিং সিস্টেম ডেলিভারির বাস্তবমুখী নির্মাতা"
+      ? "ডেটা ইঞ্জিনিয়ারিং, অ্যাপ্লাইড এআই এবং নিরাপদ প্ল্যাটফর্ম সিস্টেম নির্মাণে বাস্তবমুখী ইঞ্জিনিয়ার"
       : profile.identityLine;
-  const heroIntro = lang === "bn" ? tr(uiContent.home.profileNarrative.bn[0] ?? profile.shortIntro) : profile.shortIntro;
+  const heroIntro = lang === "bn" ? tr(uiContent.home.profileNarrative.bn[0] ?? profile.shortIntro) : tr(profile.shortIntro);
   const roleBadges = currentPositions.map((item) => tr(item.role)).slice(0, 3);
 
   return (
@@ -146,7 +146,7 @@ export default async function HomePage() {
             <div className="home-hero__stats mt-auto">
               <article className="home-hero__stat">
                 <p className="meta-label">{t.stats.featured}</p>
-                <p className="home-hero__stat-value">{featuredProjects.length}</p>
+                <p className="home-hero__stat-value">{visibleFeaturedProjects.length}</p>
               </article>
               <article className="home-hero__stat">
                 <p className="meta-label">{t.stats.focus}</p>
@@ -201,13 +201,17 @@ export default async function HomePage() {
           <Reveal>
             <SectionHeading eyebrow={t.workstreams.eyebrow} title={t.workstreams.title} description={t.workstreams.description} icon={<WorkflowIcon className="h-8 w-8" />} />
           </Reveal>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid gap-4">
             {uiContent.home.workstreams.map((item, idx) => (
               <Reveal key={item.title.en} delay={idx * 0.06}>
-                <article className="card h-full card-pad">
-                  <DomainVisual variant={item.variant} lang={lang} />
-                  <h3 className="mt-5 text-lg font-semibold tracking-tight">{tr(item.title[lang])}</h3>
-                  <p className="mt-2 text-sm text-muted">{tr(item.detail[lang])}</p>
+                <article className="card card-pad">
+                  <div className="grid gap-4 md:grid-cols-[minmax(260px,0.95fr)_minmax(0,1.05fr)] md:items-center">
+                    <DomainVisual variant={item.variant} lang={lang} />
+                    <div>
+                      <h3 className="text-lg font-semibold tracking-tight md:text-xl">{tr(item.title[lang])}</h3>
+                      <p className="mt-2 text-sm text-muted md:text-base">{tr(item.detail[lang])}</p>
+                    </div>
+                  </div>
                 </article>
               </Reveal>
             ))}
@@ -221,7 +225,7 @@ export default async function HomePage() {
             <SectionHeading eyebrow={t.featured.eyebrow} title={t.featured.title} description={t.featured.description} icon={<SystemsIcon className="h-8 w-8" />} />
           </Reveal>
           <div className="grid gap-4 md:grid-cols-2">
-            {featuredProjects.slice(0, 4).map((project, idx) => (
+            {visibleFeaturedProjects.slice(0, 4).map((project, idx) => (
               <Reveal key={project.title} delay={idx * 0.05}>
                 <ProjectCard project={project} compact lang={lang} />
               </Reveal>
@@ -272,7 +276,7 @@ export default async function HomePage() {
           <div className="timeline-rail">
             {currentPositions.map((item, idx) => (
               <Reveal key={`${item.role}-${item.period}`} delay={idx * 0.05}>
-                <ExperienceCard item={item} />
+                <ExperienceCard item={item} lang={lang} />
               </Reveal>
             ))}
           </div>

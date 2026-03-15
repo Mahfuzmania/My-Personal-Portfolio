@@ -6,14 +6,17 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { VisualList } from "@/components/visual-list";
+import { normalizeBnUiText } from "@/lib/bn-localize";
 import { getPortfolioContent } from "@/lib/content-service";
 import { getSiteLang } from "@/lib/lang";
+import { repairMojibakeText } from "@/lib/mojibake";
 
 export const dynamic = "force-dynamic";
 
 export default async function ExperiencePage() {
   const { achievementItems, education, experience, training } = await getPortfolioContent();
   const lang = await getSiteLang();
+  const tr = (value: string) => normalizeBnUiText(repairMojibakeText(value), lang);
   const azmLabsExperience = experience.filter((item) => item.org === "AZM Labs");
   const nonAzmExperience = experience.filter((item) => item.org !== "AZM Labs");
   const careerTimeline = [...nonAzmExperience, ...azmLabsExperience];
@@ -26,7 +29,7 @@ export default async function ExperiencePage() {
       description:
         lang === "bn"
           ? "ডেটা ইঞ্জিনিয়ারিং, টেকনিক্যাল রিসার্চ এবং প্রোডাক্ট ডেলিভারির টাইমলাইন।"
-          : "Timeline across data engineering, technical research, and product delivery execution.",
+          : "Applied responsibility timeline across data delivery, AI research implementation, and secure platform shipping.",
     },
     current: {
       label: lang === "bn" ? "বর্তমান প্রোফাইল" : "Current Profile",
@@ -34,7 +37,7 @@ export default async function ExperiencePage() {
       detail:
         lang === "bn"
           ? "বর্তমানে Enact Business Solutions-এ Data Engineer হিসেবে এবং AZM Labs-এ Co-Founder ও Software Engineer হিসেবে কাজ করছি।"
-          : "I currently work as a Data Engineer at Enact Business Solutions and as Co-Founder/Software Engineer at AZM Labs.",
+          : "Current work is split between enterprise data engineering at Enact and platform/CMS product delivery at AZM Labs.",
     },
     pro: {
       eyebrow: lang === "bn" ? "পেশাগত অভিজ্ঞতা" : "Professional Experience",
@@ -65,7 +68,7 @@ export default async function ExperiencePage() {
 
       <section className="section-shell section-shell--with-heading">
         <Reveal>
-          <SectionHeading eyebrow={t.pro.eyebrow} title={t.pro.title} description={t.current.detail} icon={<SparkIcon className="h-8 w-8" />} />
+          <SectionHeading eyebrow={t.pro.eyebrow} title={t.pro.title} description={tr(t.current.detail)} icon={<SparkIcon className="h-8 w-8" />} />
         </Reveal>
         <div className="grid gap-4 md:grid-cols-2 md:items-start">
           <div className="panel-grid">
@@ -75,11 +78,11 @@ export default async function ExperiencePage() {
               <div className="mt-4 flex flex-wrap gap-2.5">
                 <div className="chip company-chip">
                   <Image src="/images/logos/enact-business-solutions-logo.jpg" alt="Enact Business Solutions logo" width={20} height={20} className="company-chip__logo" />
-                  Enact Business Solutions
+                  {tr("Enact Business Solutions")}
                 </div>
                 <div className="chip company-chip">
                   <Image src="/images/azm-labs-logo.png" alt="AZM Labs logo" width={20} height={20} className="company-chip__logo" />
-                  AZM Labs
+                  {tr("AZM Labs")}
                 </div>
               </div>
               <div className="relative mt-4 aspect-[16/9] overflow-hidden rounded-xl border border-border">
@@ -95,7 +98,7 @@ export default async function ExperiencePage() {
               <div className="timeline-rail mt-4">
                 {careerTimeline.map((item, idx) => (
                   <Reveal key={`${item.role}-${item.period}`} delay={idx * 0.04}>
-                    <ExperienceCard item={item} />
+                    <ExperienceCard item={item} lang={lang} />
                   </Reveal>
                 ))}
               </div>
@@ -119,14 +122,14 @@ export default async function ExperiencePage() {
                       <span className="timeline-dot" aria-hidden />
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <span className="chip chip--accent text-[0.68rem] font-semibold uppercase tracking-[0.14em]">{t.edu.tag}</span>
-                        <span className="meta-label">{item.period}</span>
+                        <span className="meta-label">{tr(item.period)}</span>
                       </div>
-                      <h4 className="mt-3 text-lg font-semibold tracking-tight">{item.degree}</h4>
-                      <p className="mt-1 text-sm text-muted">{item.institution}</p>
+                      <h4 className="mt-3 text-lg font-semibold tracking-tight">{tr(item.degree)}</h4>
+                      <p className="mt-1 text-sm text-muted">{tr(item.institution)}</p>
                       <ul className="mt-3.5 space-y-2 text-sm text-muted">
                         {item.details.map((detail) => (
                           <li key={`${item.degree}-${detail}`} className="rounded-xl border border-border bg-surface/70 px-3 py-2.5">
-                            {detail}
+                            {tr(detail)}
                           </li>
                         ))}
                       </ul>
@@ -148,14 +151,14 @@ export default async function ExperiencePage() {
                       <span className="timeline-dot" aria-hidden />
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <span className="chip chip--accent text-[0.68rem] font-semibold uppercase tracking-[0.14em]">{t.train.tag}</span>
-                        <span className="meta-label">{item.period}</span>
+                        <span className="meta-label">{tr(item.period)}</span>
                       </div>
-                      <h4 className="mt-3 text-lg font-semibold tracking-tight">{item.title}</h4>
-                      <p className="mt-1 text-sm text-muted">{item.organization}</p>
+                      <h4 className="mt-3 text-lg font-semibold tracking-tight">{tr(item.title)}</h4>
+                      <p className="mt-1 text-sm text-muted">{tr(item.organization)}</p>
                       <ul className="mt-3.5 space-y-2 text-sm text-muted">
                         {item.details.map((detail) => (
                           <li key={`${item.organization}-${detail}`} className="rounded-xl border border-border bg-surface/70 px-3 py-2.5">
-                            {detail}
+                            {tr(detail)}
                           </li>
                         ))}
                       </ul>
@@ -173,7 +176,7 @@ export default async function ExperiencePage() {
           <SectionHeading eyebrow={t.achievements.eyebrow} title={t.achievements.title} icon={<TrophyIcon className="h-8 w-8" />} />
         </Reveal>
         <div className="card card-pad-lg">
-          <VisualList items={achievementItems} imagePool={achievementVisuals} icon="award" />
+          <VisualList items={achievementItems.map((item) => tr(item))} imagePool={achievementVisuals} icon="award" />
         </div>
       </section>
     </div>

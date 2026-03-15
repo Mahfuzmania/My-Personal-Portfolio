@@ -69,7 +69,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), "Segoe UI", sans-serif;
+  font-family: var(--font-sans), "Avenir Next", "Segoe UI", sans-serif;
   font-size: clamp(0.94rem, 0.16vw + 0.91rem, 0.98rem);
   line-height: 1.7;
   letter-spacing: 0.002em;
@@ -79,7 +79,7 @@ body {
 }
 
 html[data-lang="bn"] body {
-  font-family: var(--font-bn), var(--font-sans), sans-serif;
+  font-family: var(--font-bn), "Noto Serif Bengali", serif;
   letter-spacing: 0;
   line-height: 1.78;
   font-size: clamp(0.95rem, 0.2vw + 0.93rem, 1.01rem);
@@ -91,7 +91,7 @@ html[data-lang="bn"] h1,
 html[data-lang="bn"] h2,
 html[data-lang="bn"] h3,
 html[data-lang="bn"] h4 {
-  font-family: var(--font-bn), var(--font-sans), sans-serif;
+  font-family: var(--font-bn), "Noto Serif Bengali", serif;
   letter-spacing: 0;
 }
 
@@ -140,6 +140,7 @@ html {
 
 .section-title {
   font-family: var(--font-serif), serif;
+  font-weight: 560;
   letter-spacing: -0.018em;
 }
 
@@ -692,13 +693,13 @@ textarea:focus-visible {
 
 .contact-media-image {
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 14%;
   filter: saturate(1.03) contrast(1.01);
 }
 
 .contact-media-image--face {
-  object-position: center 18%;
-  transform: scale(1.02);
+  object-position: center 14%;
+  transform: scale(1);
 }
 
 .hero-ribbon {
@@ -1009,8 +1010,8 @@ textarea:focus-visible {
   }
 
   .contact-media-image--face {
-    object-position: center 15%;
-    transform: scale(1.01);
+    object-position: center 12%;
+    transform: scale(1);
   }
 }
 
