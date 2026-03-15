@@ -129,7 +129,7 @@ export default async function ResearchPage() {
         <Reveal>
           <SectionHeading eyebrow={t.explorations.eyebrow} title={t.explorations.title} icon={<CircuitIcon className="h-8 w-8" />} />
         </Reveal>
-        <div className="grid gap-4 md:grid-cols-[1fr_1fr] md:items-start">
+        <div className="grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-start">
           <Reveal>
             <DomainEvidenceFrame
               variant="simulation"

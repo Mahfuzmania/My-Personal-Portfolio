@@ -865,6 +865,7 @@ textarea:focus-visible {
 }
 
 .domain-evidence-frame {
+  overflow: hidden;
   border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
   background:
     linear-gradient(180deg, color-mix(in srgb, #ffffff 2.5%, transparent), transparent 32%),
@@ -898,12 +899,14 @@ textarea:focus-visible {
 .domain-evidence-frame__row {
   display: inline-flex;
   align-items: center;
+  width: 100%;
   border-color: color-mix(in srgb, var(--accent) 24%, var(--border));
   background: color-mix(in srgb, var(--surface) 86%, transparent);
   line-height: 1.45;
 }
 
 .domain-evidence-frame__metric {
+  width: 100%;
   border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
   background: color-mix(in srgb, var(--accent) 7%, var(--surface));
   color: color-mix(in srgb, var(--accent) 52%, var(--foreground));
