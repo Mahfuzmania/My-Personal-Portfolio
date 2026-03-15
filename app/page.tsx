@@ -10,7 +10,7 @@ import {
   WorkflowIcon,
 } from "@/components/logo-pack";
 import { CtaLink } from "@/components/cta-link";
-import { DomainVisual } from "@/components/domain-visual";
+import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { ExperienceCard } from "@/components/experience-card";
 import { PortraitStage } from "@/components/portrait-stage";
 import { ProjectCard } from "@/components/project-card";
@@ -38,7 +38,7 @@ export default async function HomePage() {
       description:
         lang === "bn"
           ? "বর্তমান ভূমিকা, কাজের পরিধি এবং টেকনিক্যাল দিকনির্দেশের সংক্ষিপ্ত চিত্র।"
-          : "A focused view of current execution across data systems, applied AI, secure CMS operations, and engineering analysis.",
+          : "Current role context, delivery scope, and execution style.",
     },
     workstreams: {
       eyebrow: lang === "bn" ? "ওয়ার্কস্ট্রিমস" : "Workstreams",
@@ -46,7 +46,7 @@ export default async function HomePage() {
       description:
         lang === "bn"
           ? "চলমান কাজের প্রধান টেকনিক্যাল ট্র্যাক।"
-          : "Data engineering and applied AI are primary; platform security and simulation work provide technical depth.",
+          : "Data engineering and applied AI are primary; platform and simulation tracks provide supporting depth.",
     },
     featured: {
       eyebrow: lang === "bn" ? "ফিচার্ড প্রজেক্টস" : "Featured Projects",
@@ -63,7 +63,7 @@ export default async function HomePage() {
       description:
         lang === "bn"
           ? "ডেটা ইনফ্রা, অ্যাপ্লাইড এমএল এবং সিস্টেম নির্মাণ।"
-          : "How data engineering, applied AI systems, platform security, and research simulation connect in production work.",
+          : "How data systems, applied AI, platform operations, and simulation depth connect in delivery work.",
       explore: lang === "bn" ? "রিসার্চ কাজ দেখুন" : "Explore Research Work",
     },
     positions: {
@@ -204,15 +204,14 @@ export default async function HomePage() {
           <div className="grid gap-4">
             {uiContent.home.workstreams.map((item, idx) => (
               <Reveal key={item.title.en} delay={idx * 0.06}>
-                <article className="card card-pad">
-                  <div className="grid gap-4 md:grid-cols-[minmax(260px,0.95fr)_minmax(0,1.05fr)] md:items-center">
-                    <DomainVisual variant={item.variant} lang={lang} />
-                    <div>
-                      <h3 className="text-lg font-semibold tracking-tight md:text-xl">{tr(item.title[lang])}</h3>
-                      <p className="mt-2 text-sm text-muted md:text-base">{tr(item.detail[lang])}</p>
-                    </div>
-                  </div>
-                </article>
+                <DomainEvidenceFrame
+                  variant={item.variant}
+                  lang={lang}
+                  title={tr(item.title[lang])}
+                  description={tr(item.detail[lang])}
+                  rowsLimit={4}
+                  className="card card-pad"
+                />
               </Reveal>
             ))}
           </div>

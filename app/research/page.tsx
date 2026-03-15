@@ -129,7 +129,7 @@ export default async function ResearchPage() {
         <Reveal>
           <SectionHeading eyebrow={t.explorations.eyebrow} title={t.explorations.title} icon={<CircuitIcon className="h-8 w-8" />} />
         </Reveal>
-        <div className="grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-start">
+        <div className="grid gap-4 xl:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)] xl:items-start">
           <Reveal>
             <DomainEvidenceFrame
               variant="simulation"
@@ -144,7 +144,7 @@ export default async function ResearchPage() {
               className="card card-pad h-full"
             />
           </Reveal>
-          <div className="card h-full card-pad">
+          <div className="card card-pad">
             <VisualList items={explorations} imagePool={researchVisuals} icon="link" columns="one" />
           </div>
         </div>

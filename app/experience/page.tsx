@@ -70,7 +70,7 @@ export default async function ExperiencePage() {
         <Reveal>
           <SectionHeading eyebrow={t.pro.eyebrow} title={t.pro.title} description={tr(t.current.detail)} icon={<SparkIcon className="h-8 w-8" />} />
         </Reveal>
-        <div className="grid gap-4 md:grid-cols-2 md:items-start">
+        <div className="grid gap-4 xl:grid-cols-2 xl:items-start">
           <div className="panel-grid">
             <article className="card card-pad">
               <p className="text-xs uppercase tracking-[0.16em] text-accent">{t.current.label}</p>

@@ -171,7 +171,8 @@ h1,
 h2,
 h3,
 h4 {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .card {
@@ -885,15 +886,19 @@ textarea:focus-visible {
   grid-template-rows: auto 1fr;
   align-content: stretch;
   min-height: 100%;
+  min-width: 0;
+  gap: 0.1rem;
 }
 
 .domain-evidence-frame__summary {
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
   padding-bottom: 0.65rem;
+  min-width: 0;
 }
 
 .domain-evidence-frame__rows {
   align-content: start;
+  min-width: 0;
 }
 
 .domain-evidence-frame__row {
@@ -1120,6 +1125,12 @@ textarea:focus-visible {
   .domain-evidence-frame__figure .domain-media .domain-visual__media {
     flex: 1 1 auto;
     min-height: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .domain-evidence-frame__figure .domain-media .domain-visual__media {
+    min-height: 230px;
   }
 }
 

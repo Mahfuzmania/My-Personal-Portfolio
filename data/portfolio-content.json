@@ -22,12 +22,12 @@
       "workstreams": [
         {
           "title": {
-            "en": "Healthcare Data Engineering",
-            "bn": "Healthcare Data Engineering"
+            "en": "Data Engineering",
+            "bn": "Data Engineering"
           },
           "detail": {
-            "en": "Ingestion, cleaning, harmonization, and validation of clinical datasets into analysis-ready outputs.",
-            "bn": "Ingestion, cleaning, harmonization, and validation of clinical datasets into analysis-ready outputs."
+            "en": "Ingestion, cleaning, harmonization, and validation workflows that turn fragmented sources into analysis-ready outputs.",
+            "bn": "Ingestion, cleaning, harmonization, and validation workflows that turn fragmented sources into analysis-ready outputs."
           },
           "variant": "data"
         },
@@ -68,7 +68,7 @@
       "profileNarrative": {
         "en": [
           "My primary delivery focus is data engineering and applied AI systems that support reliable technical decisions.",
-          "Recent work includes healthcare data programs, alongside secure platform/CMS delivery and simulation-led engineering analysis."
+          "Recent execution includes high-integrity data programs, secure platform/CMS delivery, and simulation-led engineering analysis."
         ],
         "bn": [
           "আমি ইমপ্লিমেন্টেশন-কেন্দ্রিক ডেটা ও এআই সিস্টেম তৈরি করি, যেখানে ইঞ্জিনিয়ারিং ডিসিপ্লিন এবং বিশ্লেষণাত্মক কঠোরতা সমানভাবে গুরুত্বপূর্ণ।",
@@ -77,7 +77,7 @@
       },
       "scope": {
         "en": [
-          "Healthcare data integration with validation checkpoints",
+          "Multi-source data integration with validation checkpoints",
           "Applied AI retrieval systems with grounded outputs",
           "Secure role-based CMS and platform operations",
           "Simulation/control analysis for engineering tradeoffs"

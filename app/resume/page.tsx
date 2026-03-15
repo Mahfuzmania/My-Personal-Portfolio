@@ -54,7 +54,7 @@ export default async function ResumePage() {
       </Reveal>
 
       <section className="section-shell">
-        <div className="grid gap-4 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+        <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr] xl:items-start">
           <article className="card card-pad">
             <div className="mb-4 flex items-center gap-3">
               <BriefcaseIcon className="h-8 w-8" />
@@ -75,7 +75,7 @@ export default async function ResumePage() {
                 : "Data ingestion, standardization, validation, and production-ready handoff flow."
             }
             rowsLimit={4}
-            className="card card-pad h-full"
+            className="card card-pad"
           />
         </div>
       </section>

@@ -72,8 +72,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         : "Until the first post is published, project case studies remain available.",
     upcomingTopics:
       lang === "bn"
-        ? ["হেলথকেয়ার ডেটা কোয়ালিটি চেকপয়েন্ট", "RAG মূল্যায়ন ডিজাইন", "নিরাপদ CMS পাবলিশিং ওয়ার্কফ্লো"]
-        : ["Healthcare Data Quality Checkpoints", "RAG Evaluation Design", "Secure CMS Publishing Workflow"],
+        ? ["মাল্টি-সোর্স ডেটা কোয়ালিটি চেকপয়েন্ট", "RAG মূল্যায়ন ডিজাইন", "নিরাপদ CMS পাবলিশিং ওয়ার্কফ্লো"]
+        : ["Multi-source Data Quality Checkpoints", "RAG Evaluation Design", "Secure CMS Publishing Workflow"],
     browseProjects: lang === "bn" ? "প্রজেক্ট ব্রাউজ করুন" : "Browse Projects",
   };
 

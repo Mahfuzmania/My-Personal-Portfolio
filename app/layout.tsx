@@ -61,9 +61,9 @@ export const metadata: Metadata = {
       "Personal portfolio of Md Mahfuzul Islam featuring data engineering, applied AI systems, secure platform delivery, and simulation-led technical work.",
   },
   icons: {
-    icon: [{ url: "/favicon.ico?v=2", type: "image/x-icon" }, { url: "/icon.png?v=2", type: "image/png" }],
-    shortcut: ["/favicon.ico?v=2"],
-    apple: [{ url: "/apple-icon.png?v=2", sizes: "180x180", type: "image/png" }],
+    icon: [{ url: "/favicon.ico?v=3", type: "image/x-icon" }, { url: "/icon.png?v=3", type: "image/png" }],
+    shortcut: ["/favicon.ico?v=3"],
+    apple: [{ url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" }],
   },
 };
 
