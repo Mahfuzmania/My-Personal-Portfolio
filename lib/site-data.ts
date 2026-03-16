@@ -65,8 +65,29 @@ export type Profile = {
   github: string;
   linkedin: string;
   facebook: string;
+  googleScholar?: string;
+  researchGate?: string;
   resumePath: string;
   cvPath: string;
+};
+
+export type Publication = {
+  title: string;
+  venue: string;
+  year: number;
+  authors?: string;
+  url?: string;
+  doi?: string;
+  citations?: number;
+};
+
+export type IeltsScore = {
+  overallBand: string;
+  listening?: string;
+  reading?: string;
+  writing?: string;
+  speaking?: string;
+  cefrLevel?: string;
 };
 
 export type LocalizedText = {
@@ -161,6 +182,8 @@ export type PortfolioContent = {
   researchThemes: string[];
   skillGroups: SkillGroup[];
   achievementItems: string[];
+  publications: Publication[];
+  ielts?: IeltsScore;
 };
 
 export const navItems = [
@@ -188,6 +211,8 @@ const defaultPortfolioContentBase: PortfolioContent = {
     github: "https://github.com/Mahfuzmania",
     linkedin: "https://www.linkedin.com/in/mahfuzul-islam-4366941a5/",
     facebook: "https://www.facebook.com/mahfuzul.islam.280199/",
+    googleScholar: "https://scholar.google.com/citations?hl=en&user=y-kOLZ8AAAAJ",
+    researchGate: "https://www.researchgate.net/profile/Md-Islam-2284?ev=hdr_xprf",
     resumePath: "/docs/Md_Mahfuzul_Islam_Resume.pdf",
     cvPath: "/docs/Md_Mahfuzul_Islam_CV.pdf",
   },
@@ -614,6 +639,24 @@ const defaultPortfolioContentBase: PortfolioContent = {
     "Conference publication at ICECET 2023.",
     "Director of Operations, Esonance 2023 (major university tech festival).",
   ],
+  publications: [
+    {
+      title: "Survival Analysis of Breast Cancer Patients: A Population-Based Study from SEER",
+      authors: "R S Rahman, Al Keats, M A Kabir, A Newaz, M M Islam",
+      venue: "2023 International Conference on Electrical, Computer and Energy Technologies (ICECET)",
+      year: 2023,
+      url: "https://scholar.google.com/citations?hl=en&user=y-kOLZ8AAAAJ",
+      citations: 4,
+    },
+  ],
+  ielts: {
+    overallBand: "7.5",
+    listening: "7.5",
+    reading: "9.0",
+    writing: "6.5",
+    speaking: "6.5",
+    cefrLevel: "C1",
+  },
 };
 
 defaultPortfolioContentBase.projects = [

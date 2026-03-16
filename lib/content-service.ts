@@ -123,6 +123,15 @@ function mergeWithDefaults(raw: unknown): PortfolioContent {
     achievementItems: Array.isArray(incoming.achievementItems)
       ? incoming.achievementItems
       : defaultPortfolioContent.achievementItems,
+    publications: Array.isArray(incoming.publications)
+      ? incoming.publications
+      : defaultPortfolioContent.publications,
+    ielts: incoming.ielts
+      ? {
+          ...defaultPortfolioContent.ielts,
+          ...incoming.ielts,
+        }
+      : defaultPortfolioContent.ielts,
   };
 }
 

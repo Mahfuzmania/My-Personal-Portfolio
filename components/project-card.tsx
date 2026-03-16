@@ -34,13 +34,12 @@ function isLiveLink(url: string) {
 
 export function ProjectCard({ project, compact = false, lang = "en" }: ProjectCardProps) {
   const tr = (value: string) => normalizeBnUiText(repairMojibakeText(value), lang);
-  const visibleStack = compact ? project.stack.slice(0, 4) : project.stack.slice(0, 6);
-  const visibleTags = compact ? project.tags.slice(0, 3) : project.tags.slice(0, 4);
+  const visibleStack = compact ? project.stack.slice(0, 3) : project.stack.slice(0, 6);
+  const visibleTags = compact ? project.tags.slice(0, 2) : project.tags.slice(0, 4);
   const categoryIcon = getProjectCategoryIcon(project.category);
   const figureLabel = getProjectFigureLabel(project.figureType, lang);
   const figureImage = resolveProjectFigureImage(project);
   const projectLinks = resolveProjectLinks(project).slice(0, compact ? 1 : 2);
-  const compactInsight = compact ? project.outcomes?.[0] ?? project.provenCapability ?? project.challenge ?? project.impact : null;
   const conciseDetail = project.solution ?? project.detail;
   const metrics = project.metrics?.slice(0, compact ? 2 : 3) ?? [];
   const outcomes = project.outcomes?.slice(0, compact ? 1 : 2) ?? [];
@@ -94,16 +93,16 @@ export function ProjectCard({ project, compact = false, lang = "en" }: ProjectCa
       <div className="mt-2.5 flex flex-wrap items-center gap-2">
         {project.featured ? <span className="chip chip--accent">{t.featured}</span> : null}
         {project.privateRepo ? <span className="chip">{t.privateTag}</span> : null}
-        {figureLabel ? <span className="chip">{figureLabel}</span> : null}
-        <span className="chip">
-          {t.stack}: {project.stack.length}
-        </span>
+        {!compact && figureLabel ? <span className="chip">{figureLabel}</span> : null}
+        {!compact ? (
+          <span className="chip">
+            {t.stack}: {project.stack.length}
+          </span>
+        ) : null}
       </div>
 
       <h3 className="mt-3 text-xl font-semibold tracking-tight">{tr(project.title)}</h3>
-      <p className="mt-1.5 text-sm leading-6 text-muted">{tr(summary)}</p>
-
-      {compactInsight ? <p className="mt-2.5 rounded-xl border border-border bg-surface/70 px-3 py-2.5 text-sm leading-6 text-muted">{tr(compactInsight)}</p> : null}
+      <p className={`mt-1.5 text-sm leading-6 text-muted ${compact ? "line-clamp-3" : ""}`}>{tr(summary)}</p>
 
       {!compact && project.challenge ? (
         <div className="mt-3 rounded-xl border border-border bg-surface/70 px-3 py-2.5">
@@ -166,15 +165,17 @@ export function ProjectCard({ project, compact = false, lang = "en" }: ProjectCa
         ))}
       </div>
 
-      <div className="mt-2.5 flex flex-wrap gap-2">
-        {visibleTags.map((tag) => (
-          <span key={`${project.title}-${tag}`} className="chip chip--accent">
-            {tr(tag)}
-          </span>
-        ))}
-      </div>
+      {!compact ? (
+        <div className="mt-2.5 flex flex-wrap gap-2">
+          {visibleTags.map((tag) => (
+            <span key={`${project.title}-${tag}`} className="chip chip--accent">
+              {tr(tag)}
+            </span>
+          ))}
+        </div>
+      ) : null}
 
-      <div className="mt-auto flex flex-wrap gap-3 pt-3">
+      <div className={`${compact ? "mt-3 flex flex-wrap gap-3 pt-2" : "mt-auto flex flex-wrap gap-3 pt-3"}`}>
         {projectLinks.length ? (
           projectLinks.map((link) => (
             <Link key={`${project.title}-${link}`} href={link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:opacity-80">

@@ -64,6 +64,8 @@ const profileSchema = z.object({
   github: z.string().url(),
   linkedin: z.string().url(),
   facebook: z.string().url(),
+  googleScholar: z.string().url().optional(),
+  researchGate: z.string().url().optional(),
   resumePath: z.string().min(1),
   cvPath: z.string().min(1),
 });
@@ -145,6 +147,25 @@ const skillGroupSchema = z.object({
   items: z.array(z.string().min(1)),
 });
 
+const publicationSchema = z.object({
+  title: z.string().min(1),
+  venue: z.string().min(1),
+  year: z.number().int().min(1900).max(2100),
+  authors: z.string().min(1).optional(),
+  url: z.string().url().optional(),
+  doi: z.string().min(1).optional(),
+  citations: z.number().int().min(0).optional(),
+});
+
+const ieltsSchema = z.object({
+  overallBand: z.string().min(1),
+  listening: z.string().min(1).optional(),
+  reading: z.string().min(1).optional(),
+  writing: z.string().min(1).optional(),
+  speaking: z.string().min(1).optional(),
+  cefrLevel: z.string().min(1).optional(),
+});
+
 export const portfolioContentSchema = z.object({
   profile: profileSchema,
   uiContent: uiContentSchema,
@@ -160,6 +181,8 @@ export const portfolioContentSchema = z.object({
   researchThemes: z.array(z.string().min(1)),
   skillGroups: z.array(skillGroupSchema),
   achievementItems: z.array(z.string().min(1)),
+  publications: z.array(publicationSchema),
+  ielts: ieltsSchema.optional(),
 });
 
 export type PortfolioContentInput = z.infer<typeof portfolioContentSchema>;

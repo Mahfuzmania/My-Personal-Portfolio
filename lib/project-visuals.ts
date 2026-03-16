@@ -23,17 +23,6 @@ const figureTypeLabels: Record<ProjectFigureType, { en: string; bn: string }> = 
   "embedded-system-diagram": { en: "Embedded System Diagram", bn: "এমবেডেড সিস্টেম ডায়াগ্রাম" },
 };
 
-const figureTypeFallbackImage: Record<ProjectFigureType, string> = {
-  "healthcare-data-flow": "/images/placeholders/project-data.svg",
-  "rag-retrieval-workflow": "/images/placeholders/project-ai.svg",
-  "cms-publishing-workflow": "/images/placeholders/project-data.svg",
-  "simulation-tradeoff-chart": "/images/placeholders/project-simulation.svg",
-  "control-response-curve": "/images/placeholders/project-simulation.svg",
-  "clinical-ml-pipeline": "/images/placeholders/project-ml.svg",
-  "signal-processing-pipeline": "/images/placeholders/project-signal.svg",
-  "embedded-system-diagram": "/images/placeholders/project-embedded.svg",
-};
-
 export function buildFigurePath(fileName: string) {
   if (!fileName) return "";
   if (fileName.startsWith("/")) return fileName;
@@ -44,13 +33,10 @@ export function resolveProjectFigureImage(project: Project) {
   if (project.figureImage) {
     return buildFigurePath(project.figureImage);
   }
-  if (project.imagePath) {
+  if (project.imagePath && !project.imagePath.includes("/images/placeholders/")) {
     return project.imagePath;
   }
-  if (project.figureType) {
-    return figureTypeFallbackImage[project.figureType];
-  }
-  return "/images/placeholders/project-data.svg";
+  return null;
 }
 
 export function getProjectFigureLabel(figureType: ProjectFigureType | undefined, lang: SiteLang) {

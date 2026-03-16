@@ -1,1346 +1,1378 @@
-{
-  "profile": {
-    "name": "Md Mahfuzul Islam",
-    "identityLine": "Data Engineer and applied AI systems builder delivering secure, evidence-driven platforms.",
-    "shortIntro": "I build reliable data pipelines and applied AI workflows for production use, then package them into secure CMS-enabled platforms with operational control.",
-    "photoPath": "/images/portraits/mahfuzul-whatsapp-2026-03-11.jpeg",
-    "location": "Dhaka, Bangladesh",
-    "email": "mahfuzulislam@iut-dhaka.edu",
-    "secondaryEmail": "mahfuzulislam41@gmail.com",
-    "github": "https://github.com/Mahfuzmania",
-    "linkedin": "https://www.linkedin.com/in/mahfuzul-islam-4366941a5/",
-    "facebook": "https://www.facebook.com/mahfuzul.islam.280199/",
-    "resumePath": "/docs/Md_Mahfuzul_Islam_Resume.pdf",
-    "cvPath": "/docs/Md_Mahfuzul_Islam_CV.pdf"
-  },
-  "uiContent": {
-    "navbarRoleLine": {
-      "en": "Data Engineer at Enact Business Solutions",
-      "bn": "Enact Business Solutions-এ ডেটা ইঞ্জিনিয়ার"
-    },
-    "home": {
-      "workstreams": [
-        {
-          "title": {
-            "en": "Data Engineering",
-            "bn": "Data Engineering"
-          },
-          "detail": {
-            "en": "Ingestion, cleaning, harmonization, and validation workflows that turn fragmented sources into analysis-ready outputs.",
-            "bn": "Ingestion, cleaning, harmonization, and validation workflows that turn fragmented sources into analysis-ready outputs."
-          },
-          "variant": "data"
-        },
-        {
-          "title": {
-            "en": "Applied AI Systems",
-            "bn": "Applied AI Systems"
-          },
-          "detail": {
-            "en": "Retrieval-grounded AI workflows with citation-aware responses and domain-focused decision support.",
-            "bn": "Retrieval-grounded AI workflows with citation-aware responses and domain-focused decision support."
-          },
-          "variant": "ai"
-        },
-        {
-          "title": {
-            "en": "Platform Engineering / CMS Systems",
-            "bn": "Platform Engineering / CMS Systems"
-          },
-          "detail": {
-            "en": "Secure admin-managed publishing systems with role-based controls, moderation, and operational visibility.",
-            "bn": "Secure admin-managed publishing systems with role-based controls, moderation, and operational visibility."
-          },
-          "variant": "platform"
-        },
-        {
-          "title": {
-            "en": "Simulation and Control Depth",
-            "bn": "Simulation and Control Depth"
-          },
-          "detail": {
-            "en": "Simulation-based modeling and control analysis used to validate engineering decisions and tradeoffs.",
-            "bn": "Simulation-based modeling and control analysis used to validate engineering decisions and tradeoffs."
-          },
-          "variant": "simulation"
-        }
-      ],
-      "profileNarrative": {
-        "en": [
-          "My primary delivery focus is data engineering and applied AI systems that support reliable technical decisions.",
-          "Recent execution includes high-integrity data programs, secure platform/CMS delivery, and simulation-led engineering analysis."
-        ],
-        "bn": [
-          "আমি ইমপ্লিমেন্টেশন-কেন্দ্রিক ডেটা ও এআই সিস্টেম তৈরি করি, যেখানে ইঞ্জিনিয়ারিং ডিসিপ্লিন এবং বিশ্লেষণাত্মক কঠোরতা সমানভাবে গুরুত্বপূর্ণ।",
-          "বর্তমান কাজের মূল ক্ষেত্র হেলথকেয়ার ডেটা ইন্টিগ্রেশন, নিরাপদ প্ল্যাটফর্ম ইঞ্জিনিয়ারিং এবং অ্যাপ্লাইড এআই ডেলিভারি।"
-        ]
-      },
-      "scope": {
-        "en": [
-          "Multi-source data integration with validation checkpoints",
-          "Applied AI retrieval systems with grounded outputs",
-          "Secure role-based CMS and platform operations",
-          "Simulation/control analysis for engineering tradeoffs"
-        ],
-        "bn": [
-          "ক্লিনিকাল ডেটা ইন্টিগ্রেশন পাইপলাইন",
-          "অ্যাডমিন-ম্যানেজড দ্বিভাষিক ওয়েব প্ল্যাটফর্ম",
-          "অ্যাপ্লাইড এমএল ও রিট্রিভাল ওয়ার্কফ্লো",
-          "সিমুলেশন-নির্ভর ইঞ্জিনিয়ারিং বিশ্লেষণ"
-        ]
-      }
-    },
-    "about": {
-      "biography": {
-        "en": "Md Mahfuzul Islam is a Data Engineer with an Electrical and Electronic Engineering foundation, building applied AI systems and secure CMS platforms. His work emphasizes structured delivery: clear problem framing, validated pipelines, and maintainable operations across domains.",
-        "bn": "মোঃ মাহফুজুল ইসলাম একজন ডেটা ইঞ্জিনিয়ার, যার ভিত্তি Electrical and Electronic Engineering। তিনি গবেষণাভিত্তিক ধারণাকে নির্ভরযোগ্য সফটওয়্যার সিস্টেমে রূপ দিতে কাজ করেন। তার কাজের মূল ফোকাস হেলথকেয়ার ডেটা ইঞ্জিনিয়ারিং, অ্যাপ্লাইড এআই এবং নিরাপদ অ্যাডমিন-ম্যানেজড প্ল্যাটফর্ম ডেভেলপমেন্ট।"
-      },
-      "contextCards": [
-        {
-          "title": {
-            "en": "Enact Business Solutions",
-            "bn": "এনঅ্যাক্ট Business Solutions"
-          },
-          "detail": {
-            "en": "Leads healthcare data integration and quality validation workflows that turn fragmented clinical records into analysis-ready datasets.",
-            "bn": "ডেটা ইঞ্জিনিয়ার হিসেবে হেলথকেয়ার ডেটা ইন্টিগ্রেশন, ডেটা কোয়ালিটি কন্ট্রোল এবং অ্যানালিটিক্স-রেডি ডেলিভারি পাইপলাইনে কাজ করছি।"
-          }
-        },
-        {
-          "title": {
-            "en": "AZM Labs",
-            "bn": "এজেডএম Labs"
-          },
-          "detail": {
-            "en": "Builds secure admin-managed products at AZM Labs, including CMS-driven public websites and applied AI-enabled platform features.",
-            "bn": "Co-Founder এবং Software Engineer হিসেবে নিরাপদ, অ্যাডমিন-ম্যানেজড AI ও ডেটা সিস্টেম ডেলিভারিতে নেতৃত্ব দিচ্ছি।"
-          }
-        }
-      ],
-      "professionalFocus": [
-        {
-          "title": {
-            "en": "Enact Business Solutions: Healthcare Data Delivery",
-            "bn": "এনঅ্যাক্ট Business Solutions: হেলথকেয়ার ডেটা ডেলিভারি"
-          },
-          "detail": {
-            "en": "Healthcare data ingestion, transformation, reconciliation, and quality assurance for research and operational analytics.",
-            "bn": "হেলথকেয়ার ডেটা pipeline তৈরি, মান যাচাই, reconciliation এবং নিরাপদ handling নিশ্চিত করা।"
-          }
-        },
-        {
-          "title": {
-            "en": "AZM Labs: Product and Platform Engineering",
-            "bn": "এজেডএম Labs: প্রোডাক্ট ও প্ল্যাটফর্ম ইঞ্জিনিয়ারিং"
-          },
-          "detail": {
-            "en": "Platform architecture, secure admin workflows, and applied AI feature delivery for production web systems.",
-            "bn": "বাস্তবধর্মী AI ও ডেটা প্রোডাক্টের architecture, implementation এবং delivery-এ নেতৃত্ব দেওয়া।"
-          }
-        }
-      ]
-    },
-    "research": {
-      "technicalInterests": {
-        "en": [
-          "Applied AI systems for engineering and decision-support workflows",
-          "Healthcare analytics built on high-integrity clinical datasets",
-          "Secure content and workflow architecture for production platforms",
-          "Control-system and energy-model analysis through simulation"
-        ],
-        "bn": [
-          "ডোমেইন-নির্দিষ্ট টেকনিক্যাল ওয়ার্কফ্লোর জন্য অ্যাপ্লাইড এআই",
-          "উচ্চমানের ডেটা ইন্টিগ্রিটি সহ হেলথকেয়ার অ্যানালিটিক্স",
-          "নিরাপদ কনটেন্ট ও ওয়ার্কফ্লো ম্যানেজমেন্ট আর্কিটেকচার",
-          "ইলেকট্রিক্যাল সিস্টেম কন্ট্রোল ও অপ্টিমাইজেশন"
-        ]
-      },
-      "explorations": {
-        "en": [
-          "Bilingual retrieval assistant design for EE learning with cited responses",
-          "Controller tuning comparisons across series PI, IMC, and manual strategies",
-          "Schema-validated content pipelines for admin-managed platforms",
-          "Research-to-production implementation with security and operations controls"
-        ],
-        "bn": [
-          "EE শিক্ষার জন্য bilingual technical assistant design (RAG + citation workflow)",
-          "Controller tuning তুলনা (series PI, IMC, manual)",
-          "অ্যাডমিন-ম্যানেজড ওয়েব সিস্টেমের জন্য schema-validated content pipeline",
-          "production security controls সহ research-to-software implementation"
-        ]
-      }
-    },
-    "resume": {
-      "summaryPoints": {
-        "en": [
-          "Data Engineer delivering healthcare workflows for large, multi-source clinical datasets.",
-          "Built secure, admin-managed Next.js platforms with validated content and operational controls.",
-          "Co-Founder and Software Engineer at AZM Labs, leading delivery across private AI and data products."
-        ],
-        "bn": [
-          "বড় এবং মাল্টি-সোর্স হেলথকেয়ার ডেটাসেটের জন্য Data Engineering workflow-এ কাজের অভিজ্ঞতা রয়েছে।",
-          "validated content operations সহ secure admin-managed Next.js প্ল্যাটফর্ম তৈরি করেছি।",
-          "AZM Labs-এ Co-Founder এবং Software Engineer হিসেবে private platform delivery পরিচালনা করছি।"
-        ]
-      }
-    },
-    "contact": {
-      "collaborationTopics": {
-        "en": [
-          "Data engineering, integration, and quality validation pipelines",
-          "Secure admin-managed platform architecture and content operations",
-          "Applied AI, retrieval systems, and model evaluation strategy",
-          "Engineering simulation and control-oriented performance analysis"
-        ],
-        "bn": [
-          "হেলথকেয়ার ডেটা ইঞ্জিনিয়ারিং ও ইন্টিগ্রেশন পাইপলাইন",
-          "অ্যাডমিন-ম্যানেজড প্ল্যাটফর্ম আর্কিটেকচার ও নিরাপদ কনটেন্ট ওয়ার্কফ্লো",
-          "অ্যাপ্লাইড এআই, রিট্রিভাল সিস্টেম এবং মডেল ইভ্যালুয়েশন ডিজাইন",
-          "ইঞ্জিনিয়ারিং সিমুলেশন ও control-oriented analysis"
-        ]
-      }
-    }
-  },
-  "featuredProjects": [
-    {
-      "title": "Healthcare Data Integration & Analytics Pipeline",
-      "summary": "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
-      "detail": "Designed and implemented Python workflows to clean, validate, and harmonize patient records, laboratory data, and clinical metadata across multiple sources, with strong consistency checks for downstream analytics and research.",
-      "imagePath": "/images/placeholders/project-data.svg",
-      "stack": [
-        "Python",
-        "Pandas",
-        "OpenPyXL",
-        "Data Cleaning",
-        "Data Integration",
-        "Data Validation",
-        "Healthcare Data Processing"
-      ],
-      "category": "Data Engineering",
-      "tags": [
-        "Healthcare ETL",
-        "Data Validation",
-        "Clinical Analytics Readiness"
-      ],
-      "impact": "Enabled reliable analysis-ready healthcare datasets for research and reporting workflows.",
-      "contributions": [
-        "Designed Python-based healthcare data processing pipelines",
-        "Harmonized large clinical datasets from multiple sources",
-        "Resolved duplicate records, ID mismatches, and irregular date formats",
-        "Integrated patient and laboratory data into a unified analytical dataset",
-        "Performed quality validation and standardization for research usage"
-      ],
-      "featured": true,
-      "privateRepo": true,
-      "shortSummary": "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
-      "challenge": "Clinical records arrived from multiple exports with inconsistent identifiers, date formats, and missing fields, reducing analytical reliability.",
-      "solution": "Built Python-based ingestion, cleaning, harmonization, and validation pipelines to standardize patient/lab records into a unified dataset.",
-      "outcomes": [
-        "Reduced dataset inconsistency before analytics handoff through repeatable validation checks.",
-        "Delivered a unified clinical dataset structure suitable for reporting and research analysis.",
-        "Created reusable data-quality workflow patterns for future healthcare integrations."
-      ],
-      "provenCapability": "Healthcare data engineering from raw source integration to validated analytics-ready delivery.",
-      "figureType": "healthcare-data-flow",
-      "metrics": [
-        "70k+ patient records integrated",
-        "1M+ laboratory rows harmonized",
-        "Multi-source validation checkpoints"
-      ],
-      "proofAssets": [
-        "Source-to-unified dataset transformation flow",
-        "Clinical data cleaning and validation ruleset"
-      ],
-      "slug": "healthcare-data-integration-analytics-pipeline",
-      "publishState": "published",
-      "visibility": "public"
-    },
-    {
-      "title": "Electrical Engineering RAG Bot",
-      "summary": "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
-      "detail": "Built as a practical AI toolchain for technical learning with retrieval over engineering sources, controllable reasoning detail, and configurable local/remote model support.",
-      "imagePath": "/images/placeholders/project-ai.svg",
-      "stack": [
-        "Python",
-        "Flask",
-        "RAG",
-        "BM25",
-        "OCR",
-        "Ollama"
-      ],
-      "category": "Applied AI Systems",
-      "tags": [
-        "RAG",
-        "Applied AI Systems",
-        "Cited Responses"
-      ],
-      "impact": "Demonstrates full-stack AI system design for engineering education.",
-      "featured": true,
-      "repoUrl": "https://github.com/Mahfuzmania/EE-Solutions",
-      "shortSummary": "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
-      "challenge": "Technical learners needed reliable answers tied to textbook context rather than generic chatbot responses.",
-      "solution": "Designed a retrieval pipeline with document parsing, chunking, BM25 retrieval, and grounded generation with citation references.",
-      "outcomes": [
-        "Produced citation-backed responses for engineering questions.",
-        "Enabled bilingual (English/Bengali) support with structured response formatting.",
-        "Demonstrated practical applied AI system assembly beyond model prompting alone."
-      ],
-      "provenCapability": "Applied AI systems engineering with retrieval architecture, explainability, and user-facing workflow design.",
-      "figureType": "rag-retrieval-workflow",
-      "metrics": [
-        "Retrieval-grounded response pipeline",
-        "Bilingual answer generation",
-        "Citation-aware output format"
-      ],
-      "proofAssets": [
-        "Ingestion-to-retrieval-to-answer architecture",
-        "Source citation response behavior"
-      ],
-      "slug": "electrical-engineering-rag-bot",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/EE-Solutions"
-      ]
-    },
-    {
-      "title": "EV Powertrain Simulation",
-      "summary": "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
-      "detail": "Time-domain simulation explored acceleration, efficiency, and range tradeoffs to identify practical battery configuration strategies.",
-      "imagePath": "/images/projects/ev-powertrain-simulation/thesis-report-p22-2.png",
-      "stack": [
-        "MATLAB",
-        "Simulink",
-        "Control Systems",
-        "PID"
-      ],
-      "category": "Simulation / Energy Systems",
-      "tags": [
-        "Simulation",
-        "Energy Systems",
-        "Tradeoff Analysis"
-      ],
-      "featured": true,
-      "repoUrl": "https://github.com/Mahfuzmania/EV-Powertrain-Simulation",
-      "shortSummary": "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
-      "challenge": "Needed to compare how battery sizing and controller settings affect acceleration, efficiency, and usable range.",
-      "solution": "Built Simulink powertrain models and evaluated multiple scenarios across time-domain performance indicators.",
-      "outcomes": [
-        "Identified design tradeoffs between range targets and dynamic response.",
-        "Established repeatable simulation comparison setup for parameter exploration.",
-        "Generated evidence plots for performance-oriented design decisions."
-      ],
-      "provenCapability": "Simulation-led energy system analysis for practical engineering decision support.",
-      "figureType": "simulation-tradeoff-chart",
-      "metrics": [
-        "Battery sizing scenario comparison",
-        "Response and efficiency tradeoff plots",
-        "Simulation-driven configuration decisions"
-      ],
-      "proofAssets": [
-        "Powertrain simulation result chart",
-        "Scenario comparison outputs"
-      ],
-      "slug": "ev-powertrain-simulation",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/EV-Powertrain-Simulation"
-      ]
-    },
-    {
-      "title": "Breast Cancer Survival Prediction",
-      "summary": "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
-      "detail": "Applied statistical and machine learning survival modeling to support risk-aware clinical decision support analysis.",
-      "imagePath": "/images/projects/breast-cancer-survival-prediction/final-report-p7-1.png",
-      "stack": [
-        "Python",
-        "Scikit-learn",
-        "Survival Analysis",
-        "Jupyter"
-      ],
-      "category": "Clinical ML / Predictive Analytics",
-      "tags": [
-        "Clinical ML",
-        "Survival Analysis",
-        "Predictive Analytics"
-      ],
-      "featured": true,
-      "repoUrl": "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction",
-      "shortSummary": "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
-      "challenge": "Required a structured clinical ML workflow to estimate risk and compare survival model behavior on real-world outcome data.",
-      "solution": "Implemented preprocessing, feature engineering, and model evaluation using Kaplan-Meier, Cox PH, and Random Survival Forest methods.",
-      "outcomes": [
-        "Generated comparative survival analysis across classical and ML approaches.",
-        "Produced interpretable risk-oriented outputs for clinical analytics context.",
-        "Strengthened model-evaluation discipline for healthcare predictive workflows."
-      ],
-      "provenCapability": "Clinical ML pipeline design with statistical rigor and evaluation-focused decision support framing.",
-      "figureType": "clinical-ml-pipeline",
-      "metrics": [
-        "Kaplan-Meier + Cox PH + RSF comparison",
-        "SEER clinical dataset modeling workflow",
-        "Evaluation-led risk analytics output"
-      ],
-      "proofAssets": [
-        "Clinical ML pipeline structure",
-        "Survival analysis evaluation figure"
-      ],
-      "slug": "breast-cancer-survival-prediction",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction"
-      ]
-    },
-    {
-      "title": "Advanced Controller Design and Optimization (PMSM FOC)",
-      "summary": "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
-      "detail": "Used series PI controller design, comparative tuning analysis, and simulation-based validation of dynamic response under parameter variations.",
-      "imagePath": "/images/projects/advanced-controller-design-and-optimization-pmsm-foc/technical-assessment-p5-1.png",
-      "stack": [
-        "Control Theory",
-        "FOC",
-        "PMSM",
-        "Simulation Analysis"
-      ],
-      "category": "Control Systems / Simulation",
-      "tags": [
-        "Control Systems",
-        "FOC",
-        "Response Analysis"
-      ],
-      "impact": "Showcases analytical controller design workflow from problem framing to quantitative validation.",
-      "featured": true,
-      "privateRepo": true,
-      "shortSummary": "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
-      "challenge": "Current-controller behavior required improved settling performance and robustness under varying operating parameters.",
-      "solution": "Used series PI redesign and simulation-based comparative tuning to evaluate dynamic response and stability margins.",
-      "outcomes": [
-        "Improved response characterization for controller tuning decisions.",
-        "Documented tuning strategy comparison with response-curve evidence.",
-        "Mapped parameter sensitivity to practical control design choices."
-      ],
-      "provenCapability": "Control-system engineering using structured simulation evidence and quantitative tuning analysis.",
-      "figureType": "control-response-curve",
-      "metrics": [
-        "Controller tuning comparison workflow",
-        "Response and settling-time analysis",
-        "Robustness checks under variation"
-      ],
-      "proofAssets": [
-        "Control response curve snapshots",
-        "PI design assessment artifact"
-      ],
-      "slug": "advanced-controller-design-and-optimization-pmsm-foc",
-      "publishState": "published",
-      "visibility": "public"
-    },
-    {
-      "title": "Nurul Amin MP Website Platform",
-      "summary": "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
-      "detail": "Built and shipped as a secure Next.js platform with role-aware admin workflows, section-based CMS operations, request tracking, and media/document publishing for public communication.",
-      "imagePath": "/images/placeholders/project-data.svg",
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Role-Based Admin",
-        "Admin CMS",
-        "Nodemailer"
-      ],
-      "category": "Platform Engineering / CMS Systems",
-      "tags": [
-        "Platform Engineering",
-        "CMS Systems",
-        "Bilingual Operations"
-      ],
-      "impact": "Live in production for constituency communication and structured request handling.",
-      "featured": true,
-      "repoUrl": "https://nurulamin.org",
-      "privateRepo": true,
-      "shortSummary": "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
-      "challenge": "Needed a production-ready public website that supports bilingual communication, structured service workflows, and controlled publishing.",
-      "solution": "Built a secure Next.js platform with role-aware admin, CMS section management, request tracking, and media/document operations.",
-      "outcomes": [
-        "Launched a maintainable public communication platform for constituency services.",
-        "Enabled controlled publishing and structured request handling through admin workflows.",
-        "Provided reusable CMS architecture patterns for future civic platforms."
-      ],
-      "provenCapability": "Secure platform engineering and CMS workflow design for live public-service systems.",
-      "figureType": "cms-publishing-workflow",
-      "metrics": [
-        "Live production deployment",
-        "Role-based publishing control",
-        "Bilingual CMS operations"
-      ],
-      "proofAssets": [
-        "Admin publishing lifecycle design",
-        "Role-based moderation/publishing workflow"
-      ],
-      "slug": "nurul-amin-mp-website-platform",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://nurulamin.org"
-      ]
-    },
-    {
-      "title": "My Personal Portfolio Platform",
-      "summary": "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
-      "detail": "Designed and implemented with protected admin routes, signed session handling, content validation, and reusable section-level CMS patterns for maintainable updates.",
-      "imagePath": "/images/placeholders/project-ai.svg",
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Argon2",
-        "JOSE JWT",
-        "Zod"
-      ],
-      "category": "Platform Engineering / CMS Systems",
-      "tags": [
-        "Platform Engineering",
-        "Secure CMS",
-        "Admin Workflow"
-      ],
-      "impact": "Demonstrates a private CMS architecture optimized for practical portfolio and product delivery updates.",
-      "featured": true,
-      "repoUrl": "https://my-personal-portfolio-psi-seven.vercel.app/",
-      "privateRepo": true,
-      "shortSummary": "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
-      "challenge": "Required a maintainable personal platform that supports controlled content updates without exposing admin/security internals publicly.",
-      "solution": "Implemented protected admin authentication, CSRF/session controls, schema-validated content editing, and structured publishing workflows.",
-      "outcomes": [
-        "Enabled safe content operations through role-aware admin workflows.",
-        "Created reusable CMS structures for project, experience, and blog updates.",
-        "Improved maintainability with data-driven content and centralized validation."
-      ],
-      "provenCapability": "Secure CMS and platform engineering with production-safe content operations.",
-      "figureType": "cms-publishing-workflow",
-      "metrics": [
-        "Protected admin authentication flow",
-        "Schema-validated content updates",
-        "Blog CMS publish-state management"
-      ],
-      "proofAssets": [
-        "Admin workflow and permission architecture",
-        "Content model validation and publishing lifecycle"
-      ],
-      "slug": "my-personal-portfolio-platform",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://my-personal-portfolio-psi-seven.vercel.app/"
-      ]
-    }
-  ],
-  "projects": [
-    {
-      "title": "Healthcare Data Integration & Analytics Pipeline",
-      "summary": "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
-      "detail": "Designed and implemented Python workflows to clean, validate, and harmonize patient records, laboratory data, and clinical metadata across multiple sources, with strong consistency checks for downstream analytics and research.",
-      "imagePath": "/images/placeholders/project-data.svg",
-      "stack": [
-        "Python",
-        "Pandas",
-        "OpenPyXL",
-        "Data Cleaning",
-        "Data Integration",
-        "Data Validation",
-        "Healthcare Data Processing"
-      ],
-      "category": "Data Engineering",
-      "tags": [
-        "Healthcare ETL",
-        "Data Validation",
-        "Clinical Analytics Readiness"
-      ],
-      "impact": "Enabled reliable analysis-ready healthcare datasets for research and reporting workflows.",
-      "contributions": [
-        "Designed Python-based healthcare data processing pipelines",
-        "Harmonized large clinical datasets from multiple sources",
-        "Resolved duplicate records, ID mismatches, and irregular date formats",
-        "Integrated patient and laboratory data into a unified analytical dataset",
-        "Performed quality validation and standardization for research usage"
-      ],
-      "featured": true,
-      "privateRepo": true,
-      "shortSummary": "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
-      "challenge": "Clinical records arrived from multiple exports with inconsistent identifiers, date formats, and missing fields, reducing analytical reliability.",
-      "solution": "Built Python-based ingestion, cleaning, harmonization, and validation pipelines to standardize patient/lab records into a unified dataset.",
-      "outcomes": [
-        "Reduced dataset inconsistency before analytics handoff through repeatable validation checks.",
-        "Delivered a unified clinical dataset structure suitable for reporting and research analysis.",
-        "Created reusable data-quality workflow patterns for future healthcare integrations."
-      ],
-      "provenCapability": "Healthcare data engineering from raw source integration to validated analytics-ready delivery.",
-      "figureType": "healthcare-data-flow",
-      "metrics": [
-        "70k+ patient records integrated",
-        "1M+ laboratory rows harmonized",
-        "Multi-source validation checkpoints"
-      ],
-      "proofAssets": [
-        "Source-to-unified dataset transformation flow",
-        "Clinical data cleaning and validation ruleset"
-      ],
-      "slug": "healthcare-data-integration-analytics-pipeline",
-      "publishState": "published",
-      "visibility": "public"
-    },
-    {
-      "title": "Electrical Engineering RAG Bot",
-      "summary": "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
-      "detail": "Built as a practical AI toolchain for technical learning with retrieval over engineering sources, controllable reasoning detail, and configurable local/remote model support.",
-      "imagePath": "/images/placeholders/project-ai.svg",
-      "stack": [
-        "Python",
-        "Flask",
-        "RAG",
-        "BM25",
-        "OCR",
-        "Ollama"
-      ],
-      "category": "Applied AI Systems",
-      "tags": [
-        "RAG",
-        "Applied AI Systems",
-        "Cited Responses"
-      ],
-      "impact": "Demonstrates full-stack AI system design for engineering education.",
-      "featured": true,
-      "repoUrl": "https://github.com/Mahfuzmania/EE-Solutions",
-      "shortSummary": "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
-      "challenge": "Technical learners needed reliable answers tied to textbook context rather than generic chatbot responses.",
-      "solution": "Designed a retrieval pipeline with document parsing, chunking, BM25 retrieval, and grounded generation with citation references.",
-      "outcomes": [
-        "Produced citation-backed responses for engineering questions.",
-        "Enabled bilingual (English/Bengali) support with structured response formatting.",
-        "Demonstrated practical applied AI system assembly beyond model prompting alone."
-      ],
-      "provenCapability": "Applied AI systems engineering with retrieval architecture, explainability, and user-facing workflow design.",
-      "figureType": "rag-retrieval-workflow",
-      "metrics": [
-        "Retrieval-grounded response pipeline",
-        "Bilingual answer generation",
-        "Citation-aware output format"
-      ],
-      "proofAssets": [
-        "Ingestion-to-retrieval-to-answer architecture",
-        "Source citation response behavior"
-      ],
-      "slug": "electrical-engineering-rag-bot",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/EE-Solutions"
-      ]
-    },
-    {
-      "title": "EV Powertrain Simulation",
-      "summary": "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
-      "detail": "Time-domain simulation explored acceleration, efficiency, and range tradeoffs to identify practical battery configuration strategies.",
-      "imagePath": "/images/projects/ev-powertrain-simulation/thesis-report-p22-2.png",
-      "stack": [
-        "MATLAB",
-        "Simulink",
-        "Control Systems",
-        "PID"
-      ],
-      "category": "Simulation / Energy Systems",
-      "tags": [
-        "Simulation",
-        "Energy Systems",
-        "Tradeoff Analysis"
-      ],
-      "featured": true,
-      "repoUrl": "https://github.com/Mahfuzmania/EV-Powertrain-Simulation",
-      "shortSummary": "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
-      "challenge": "Needed to compare how battery sizing and controller settings affect acceleration, efficiency, and usable range.",
-      "solution": "Built Simulink powertrain models and evaluated multiple scenarios across time-domain performance indicators.",
-      "outcomes": [
-        "Identified design tradeoffs between range targets and dynamic response.",
-        "Established repeatable simulation comparison setup for parameter exploration.",
-        "Generated evidence plots for performance-oriented design decisions."
-      ],
-      "provenCapability": "Simulation-led energy system analysis for practical engineering decision support.",
-      "figureType": "simulation-tradeoff-chart",
-      "metrics": [
-        "Battery sizing scenario comparison",
-        "Response and efficiency tradeoff plots",
-        "Simulation-driven configuration decisions"
-      ],
-      "proofAssets": [
-        "Powertrain simulation result chart",
-        "Scenario comparison outputs"
-      ],
-      "slug": "ev-powertrain-simulation",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/EV-Powertrain-Simulation"
-      ]
-    },
-    {
-      "title": "Breast Cancer Survival Prediction",
-      "summary": "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
-      "detail": "Applied statistical and machine learning survival modeling to support risk-aware clinical decision support analysis.",
-      "imagePath": "/images/projects/breast-cancer-survival-prediction/final-report-p7-1.png",
-      "stack": [
-        "Python",
-        "Scikit-learn",
-        "Survival Analysis",
-        "Jupyter"
-      ],
-      "category": "Clinical ML / Predictive Analytics",
-      "tags": [
-        "Clinical ML",
-        "Survival Analysis",
-        "Predictive Analytics"
-      ],
-      "featured": true,
-      "repoUrl": "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction",
-      "shortSummary": "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
-      "challenge": "Required a structured clinical ML workflow to estimate risk and compare survival model behavior on real-world outcome data.",
-      "solution": "Implemented preprocessing, feature engineering, and model evaluation using Kaplan-Meier, Cox PH, and Random Survival Forest methods.",
-      "outcomes": [
-        "Generated comparative survival analysis across classical and ML approaches.",
-        "Produced interpretable risk-oriented outputs for clinical analytics context.",
-        "Strengthened model-evaluation discipline for healthcare predictive workflows."
-      ],
-      "provenCapability": "Clinical ML pipeline design with statistical rigor and evaluation-focused decision support framing.",
-      "figureType": "clinical-ml-pipeline",
-      "metrics": [
-        "Kaplan-Meier + Cox PH + RSF comparison",
-        "SEER clinical dataset modeling workflow",
-        "Evaluation-led risk analytics output"
-      ],
-      "proofAssets": [
-        "Clinical ML pipeline structure",
-        "Survival analysis evaluation figure"
-      ],
-      "slug": "breast-cancer-survival-prediction",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction"
-      ]
-    },
-    {
-      "title": "Advanced Controller Design and Optimization (PMSM FOC)",
-      "summary": "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
-      "detail": "Used series PI controller design, comparative tuning analysis, and simulation-based validation of dynamic response under parameter variations.",
-      "imagePath": "/images/projects/advanced-controller-design-and-optimization-pmsm-foc/technical-assessment-p5-1.png",
-      "stack": [
-        "Control Theory",
-        "FOC",
-        "PMSM",
-        "Simulation Analysis"
-      ],
-      "category": "Control Systems / Simulation",
-      "tags": [
-        "Control Systems",
-        "FOC",
-        "Response Analysis"
-      ],
-      "impact": "Showcases analytical controller design workflow from problem framing to quantitative validation.",
-      "featured": true,
-      "privateRepo": true,
-      "shortSummary": "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
-      "challenge": "Current-controller behavior required improved settling performance and robustness under varying operating parameters.",
-      "solution": "Used series PI redesign and simulation-based comparative tuning to evaluate dynamic response and stability margins.",
-      "outcomes": [
-        "Improved response characterization for controller tuning decisions.",
-        "Documented tuning strategy comparison with response-curve evidence.",
-        "Mapped parameter sensitivity to practical control design choices."
-      ],
-      "provenCapability": "Control-system engineering using structured simulation evidence and quantitative tuning analysis.",
-      "figureType": "control-response-curve",
-      "metrics": [
-        "Controller tuning comparison workflow",
-        "Response and settling-time analysis",
-        "Robustness checks under variation"
-      ],
-      "proofAssets": [
-        "Control response curve snapshots",
-        "PI design assessment artifact"
-      ],
-      "slug": "advanced-controller-design-and-optimization-pmsm-foc",
-      "publishState": "published",
-      "visibility": "public"
-    },
-    {
-      "title": "Anomaly Detection Using Gaussian Model",
-      "summary": "Probabilistic anomaly detection workflow with threshold selection and F1-guided evaluation.",
-      "detail": "Built a probabilistic anomaly-detection workflow for server metrics using univariate and multivariate Gaussian models, threshold selection via F1 optimization, and false-positive control analysis for more reliable incident flagging.",
-      "imagePath": "/images/projects/anomaly-detection-using-gaussian-model/presentation-on-anomaly-detection-p1-1.jpeg",
-      "stack": [
-        "MATLAB",
-        "Statistical Modeling"
-      ],
-      "category": "Applied AI Systems",
-      "tags": [
-        "Anomaly Detection",
-        "Probabilistic Methods"
-      ],
-      "repoUrl": "https://github.com/Mahfuzmania/Anomaly-Detection-Using-Gaussian-Model",
-      "shortSummary": "Probabilistic anomaly detection workflow with threshold selection and F1-guided evaluation.",
-      "challenge": "Needed reliable anomaly flagging with controlled false positives across server telemetry behavior.",
-      "solution": "Implemented univariate and multivariate Gaussian density models, then tuned thresholds through evaluation-based selection.",
-      "outcomes": [
-        "Improved anomaly detection precision-recall balancing through threshold tuning.",
-        "Compared model behavior to support practical incident-flagging decisions."
-      ],
-      "provenCapability": "Applied ML workflow design with evaluation-first optimization under operational constraints.",
-      "figureType": "clinical-ml-pipeline",
-      "metrics": [
-        "F1-guided threshold optimization",
-        "Univariate vs multivariate comparison"
-      ],
-      "proofAssets": [
-        "Anomaly detection evaluation slides",
-        "Instruction manual result figures"
-      ],
-      "slug": "anomaly-detection-using-gaussian-model",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/Anomaly-Detection-Using-Gaussian-Model"
-      ],
-      "featured": false
-    },
-    {
-      "title": "ECG Signal Denoising with Wiener Filtering",
-      "summary": "ECG denoising pipeline combining QRS detection and Wiener filtering for cleaner waveform analysis.",
-      "detail": "Implemented an ECG-cleaning pipeline combining synchronous averaging, QRS detection through cross-correlation, and Wiener filtering to improve signal quality for downstream waveform interpretation.",
-      "imagePath": "/images/projects/ecg-signal-denoising-with-wiener-filtering/project-report-p4-2.jpg",
-      "stack": [
-        "MATLAB",
-        "Signal Processing"
-      ],
-      "category": "Signal / Image Processing",
-      "tags": [
-        "ECG",
-        "Biomedical Signals",
-        "Filtering"
-      ],
-      "repoUrl": "https://github.com/Mahfuzmania/ECG-Signal-Denoising-Wiener-Filtering",
-      "shortSummary": "ECG denoising pipeline combining QRS detection and Wiener filtering for cleaner waveform analysis.",
-      "challenge": "Raw ECG signals contained noise artifacts that reduced reliability of downstream waveform interpretation.",
-      "solution": "Combined synchronous averaging, cross-correlation QRS detection, and Wiener filtering for robust denoising.",
-      "outcomes": [
-        "Improved ECG signal clarity while preserving diagnostically relevant waveform structure.",
-        "Created a repeatable filtering pipeline for biomedical signal preprocessing."
-      ],
-      "provenCapability": "Signal-processing workflow design for biomedical data preparation and quality enhancement.",
-      "figureType": "signal-processing-pipeline",
-      "metrics": [
-        "Noise reduction with waveform preservation",
-        "QRS-guided filtering workflow"
-      ],
-      "proofAssets": [
-        "ECG denoising report plots",
-        "Pipeline implementation snapshots"
-      ],
-      "slug": "ecg-signal-denoising-with-wiener-filtering",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/ECG-Signal-Denoising-Wiener-Filtering"
-      ],
-      "featured": false
-    },
-    {
-      "title": "Image Thresholding for Background Removal",
-      "summary": "Threshold-based image preprocessing workflow for stable foreground extraction under near-white backgrounds.",
-      "detail": "Developed a threshold-based RGB preprocessing workflow to isolate foreground objects from white and near-white backgrounds, with parameter tuning for improved edge preservation and segmentation stability.",
-      "imagePath": "/images/projects/image-thresholding-for-background-removal/dsp_projectreport-p6-1.png",
-      "stack": [
-        "MATLAB",
-        "Image Processing"
-      ],
-      "category": "Signal / Image Processing",
-      "tags": [
-        "Segmentation",
-        "Thresholding",
-        "Preprocessing"
-      ],
-      "repoUrl": "https://github.com/Mahfuzmania/Image-Thresholding-for-Background-Removal",
-      "shortSummary": "Threshold-based image preprocessing workflow for stable foreground extraction under near-white backgrounds.",
-      "challenge": "Foreground extraction degraded around edges when backgrounds were near-white and lighting varied.",
-      "solution": "Implemented threshold segmentation with RGB tuning and post-processing steps to stabilize edge quality.",
-      "outcomes": [
-        "Improved segmentation stability for white/near-white background cases.",
-        "Reduced edge-noise artifacts through parameter tuning and refinement steps."
-      ],
-      "provenCapability": "Image preprocessing pipeline development with evidence-driven parameter optimization.",
-      "figureType": "signal-processing-pipeline",
-      "metrics": [
-        "Threshold tuning for edge preservation",
-        "Foreground-background separation improvement"
-      ],
-      "proofAssets": [
-        "Segmentation result comparison figures",
-        "DSP project report visual evidence"
-      ],
-      "slug": "image-thresholding-for-background-removal",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/Image-Thresholding-for-Background-Removal"
-      ],
-      "featured": false
-    },
-    {
-      "title": "Bluetooth Interfacing with 8051",
-      "summary": "8051 + HC-05 embedded control system for wireless command handling across actuators and indicators.",
-      "detail": "Engineered an embedded Bluetooth command system around 8051 + HC-05 to control LCD, LEDs, relay modules, and buzzer states through serial protocols, including command handling and basic security logic.",
-      "imagePath": "/images/projects/bluetooth-interfacing-with-8051/report-p22-1.jpeg",
-      "stack": [
-        "8051 Assembly",
-        "MIDE 51",
-        "Serial Communication"
-      ],
-      "category": "Embedded / Systems Work",
-      "tags": [
-        "Microcontroller",
-        "Bluetooth",
-        "Real-time Control"
-      ],
-      "repoUrl": "https://github.com/Mahfuzmania/Bluetooth-Interfacing-8051-Final",
-      "shortSummary": "8051 + HC-05 embedded control system for wireless command handling across actuators and indicators.",
-      "challenge": "Needed stable serial-command handling for multiple device outputs in an 8051 embedded setup.",
-      "solution": "Implemented Bluetooth command parsing and serial control logic for LED, relay, LCD, and buzzer modules.",
-      "outcomes": [
-        "Enabled multi-output command-driven control through low-cost embedded hardware.",
-        "Improved command sequencing reliability in real-time device interaction."
-      ],
-      "provenCapability": "Embedded systems integration with communication protocol handling and device-level control.",
-      "figureType": "embedded-system-diagram",
-      "metrics": [
-        "Serial command workflow for multi-device control",
-        "8051 + HC-05 integration implementation"
-      ],
-      "proofAssets": [
-        "Embedded report architecture pages",
-        "Hardware interaction documentation"
-      ],
-      "slug": "bluetooth-interfacing-with-8051",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/Bluetooth-Interfacing-8051-Final"
-      ],
-      "featured": false
-    },
-    {
-      "title": "Two-Area Power System MATLAB Simulink",
-      "summary": "Two-area power-system dynamic simulation for load-frequency and tie-line response analysis.",
-      "detail": "Modeled a two-area interconnected power system in Simulink to analyze load-frequency control behavior, tie-line power deviations, and system response under load disturbances.",
-      "imagePath": "/images/placeholders/project-simulation.svg",
-      "stack": [
-        "MATLAB",
-        "Simulink",
-        "Power Systems"
-      ],
-      "category": "Simulation / Energy Systems",
-      "tags": [
-        "LFC",
-        "Grid Dynamics",
-        "Frequency Control"
-      ],
-      "repoUrl": "https://github.com/Mahfuzmania/Two-Area-Power-System-MATLAB-Simulink",
-      "shortSummary": "Two-area power-system dynamic simulation for load-frequency and tie-line response analysis.",
-      "challenge": "Analyzed load disturbance effects on interconnected grid frequency and tie-line power behavior.",
-      "solution": "Modeled two-area power system dynamics in Simulink and evaluated transient and steady-state responses.",
-      "outcomes": [
-        "Characterized frequency-control behavior under disturbance scenarios.",
-        "Produced simulation evidence for system-level control understanding."
-      ],
-      "provenCapability": "Energy-system simulation and control response analysis using model-based evaluation.",
-      "figureType": "simulation-tradeoff-chart",
-      "metrics": [
-        "Load-frequency control response observation",
-        "Tie-line dynamic behavior analysis"
-      ],
-      "proofAssets": [
-        "Simulink system model outputs",
-        "Dynamic response interpretation notes"
-      ],
-      "slug": "two-area-power-system-matlab-simulink",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://github.com/Mahfuzmania/Two-Area-Power-System-MATLAB-Simulink"
-      ],
-      "featured": false
-    },
-    {
-      "title": "Cardiac EDA Processing",
-      "summary": "Private healthcare ETL pipeline for Oracle exports and lab sheets into curated patient-level analytics tables.",
-      "detail": "Designed a private healthcare ETL workflow that ingests Oracle exports and multi-sheet lab reports, standardizes identifiers and timelines, and outputs curated patient-level datasets for reliable analysis.",
-      "imagePath": "/images/placeholders/project-data.svg",
-      "stack": [
-        "Python",
-        "Pandas",
-        "OpenPyXL",
-        "Healthcare ETL"
-      ],
-      "category": "Data Engineering",
-      "tags": [
-        "Clinical Data",
-        "ETL",
-        "Standardization"
-      ],
-      "privateRepo": true,
-      "shortSummary": "Private healthcare ETL pipeline for Oracle exports and lab sheets into curated patient-level analytics tables.",
-      "challenge": "Clinical source files were fragmented across export types and lacked consistent identifiers/timelines.",
-      "solution": "Implemented extraction, harmonization, and quality checks to produce curated longitudinal clinical data assets.",
-      "outcomes": [
-        "Improved consistency of patient-level data across repeated ETL refresh cycles.",
-        "Reduced manual preparation effort for downstream analytics and reporting."
-      ],
-      "provenCapability": "Private clinical data integration with repeatable quality enforcement and structured output delivery.",
-      "figureType": "healthcare-data-flow",
-      "metrics": [
-        "Oracle + lab source consolidation",
-        "Identifier and timeline harmonization"
-      ],
-      "proofAssets": [
-        "ETL transformation workflow",
-        "Clinical data quality control checkpoints"
-      ],
-      "slug": "cardiac-eda-processing",
-      "publishState": "published",
-      "visibility": "public",
-      "featured": false
-    },
-    {
-      "title": "Coronary Angiogram Dataset Cleaning",
-      "summary": "Rule-based cleaning and feature standardization pipeline for coronary angiogram clinical datasets.",
-      "detail": "Implemented rule-based cleaning and harmonization for coronary angiogram records, including severity normalization, derived feature generation, and quality checks to reduce analytical noise.",
-      "imagePath": "/images/placeholders/project-data.svg",
-      "stack": [
-        "Python",
-        "Data Cleaning",
-        "Clinical Rules"
-      ],
-      "category": "Data Engineering",
-      "tags": [
-        "Data Quality",
-        "Feature Engineering",
-        "Clinical Analytics"
-      ],
-      "privateRepo": true,
-      "shortSummary": "Rule-based cleaning and feature standardization pipeline for coronary angiogram clinical datasets.",
-      "challenge": "Coronary angiogram records contained inconsistent severity labels and noisy feature fields.",
-      "solution": "Applied domain rules for severity normalization, derived feature construction, and consistency validation.",
-      "outcomes": [
-        "Reduced analytical noise through structured data cleaning and normalization.",
-        "Prepared stable feature sets suitable for clinical analytics and modeling."
-      ],
-      "provenCapability": "Domain-informed data quality engineering for specialized clinical datasets.",
-      "figureType": "healthcare-data-flow",
-      "metrics": [
-        "Severity classification normalization",
-        "Derived clinical feature consistency checks"
-      ],
-      "proofAssets": [
-        "Rule-based cleaning workflow",
-        "Feature engineering quality validation notes"
-      ],
-      "slug": "coronary-angiogram-dataset-cleaning",
-      "publishState": "published",
-      "visibility": "public",
-      "featured": false
-    },
-    {
-      "title": "Nurul Amin MP Website Platform",
-      "summary": "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
-      "detail": "Built and shipped as a secure Next.js platform with role-aware admin workflows, section-based CMS operations, request tracking, and media/document publishing for public communication.",
-      "imagePath": "/images/placeholders/project-data.svg",
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Role-Based Admin",
-        "Admin CMS",
-        "Nodemailer"
-      ],
-      "category": "Platform Engineering / CMS Systems",
-      "tags": [
-        "Platform Engineering",
-        "CMS Systems",
-        "Bilingual Operations"
-      ],
-      "impact": "Live in production for constituency communication and structured request handling.",
-      "featured": true,
-      "repoUrl": "https://nurulamin.org",
-      "privateRepo": true,
-      "shortSummary": "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
-      "challenge": "Needed a production-ready public website that supports bilingual communication, structured service workflows, and controlled publishing.",
-      "solution": "Built a secure Next.js platform with role-aware admin, CMS section management, request tracking, and media/document operations.",
-      "outcomes": [
-        "Launched a maintainable public communication platform for constituency services.",
-        "Enabled controlled publishing and structured request handling through admin workflows.",
-        "Provided reusable CMS architecture patterns for future civic platforms."
-      ],
-      "provenCapability": "Secure platform engineering and CMS workflow design for live public-service systems.",
-      "figureType": "cms-publishing-workflow",
-      "metrics": [
-        "Live production deployment",
-        "Role-based publishing control",
-        "Bilingual CMS operations"
-      ],
-      "proofAssets": [
-        "Admin publishing lifecycle design",
-        "Role-based moderation/publishing workflow"
-      ],
-      "slug": "nurul-amin-mp-website-platform",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://nurulamin.org"
-      ]
-    },
-    {
-      "title": "My Personal Portfolio Platform",
-      "summary": "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
-      "detail": "Designed and implemented with protected admin routes, signed session handling, content validation, and reusable section-level CMS patterns for maintainable updates.",
-      "imagePath": "/images/placeholders/project-ai.svg",
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Argon2",
-        "JOSE JWT",
-        "Zod"
-      ],
-      "category": "Platform Engineering / CMS Systems",
-      "tags": [
-        "Platform Engineering",
-        "Secure CMS",
-        "Admin Workflow"
-      ],
-      "impact": "Demonstrates a private CMS architecture optimized for practical portfolio and product delivery updates.",
-      "featured": true,
-      "repoUrl": "https://my-personal-portfolio-psi-seven.vercel.app/",
-      "privateRepo": true,
-      "shortSummary": "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
-      "challenge": "Required a maintainable personal platform that supports controlled content updates without exposing admin/security internals publicly.",
-      "solution": "Implemented protected admin authentication, CSRF/session controls, schema-validated content editing, and structured publishing workflows.",
-      "outcomes": [
-        "Enabled safe content operations through role-aware admin workflows.",
-        "Created reusable CMS structures for project, experience, and blog updates.",
-        "Improved maintainability with data-driven content and centralized validation."
-      ],
-      "provenCapability": "Secure CMS and platform engineering with production-safe content operations.",
-      "figureType": "cms-publishing-workflow",
-      "metrics": [
-        "Protected admin authentication flow",
-        "Schema-validated content updates",
-        "Blog CMS publish-state management"
-      ],
-      "proofAssets": [
-        "Admin workflow and permission architecture",
-        "Content model validation and publishing lifecycle"
-      ],
-      "slug": "my-personal-portfolio-platform",
-      "publishState": "published",
-      "visibility": "public",
-      "links": [
-        "https://my-personal-portfolio-psi-seven.vercel.app/"
-      ]
-    }
-  ],
-  "technicalFocus": [
-    {
-      "title": "Data Engineering for High-Integrity Systems",
-      "detail": "Designing resilient data pipelines from source ingestion to validated, analysis-ready outputs (including recent healthcare deployments)."
-    },
-    {
-      "title": "Applied AI Systems",
-      "detail": "Building retrieval-grounded AI applications with explainability, citations, and domain-aware response control."
-    },
-    {
-      "title": "Platform Engineering / CMS Systems",
-      "detail": "Delivering secure role-based content platforms with moderation, publishing workflows, and operational controls."
-    },
-    {
-      "title": "Simulation and Control Analysis",
-      "detail": "Using simulation and controller response evaluation to support engineering decisions with measurable evidence."
-    }
-  ],
-  "highlights": [
-    "Integrated 70k+ patient records and 1M+ laboratory entries into validated healthcare analytics datasets.",
-    "Built and deployed secure CMS-backed public platforms including nurulamin.org and this portfolio system.",
-    "Developed retrieval-augmented AI tooling with citation-grounded responses for technical learning workflows.",
-    "Applied simulation and control analysis methods to evaluate performance, stability, and tradeoffs in engineering systems."
-  ],
-  "aboutSummary": [
-    "Primary role: Data Engineer delivering high-integrity integration and quality pipelines.",
-    "Secondary core: Applied AI systems builder focused on retrieval-grounded, domain-aware workflows.",
-    "Platform strength: secure CMS and admin workflow engineering for production web systems.",
-    "Supporting depth: simulation/control analysis for rigorous engineering validation."
-  ],
-  "workingPhilosophy": [
-    "Establish data integrity before model decisions.",
-    "Translate research ideas into deployable, maintainable systems.",
-    "Design for traceability, security, and operational reliability.",
-    "Prioritize measurable outcomes over feature noise."
-  ],
-  "experience": [
-    {
-      "period": "Nov 2025 - Present",
-      "role": "Data Engineer",
-      "org": "Enact Business Solutions",
-      "type": "Professional Experience",
-      "points": [
-        "Built Python-based pipelines for multi-source clinical datasets, including patient, lab, and outcome records.",
-        "Standardized identifiers and timelines across sources to produce analysis-ready integrated datasets.",
-        "Implemented quality controls for missing values, duplicates, and temporal consistency before downstream analytics."
-      ]
-    },
-    {
-      "period": "Nov 2024 - Apr 2025",
-      "role": "Research Engineer (AI & Data Science)",
-      "org": "AIMS Lab, IRIIC, United International University",
-      "type": "Technical / Research Experience",
-      "points": [
-        "Contributed to Jotno.AI and Susastho.AI across NLP-driven screening and healthcare guidance workflows.",
-        "Applied machine learning and NLP techniques for symptom triage, risk-aware assessment, and model evaluation.",
-        "Worked with cross-functional teams to translate research workflows into deployable technical systems."
-      ]
-    },
-    {
-      "period": "2025 - Present",
-      "role": "Co-Founder, AZM Labs",
-      "org": "AZM Labs",
-      "type": "Product Leadership",
-      "points": [
-        "Driving technical strategy and execution for practical AI and data-centric software systems.",
-        "Led delivery of the live Nurul Amin MP platform (nurulamin.org) from architecture to operational CMS workflows.",
-        "Set delivery standards and roadmap priorities across internal products and client-facing platforms."
-      ]
-    },
-    {
-      "period": "2025 - Present",
-      "role": "Software Engineer, AZM Labs",
-      "org": "AZM Labs",
-      "type": "Product Engineering",
-      "points": [
-        "Built secure, admin-managed web platforms with role-based workflows and validated content pipelines.",
-        "Delivered and iterated the My Personal Portfolio platform (my-personal-portfolio-psi-seven.vercel.app) with protected CMS operations.",
-        "Delivered Next.js systems spanning content management, citizen workflows, and operational dashboards."
-      ]
-    }
-  ],
-  "education": [
-    {
-      "period": "Jan 2020 - Jun 2024",
-      "degree": "B.Sc. in Electrical and Electronic Engineering (CGPA: 3.72/4.00)",
-      "institution": "Islamic University of Technology (IUT)",
-      "details": [
-        "Relevant focus: AI/ML, biomedical signal processing, power electronics, control systems, power systems.",
-        "Undergraduate thesis: EV powertrain modeling and simulation."
-      ]
-    },
-    {
-      "period": "2019",
-      "degree": "Higher Secondary Certificate (GPA 5.00, General Grade Scholarship)",
-      "institution": "Dinajpur Govt. College, Dinajpur",
-      "details": [
-        "Science stream with strong mathematics and analytical foundation."
-      ]
-    },
-    {
-      "period": "2017",
-      "degree": "Secondary School Certificate (GPA 5.00)",
-      "institution": "Dinajpur Zilla School, Dinajpur",
-      "details": [
-        "Early academic distinction and Olympiad track record."
-      ]
-    }
-  ],
-  "training": [
-    {
-      "period": "Jun 2023",
-      "title": "Industrial Trainee",
-      "organization": "Institute of Nuclear Science and Technology",
-      "details": [
-        "Practical sessions on ITU TRIGA Mark-II training and research reactor operations."
-      ]
-    },
-    {
-      "period": "May 2023",
-      "title": "Industrial Trainee",
-      "organization": "Robi Axiata Limited",
-      "details": [
-        "Training in telecommunications network systems and communication design."
-      ]
-    },
-    {
-      "period": "May 2023",
-      "title": "Industrial Trainee",
-      "organization": "Bangladesh Power Development Board (BPDB)",
-      "details": [
-        "Hands-on exposure to steam, gas, and combined cycle power plant systems."
-      ]
-    }
-  ],
-  "researchThemes": [
-    "Healthcare data integration and reliable analytical infrastructure",
-    "Survival modeling and interpretable clinical ML",
-    "Signal and system-level analysis for biomedical and engineering use-cases",
-    "Controller design and performance optimization in electrical drives",
-    "Retrieval-augmented AI tools for technical learning and decision support"
-  ],
-  "skillGroups": [
-    {
-      "title": "Backend and Platform Engineering",
-      "items": [
-        "Node.js Runtime",
-        "Next.js Route Handlers",
-        "TypeScript",
-        "REST API Design",
-        "Role-Based Admin",
-        "CMS Workflows",
-        "JSON/Content Persistence"
-      ]
-    },
-    {
-      "title": "Security and Reliability",
-      "items": [
-        "Argon2",
-        "JOSE JWT",
-        "Session Cookies",
-        "CSRF Protection",
-        "Rate Limiting",
-        "Zod Validation",
-        "API Route Guarding"
-      ]
-    },
-    {
-      "title": "Data, AI, and Simulation",
-      "items": [
-        "Python",
-        "Pandas",
-        "OpenPyXL",
-        "RAG Pipelines",
-        "MATLAB",
-        "Simulink",
-        "Control Systems",
-        "Survival Analysis"
-      ]
-    }
-  ],
-  "achievementItems": [
-    "OIC partial scholarship recipient for academic excellence at IUT.",
-    "Champion, 10th Mathematical Olympiad (Higher Secondary Group, Dinajpur).",
-    "Conference publication at ICECET 2023.",
-    "Director of Operations, Esonance 2023 (major university tech festival)."
-  ]
+﻿{
+    "profile":  {
+                    "name":  "Md Mahfuzul Islam",
+                    "identityLine":  "Data Engineer and applied AI systems builder delivering secure, evidence-driven platforms.",
+                    "shortIntro":  "I build reliable data pipelines and applied AI workflows for production use, then package them into secure CMS-enabled platforms with operational control.",
+                    "photoPath":  "/images/portraits/mahfuzul-whatsapp-2026-03-11.jpeg",
+                    "location":  "Dhaka, Bangladesh",
+                    "email":  "mahfuzulislam@iut-dhaka.edu",
+                    "secondaryEmail":  "mahfuzulislam41@gmail.com",
+                    "github":  "https://github.com/Mahfuzmania",
+                    "linkedin":  "https://www.linkedin.com/in/mahfuzul-islam-4366941a5/",
+                    "facebook":  "https://www.facebook.com/mahfuzul.islam.280199/",
+                    "googleScholar":  "https://scholar.google.com/citations?hl=en\u0026user=y-kOLZ8AAAAJ",
+                    "researchGate":  "https://www.researchgate.net/profile/Md-Islam-2284?ev=hdr_xprf",
+                    "resumePath":  "/docs/Md_Mahfuzul_Islam_Resume.pdf",
+                    "cvPath":  "/docs/Md_Mahfuzul_Islam_CV.pdf"
+                },
+    "uiContent":  {
+                      "navbarRoleLine":  {
+                                             "en":  "Data Engineer at Enact Business Solutions",
+                                             "bn":  "Enact Business Solutions-à¦ à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°"
+                                         },
+                      "home":  {
+                                   "workstreams":  [
+                                                       {
+                                                           "title":  {
+                                                                         "en":  "Data Engineering",
+                                                                         "bn":  "Data Engineering"
+                                                                     },
+                                                           "detail":  {
+                                                                          "en":  "Ingestion, cleaning, harmonization, and validation workflows that turn fragmented sources into analysis-ready outputs.",
+                                                                          "bn":  "Ingestion, cleaning, harmonization, and validation workflows that turn fragmented sources into analysis-ready outputs."
+                                                                      },
+                                                           "variant":  "data"
+                                                       },
+                                                       {
+                                                           "title":  {
+                                                                         "en":  "Applied AI Systems",
+                                                                         "bn":  "Applied AI Systems"
+                                                                     },
+                                                           "detail":  {
+                                                                          "en":  "Retrieval-grounded AI workflows with citation-aware responses and domain-focused decision support.",
+                                                                          "bn":  "Retrieval-grounded AI workflows with citation-aware responses and domain-focused decision support."
+                                                                      },
+                                                           "variant":  "ai"
+                                                       },
+                                                       {
+                                                           "title":  {
+                                                                         "en":  "Platform Engineering / CMS Systems",
+                                                                         "bn":  "Platform Engineering / CMS Systems"
+                                                                     },
+                                                           "detail":  {
+                                                                          "en":  "Secure admin-managed publishing systems with role-based controls, moderation, and operational visibility.",
+                                                                          "bn":  "Secure admin-managed publishing systems with role-based controls, moderation, and operational visibility."
+                                                                      },
+                                                           "variant":  "platform"
+                                                       },
+                                                       {
+                                                           "title":  {
+                                                                         "en":  "Simulation and Control Depth",
+                                                                         "bn":  "Simulation and Control Depth"
+                                                                     },
+                                                           "detail":  {
+                                                                          "en":  "Simulation-based modeling and control analysis used to validate engineering decisions and tradeoffs.",
+                                                                          "bn":  "Simulation-based modeling and control analysis used to validate engineering decisions and tradeoffs."
+                                                                      },
+                                                           "variant":  "simulation"
+                                                       }
+                                                   ],
+                                   "profileNarrative":  {
+                                                            "en":  [
+                                                                       "My primary delivery focus is data engineering and applied AI systems that support reliable technical decisions.",
+                                                                       "Recent execution includes high-integrity data programs, secure platform/CMS delivery, and simulation-led engineering analysis."
+                                                                   ],
+                                                            "bn":  [
+                                                                       "à¦†à¦®à¦¿ à¦‡à¦®à¦ªà§à¦²à¦¿à¦®à§‡à¦¨à§à¦Ÿà§‡à¦¶à¦¨-à¦•à§‡à¦¨à§à¦¦à§à¦°à¦¿à¦• à¦¡à§‡à¦Ÿà¦¾ à¦“ à¦à¦†à¦‡ à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦® à¦¤à§ˆà¦°à¦¿ à¦•à¦°à¦¿, à¦¯à§‡à¦–à¦¾à¦¨à§‡ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°à¦¿à¦‚ à¦¡à¦¿à¦¸à¦¿à¦ªà§à¦²à¦¿à¦¨ à¦à¦¬à¦‚ à¦¬à¦¿à¦¶à§à¦²à§‡à¦·à¦£à¦¾à¦¤à§à¦®à¦• à¦•à¦ à§‹à¦°à¦¤à¦¾ à¦¸à¦®à¦¾à¦¨à¦­à¦¾à¦¬à§‡ à¦—à§à¦°à§à¦¤à§à¦¬à¦ªà§‚à¦°à§à¦£à¥¤",
+                                                                       "à¦¬à¦°à§à¦¤à¦®à¦¾à¦¨ à¦•à¦¾à¦œà§‡à¦° à¦®à§‚à¦² à¦•à§à¦·à§‡à¦¤à§à¦° à¦¹à§‡à¦²à¦¥à¦•à§‡à¦¯à¦¼à¦¾à¦° à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦¨à§à¦Ÿà¦¿à¦—à§à¦°à§‡à¦¶à¦¨, à¦¨à¦¿à¦°à¦¾à¦ªà¦¦ à¦ªà§à¦²à§à¦¯à¦¾à¦Ÿà¦«à¦°à§à¦® à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°à¦¿à¦‚ à¦à¦¬à¦‚ à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦†à¦‡ à¦¡à§‡à¦²à¦¿à¦­à¦¾à¦°à¦¿à¥¤"
+                                                                   ]
+                                                        },
+                                   "scope":  {
+                                                 "en":  [
+                                                            "Multi-source data integration with validation checkpoints",
+                                                            "Applied AI retrieval systems with grounded outputs",
+                                                            "Secure role-based CMS and platform operations",
+                                                            "Simulation/control analysis for engineering tradeoffs"
+                                                        ],
+                                                 "bn":  [
+                                                            "à¦•à§à¦²à¦¿à¦¨à¦¿à¦•à¦¾à¦² à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦¨à§à¦Ÿà¦¿à¦—à§à¦°à§‡à¦¶à¦¨ à¦ªà¦¾à¦‡à¦ªà¦²à¦¾à¦‡à¦¨",
+                                                            "à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨-à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¡ à¦¦à§à¦¬à¦¿à¦­à¦¾à¦·à¦¿à¦• à¦“à¦¯à¦¼à§‡à¦¬ à¦ªà§à¦²à§à¦¯à¦¾à¦Ÿà¦«à¦°à§à¦®",
+                                                            "à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦®à¦à¦² à¦“ à¦°à¦¿à¦Ÿà§à¦°à¦¿à¦­à¦¾à¦² à¦“à¦¯à¦¼à¦¾à¦°à§à¦•à¦«à§à¦²à§‹",
+                                                            "à¦¸à¦¿à¦®à§à¦²à§‡à¦¶à¦¨-à¦¨à¦¿à¦°à§à¦­à¦° à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°à¦¿à¦‚ à¦¬à¦¿à¦¶à§à¦²à§‡à¦·à¦£"
+                                                        ]
+                                             }
+                               },
+                      "about":  {
+                                    "biography":  {
+                                                      "en":  "Md Mahfuzul Islam is a Data Engineer with an Electrical and Electronic Engineering foundation, building applied AI systems and secure CMS platforms. His work emphasizes structured delivery: clear problem framing, validated pipelines, and maintainable operations across domains.",
+                                                      "bn":  "à¦®à§‹à¦ƒ à¦®à¦¾à¦¹à¦«à§à¦œà§à¦² à¦‡à¦¸à¦²à¦¾à¦® à¦à¦•à¦œà¦¨ à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°, à¦¯à¦¾à¦° à¦­à¦¿à¦¤à§à¦¤à¦¿ Electrical and Electronic Engineeringà¥¤ à¦¤à¦¿à¦¨à¦¿ à¦—à¦¬à§‡à¦·à¦£à¦¾à¦­à¦¿à¦¤à§à¦¤à¦¿à¦• à¦§à¦¾à¦°à¦£à¦¾à¦•à§‡ à¦¨à¦¿à¦°à§à¦­à¦°à¦¯à§‹à¦—à§à¦¯ à¦¸à¦«à¦Ÿà¦“à¦¯à¦¼à§à¦¯à¦¾à¦° à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦®à§‡ à¦°à§‚à¦ª à¦¦à¦¿à¦¤à§‡ à¦•à¦¾à¦œ à¦•à¦°à§‡à¦¨à¥¤ à¦¤à¦¾à¦° à¦•à¦¾à¦œà§‡à¦° à¦®à§‚à¦² à¦«à§‹à¦•à¦¾à¦¸ à¦¹à§‡à¦²à¦¥à¦•à§‡à¦¯à¦¼à¦¾à¦° à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°à¦¿à¦‚, à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦†à¦‡ à¦à¦¬à¦‚ à¦¨à¦¿à¦°à¦¾à¦ªà¦¦ à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨-à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¡ à¦ªà§à¦²à§à¦¯à¦¾à¦Ÿà¦«à¦°à§à¦® à¦¡à§‡à¦­à§‡à¦²à¦ªà¦®à§‡à¦¨à§à¦Ÿà¥¤"
+                                                  },
+                                    "contextCards":  [
+                                                         {
+                                                             "title":  {
+                                                                           "en":  "Enact Business Solutions",
+                                                                           "bn":  "à¦à¦¨à¦…à§à¦¯à¦¾à¦•à§à¦Ÿ Business Solutions"
+                                                                       },
+                                                             "detail":  {
+                                                                            "en":  "Leads healthcare data integration and quality validation workflows that turn fragmented clinical records into analysis-ready datasets.",
+                                                                            "bn":  "à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦° à¦¹à¦¿à¦¸à§‡à¦¬à§‡ à¦¹à§‡à¦²à¦¥à¦•à§‡à¦¯à¦¼à¦¾à¦° à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦¨à§à¦Ÿà¦¿à¦—à§à¦°à§‡à¦¶à¦¨, à¦¡à§‡à¦Ÿà¦¾ à¦•à§‹à¦¯à¦¼à¦¾à¦²à¦¿à¦Ÿà¦¿ à¦•à¦¨à§à¦Ÿà§à¦°à§‹à¦² à¦à¦¬à¦‚ à¦…à§à¦¯à¦¾à¦¨à¦¾à¦²à¦¿à¦Ÿà¦¿à¦•à§à¦¸-à¦°à§‡à¦¡à¦¿ à¦¡à§‡à¦²à¦¿à¦­à¦¾à¦°à¦¿ à¦ªà¦¾à¦‡à¦ªà¦²à¦¾à¦‡à¦¨à§‡ à¦•à¦¾à¦œ à¦•à¦°à¦›à¦¿à¥¤"
+                                                                        }
+                                                         },
+                                                         {
+                                                             "title":  {
+                                                                           "en":  "AZM Labs",
+                                                                           "bn":  "à¦à¦œà§‡à¦¡à¦à¦® Labs"
+                                                                       },
+                                                             "detail":  {
+                                                                            "en":  "Builds secure admin-managed products at AZM Labs, including CMS-driven public websites and applied AI-enabled platform features.",
+                                                                            "bn":  "Co-Founder à¦à¦¬à¦‚ Software Engineer à¦¹à¦¿à¦¸à§‡à¦¬à§‡ à¦¨à¦¿à¦°à¦¾à¦ªà¦¦, à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨-à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¡ AI à¦“ à¦¡à§‡à¦Ÿà¦¾ à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦® à¦¡à§‡à¦²à¦¿à¦­à¦¾à¦°à¦¿à¦¤à§‡ à¦¨à§‡à¦¤à§ƒà¦¤à§à¦¬ à¦¦à¦¿à¦šà§à¦›à¦¿à¥¤"
+                                                                        }
+                                                         }
+                                                     ],
+                                    "professionalFocus":  [
+                                                              {
+                                                                  "title":  {
+                                                                                "en":  "Enact Business Solutions: Healthcare Data Delivery",
+                                                                                "bn":  "à¦à¦¨à¦…à§à¦¯à¦¾à¦•à§à¦Ÿ Business Solutions: à¦¹à§‡à¦²à¦¥à¦•à§‡à§Ÿà¦¾à¦° à¦¡à§‡à¦Ÿà¦¾ à¦¡à§‡à¦²à¦¿à¦­à¦¾à¦°à¦¿"
+                                                                            },
+                                                                  "detail":  {
+                                                                                 "en":  "Healthcare data ingestion, transformation, reconciliation, and quality assurance for research and operational analytics.",
+                                                                                 "bn":  "à¦¹à§‡à¦²à¦¥à¦•à§‡à§Ÿà¦¾à¦° à¦¡à§‡à¦Ÿà¦¾ pipeline à¦¤à§ˆà¦°à¦¿, à¦®à¦¾à¦¨ à¦¯à¦¾à¦šà¦¾à¦‡, reconciliation à¦à¦¬à¦‚ à¦¨à¦¿à¦°à¦¾à¦ªà¦¦ handling à¦¨à¦¿à¦¶à§à¦šà¦¿à¦¤ à¦•à¦°à¦¾à¥¤"
+                                                                             }
+                                                              },
+                                                              {
+                                                                  "title":  {
+                                                                                "en":  "AZM Labs: Product and Platform Engineering",
+                                                                                "bn":  "à¦à¦œà§‡à¦¡à¦à¦® Labs: à¦ªà§à¦°à§‹à¦¡à¦¾à¦•à§à¦Ÿ à¦“ à¦ªà§à¦²à§à¦¯à¦¾à¦Ÿà¦«à¦°à§à¦® à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à§Ÿà¦¾à¦°à¦¿à¦‚"
+                                                                            },
+                                                                  "detail":  {
+                                                                                 "en":  "Platform architecture, secure admin workflows, and applied AI feature delivery for production web systems.",
+                                                                                 "bn":  "à¦¬à¦¾à¦¸à§à¦¤à¦¬à¦§à¦°à§à¦®à§€ AI à¦“ à¦¡à§‡à¦Ÿà¦¾ à¦ªà§à¦°à§‹à¦¡à¦¾à¦•à§à¦Ÿà§‡à¦° architecture, implementation à¦à¦¬à¦‚ delivery-à¦ à¦¨à§‡à¦¤à§ƒà¦¤à§à¦¬ à¦¦à§‡à¦“à§Ÿà¦¾à¥¤"
+                                                                             }
+                                                              }
+                                                          ]
+                                },
+                      "research":  {
+                                       "technicalInterests":  {
+                                                                  "en":  [
+                                                                             "Applied AI systems for engineering and decision-support workflows",
+                                                                             "Healthcare analytics built on high-integrity clinical datasets",
+                                                                             "Secure content and workflow architecture for production platforms",
+                                                                             "Control-system and energy-model analysis through simulation"
+                                                                         ],
+                                                                  "bn":  [
+                                                                             "à¦¡à§‹à¦®à§‡à¦‡à¦¨-à¦¨à¦¿à¦°à§à¦¦à¦¿à¦·à§à¦Ÿ à¦Ÿà§‡à¦•à¦¨à¦¿à¦•à§à¦¯à¦¾à¦² à¦“à¦¯à¦¼à¦¾à¦°à§à¦•à¦«à§à¦²à§‹à¦° à¦œà¦¨à§à¦¯ à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦†à¦‡",
+                                                                             "à¦‰à¦šà§à¦šà¦®à¦¾à¦¨à§‡à¦° à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦¨à§à¦Ÿà¦¿à¦—à§à¦°à¦¿à¦Ÿà¦¿ à¦¸à¦¹ à¦¹à§‡à¦²à¦¥à¦•à§‡à¦¯à¦¼à¦¾à¦° à¦…à§à¦¯à¦¾à¦¨à¦¾à¦²à¦¿à¦Ÿà¦¿à¦•à§à¦¸",
+                                                                             "à¦¨à¦¿à¦°à¦¾à¦ªà¦¦ à¦•à¦¨à¦Ÿà§‡à¦¨à§à¦Ÿ à¦“ à¦“à¦¯à¦¼à¦¾à¦°à§à¦•à¦«à§à¦²à§‹ à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦®à§‡à¦¨à§à¦Ÿ à¦†à¦°à§à¦•à¦¿à¦Ÿà§‡à¦•à¦šà¦¾à¦°",
+                                                                             "à¦‡à¦²à§‡à¦•à¦Ÿà§à¦°à¦¿à¦•à§à¦¯à¦¾à¦² à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦® à¦•à¦¨à§à¦Ÿà§à¦°à§‹à¦² à¦“ à¦…à¦ªà§à¦Ÿà¦¿à¦®à¦¾à¦‡à¦œà§‡à¦¶à¦¨"
+                                                                         ]
+                                                              },
+                                       "explorations":  {
+                                                            "en":  [
+                                                                       "Bilingual retrieval assistant design for EE learning with cited responses",
+                                                                       "Controller tuning comparisons across series PI, IMC, and manual strategies",
+                                                                       "Schema-validated content pipelines for admin-managed platforms",
+                                                                       "Research-to-production implementation with security and operations controls"
+                                                                   ],
+                                                            "bn":  [
+                                                                       "EE à¦¶à¦¿à¦•à§à¦·à¦¾à¦° à¦œà¦¨à§à¦¯ bilingual technical assistant design (RAG + citation workflow)",
+                                                                       "Controller tuning à¦¤à§à¦²à¦¨à¦¾ (series PI, IMC, manual)",
+                                                                       "à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨-à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¡ à¦“à¦¯à¦¼à§‡à¦¬ à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦®à§‡à¦° à¦œà¦¨à§à¦¯ schema-validated content pipeline",
+                                                                       "production security controls à¦¸à¦¹ research-to-software implementation"
+                                                                   ]
+                                                        }
+                                   },
+                      "resume":  {
+                                     "summaryPoints":  {
+                                                           "en":  [
+                                                                      "Data Engineer delivering healthcare workflows for large, multi-source clinical datasets.",
+                                                                      "Built secure, admin-managed Next.js platforms with validated content and operational controls.",
+                                                                      "Co-Founder and Software Engineer at AZM Labs, leading delivery across private AI and data products."
+                                                                  ],
+                                                           "bn":  [
+                                                                      "à¦¬à¦¡à¦¼ à¦à¦¬à¦‚ à¦®à¦¾à¦²à§à¦Ÿà¦¿-à¦¸à§‹à¦°à§à¦¸ à¦¹à§‡à¦²à¦¥à¦•à§‡à¦¯à¦¼à¦¾à¦° à¦¡à§‡à¦Ÿà¦¾à¦¸à§‡à¦Ÿà§‡à¦° à¦œà¦¨à§à¦¯ Data Engineering workflow-à¦ à¦•à¦¾à¦œà§‡à¦° à¦…à¦­à¦¿à¦œà§à¦žà¦¤à¦¾ à¦°à¦¯à¦¼à§‡à¦›à§‡à¥¤",
+                                                                      "validated content operations à¦¸à¦¹ secure admin-managed Next.js à¦ªà§à¦²à§à¦¯à¦¾à¦Ÿà¦«à¦°à§à¦® à¦¤à§ˆà¦°à¦¿ à¦•à¦°à§‡à¦›à¦¿à¥¤",
+                                                                      "AZM Labs-à¦ Co-Founder à¦à¦¬à¦‚ Software Engineer à¦¹à¦¿à¦¸à§‡à¦¬à§‡ private platform delivery à¦ªà¦°à¦¿à¦šà¦¾à¦²à¦¨à¦¾ à¦•à¦°à¦›à¦¿à¥¤"
+                                                                  ]
+                                                       }
+                                 },
+                      "contact":  {
+                                      "collaborationTopics":  {
+                                                                  "en":  [
+                                                                             "Data engineering, integration, and quality validation pipelines",
+                                                                             "Secure admin-managed platform architecture and content operations",
+                                                                             "Applied AI, retrieval systems, and model evaluation strategy",
+                                                                             "Engineering simulation and control-oriented performance analysis"
+                                                                         ],
+                                                                  "bn":  [
+                                                                             "à¦¹à§‡à¦²à¦¥à¦•à§‡à¦¯à¦¼à¦¾à¦° à¦¡à§‡à¦Ÿà¦¾ à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°à¦¿à¦‚ à¦“ à¦‡à¦¨à§à¦Ÿà¦¿à¦—à§à¦°à§‡à¦¶à¦¨ à¦ªà¦¾à¦‡à¦ªà¦²à¦¾à¦‡à¦¨",
+                                                                             "à¦…à§à¦¯à¦¾à¦¡à¦®à¦¿à¦¨-à¦®à§à¦¯à¦¾à¦¨à§‡à¦œà¦¡ à¦ªà§à¦²à§à¦¯à¦¾à¦Ÿà¦«à¦°à§à¦® à¦†à¦°à§à¦•à¦¿à¦Ÿà§‡à¦•à¦šà¦¾à¦° à¦“ à¦¨à¦¿à¦°à¦¾à¦ªà¦¦ à¦•à¦¨à¦Ÿà§‡à¦¨à§à¦Ÿ à¦“à¦¯à¦¼à¦¾à¦°à§à¦•à¦«à§à¦²à§‹",
+                                                                             "à¦…à§à¦¯à¦¾à¦ªà§à¦²à¦¾à¦‡à¦¡ à¦à¦†à¦‡, à¦°à¦¿à¦Ÿà§à¦°à¦¿à¦­à¦¾à¦² à¦¸à¦¿à¦¸à§à¦Ÿà§‡à¦® à¦à¦¬à¦‚ à¦®à¦¡à§‡à¦² à¦‡à¦­à§à¦¯à¦¾à¦²à§à¦¯à¦¼à§‡à¦¶à¦¨ à¦¡à¦¿à¦œà¦¾à¦‡à¦¨",
+                                                                             "à¦‡à¦žà§à¦œà¦¿à¦¨à¦¿à¦¯à¦¼à¦¾à¦°à¦¿à¦‚ à¦¸à¦¿à¦®à§à¦²à§‡à¦¶à¦¨ à¦“ control-oriented analysis"
+                                                                         ]
+                                                              }
+                                  }
+                  },
+    "featuredProjects":  [
+                             {
+                                 "title":  "Healthcare Data Integration \u0026 Analytics Pipeline",
+                                 "summary":  "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
+                                 "detail":  "Designed and implemented Python workflows to clean, validate, and harmonize patient records, laboratory data, and clinical metadata across multiple sources, with strong consistency checks for downstream analytics and research.",
+                                 "imagePath":  "/images/placeholders/project-data.svg",
+                                 "stack":  [
+                                               "Python",
+                                               "Pandas",
+                                               "OpenPyXL",
+                                               "Data Cleaning",
+                                               "Data Integration",
+                                               "Data Validation",
+                                               "Healthcare Data Processing"
+                                           ],
+                                 "category":  "Data Engineering",
+                                 "tags":  [
+                                              "Healthcare ETL",
+                                              "Data Validation",
+                                              "Clinical Analytics Readiness"
+                                          ],
+                                 "impact":  "Enabled reliable analysis-ready healthcare datasets for research and reporting workflows.",
+                                 "contributions":  [
+                                                       "Designed Python-based healthcare data processing pipelines",
+                                                       "Harmonized large clinical datasets from multiple sources",
+                                                       "Resolved duplicate records, ID mismatches, and irregular date formats",
+                                                       "Integrated patient and laboratory data into a unified analytical dataset",
+                                                       "Performed quality validation and standardization for research usage"
+                                                   ],
+                                 "featured":  true,
+                                 "privateRepo":  true,
+                                 "shortSummary":  "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
+                                 "challenge":  "Clinical records arrived from multiple exports with inconsistent identifiers, date formats, and missing fields, reducing analytical reliability.",
+                                 "solution":  "Built Python-based ingestion, cleaning, harmonization, and validation pipelines to standardize patient/lab records into a unified dataset.",
+                                 "outcomes":  [
+                                                  "Reduced dataset inconsistency before analytics handoff through repeatable validation checks.",
+                                                  "Delivered a unified clinical dataset structure suitable for reporting and research analysis.",
+                                                  "Created reusable data-quality workflow patterns for future healthcare integrations."
+                                              ],
+                                 "provenCapability":  "Healthcare data engineering from raw source integration to validated analytics-ready delivery.",
+                                 "figureType":  "healthcare-data-flow",
+                                 "metrics":  [
+                                                 "70k+ patient records integrated",
+                                                 "1M+ laboratory rows harmonized",
+                                                 "Multi-source validation checkpoints"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Source-to-unified dataset transformation flow",
+                                                     "Clinical data cleaning and validation ruleset"
+                                                 ],
+                                 "slug":  "healthcare-data-integration-analytics-pipeline",
+                                 "publishState":  "published",
+                                 "visibility":  "public",
+                                 "figureImage":  "healthcare-data-integration.svg"
+                             },
+                             {
+                                 "title":  "Electrical Engineering RAG Bot",
+                                 "summary":  "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
+                                 "detail":  "Built as a practical AI toolchain for technical learning with retrieval over engineering sources, controllable reasoning detail, and configurable local/remote model support.",
+                                 "imagePath":  "/images/placeholders/project-ai.svg",
+                                 "stack":  [
+                                               "Python",
+                                               "Flask",
+                                               "RAG",
+                                               "BM25",
+                                               "OCR",
+                                               "Ollama"
+                                           ],
+                                 "category":  "Applied AI Systems",
+                                 "tags":  [
+                                              "RAG",
+                                              "Applied AI Systems",
+                                              "Cited Responses"
+                                          ],
+                                 "impact":  "Demonstrates full-stack AI system design for engineering education.",
+                                 "featured":  true,
+                                 "repoUrl":  "https://github.com/Mahfuzmania/EE-Solutions",
+                                 "shortSummary":  "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
+                                 "challenge":  "Technical learners needed reliable answers tied to textbook context rather than generic chatbot responses.",
+                                 "solution":  "Designed a retrieval pipeline with document parsing, chunking, BM25 retrieval, and grounded generation with citation references.",
+                                 "outcomes":  [
+                                                  "Produced citation-backed responses for engineering questions.",
+                                                  "Enabled bilingual (English/Bengali) support with structured response formatting.",
+                                                  "Demonstrated practical applied AI system assembly beyond model prompting alone."
+                                              ],
+                                 "provenCapability":  "Applied AI systems engineering with retrieval architecture, explainability, and user-facing workflow design.",
+                                 "figureType":  "rag-retrieval-workflow",
+                                 "metrics":  [
+                                                 "Retrieval-grounded response pipeline",
+                                                 "Bilingual answer generation",
+                                                 "Citation-aware output format"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Ingestion-to-retrieval-to-answer architecture",
+                                                     "Source citation response behavior"
+                                                 ],
+                                 "slug":  "electrical-engineering-rag-bot",
+                                 "publishState":  "published",
+                                 "visibility":  "public",
+                                 "links":  [
+                                               "https://github.com/Mahfuzmania/EE-Solutions"
+                                           ],
+                                 "figureImage":  "ee-rag-bot.svg"
+                             },
+                             {
+                                 "title":  "EV Powertrain Simulation",
+                                 "summary":  "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
+                                 "detail":  "Time-domain simulation explored acceleration, efficiency, and range tradeoffs to identify practical battery configuration strategies.",
+                                 "imagePath":  "/images/projects/ev-powertrain-simulation/thesis-report-p22-2.png",
+                                 "stack":  [
+                                               "MATLAB",
+                                               "Simulink",
+                                               "Control Systems",
+                                               "PID"
+                                           ],
+                                 "category":  "Simulation / Energy Systems",
+                                 "tags":  [
+                                              "Simulation",
+                                              "Energy Systems",
+                                              "Tradeoff Analysis"
+                                          ],
+                                 "featured":  true,
+                                 "repoUrl":  "https://github.com/Mahfuzmania/EV-Powertrain-Simulation",
+                                 "shortSummary":  "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
+                                 "challenge":  "Needed to compare how battery sizing and controller settings affect acceleration, efficiency, and usable range.",
+                                 "solution":  "Built Simulink powertrain models and evaluated multiple scenarios across time-domain performance indicators.",
+                                 "outcomes":  [
+                                                  "Identified design tradeoffs between range targets and dynamic response.",
+                                                  "Established repeatable simulation comparison setup for parameter exploration.",
+                                                  "Generated evidence plots for performance-oriented design decisions."
+                                              ],
+                                 "provenCapability":  "Simulation-led energy system analysis for practical engineering decision support.",
+                                 "figureType":  "simulation-tradeoff-chart",
+                                 "metrics":  [
+                                                 "Battery sizing scenario comparison",
+                                                 "Response and efficiency tradeoff plots",
+                                                 "Simulation-driven configuration decisions"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Powertrain simulation result chart",
+                                                     "Scenario comparison outputs"
+                                                 ],
+                                 "slug":  "ev-powertrain-simulation",
+                                 "publishState":  "published",
+                                 "visibility":  "public",
+                                 "links":  [
+                                               "https://github.com/Mahfuzmania/EV-Powertrain-Simulation"
+                                           ]
+                             },
+                             {
+                                 "title":  "Breast Cancer Survival Prediction",
+                                 "summary":  "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
+                                 "detail":  "Applied statistical and machine learning survival modeling to support risk-aware clinical decision support analysis.",
+                                 "imagePath":  "/images/projects/breast-cancer-survival-prediction/final-report-p7-1.png",
+                                 "stack":  [
+                                               "Python",
+                                               "Scikit-learn",
+                                               "Survival Analysis",
+                                               "Jupyter"
+                                           ],
+                                 "category":  "Clinical ML / Predictive Analytics",
+                                 "tags":  [
+                                              "Clinical ML",
+                                              "Survival Analysis",
+                                              "Predictive Analytics"
+                                          ],
+                                 "featured":  true,
+                                 "repoUrl":  "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction",
+                                 "shortSummary":  "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
+                                 "challenge":  "Required a structured clinical ML workflow to estimate risk and compare survival model behavior on real-world outcome data.",
+                                 "solution":  "Implemented preprocessing, feature engineering, and model evaluation using Kaplan-Meier, Cox PH, and Random Survival Forest methods.",
+                                 "outcomes":  [
+                                                  "Generated comparative survival analysis across classical and ML approaches.",
+                                                  "Produced interpretable risk-oriented outputs for clinical analytics context.",
+                                                  "Strengthened model-evaluation discipline for healthcare predictive workflows."
+                                              ],
+                                 "provenCapability":  "Clinical ML pipeline design with statistical rigor and evaluation-focused decision support framing.",
+                                 "figureType":  "clinical-ml-pipeline",
+                                 "metrics":  [
+                                                 "Kaplan-Meier + Cox PH + RSF comparison",
+                                                 "SEER clinical dataset modeling workflow",
+                                                 "Evaluation-led risk analytics output"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Clinical ML pipeline structure",
+                                                     "Survival analysis evaluation figure"
+                                                 ],
+                                 "slug":  "breast-cancer-survival-prediction",
+                                 "publishState":  "published",
+                                 "visibility":  "public",
+                                 "links":  [
+                                               "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction"
+                                           ]
+                             },
+                             {
+                                 "title":  "Advanced Controller Design and Optimization (PMSM FOC)",
+                                 "summary":  "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
+                                 "detail":  "Used series PI controller design, comparative tuning analysis, and simulation-based validation of dynamic response under parameter variations.",
+                                 "imagePath":  "/images/projects/advanced-controller-design-and-optimization-pmsm-foc/technical-assessment-p5-1.png",
+                                 "stack":  [
+                                               "Control Theory",
+                                               "FOC",
+                                               "PMSM",
+                                               "Simulation Analysis"
+                                           ],
+                                 "category":  "Control Systems / Simulation",
+                                 "tags":  [
+                                              "Control Systems",
+                                              "FOC",
+                                              "Response Analysis"
+                                          ],
+                                 "impact":  "Showcases analytical controller design workflow from problem framing to quantitative validation.",
+                                 "featured":  true,
+                                 "privateRepo":  true,
+                                 "shortSummary":  "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
+                                 "challenge":  "Current-controller behavior required improved settling performance and robustness under varying operating parameters.",
+                                 "solution":  "Used series PI redesign and simulation-based comparative tuning to evaluate dynamic response and stability margins.",
+                                 "outcomes":  [
+                                                  "Improved response characterization for controller tuning decisions.",
+                                                  "Documented tuning strategy comparison with response-curve evidence.",
+                                                  "Mapped parameter sensitivity to practical control design choices."
+                                              ],
+                                 "provenCapability":  "Control-system engineering using structured simulation evidence and quantitative tuning analysis.",
+                                 "figureType":  "control-response-curve",
+                                 "metrics":  [
+                                                 "Controller tuning comparison workflow",
+                                                 "Response and settling-time analysis",
+                                                 "Robustness checks under variation"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Control response curve snapshots",
+                                                     "PI design assessment artifact"
+                                                 ],
+                                 "slug":  "advanced-controller-design-and-optimization-pmsm-foc",
+                                 "publishState":  "published",
+                                 "visibility":  "public"
+                             },
+                             {
+                                 "title":  "Nurul Amin MP Website Platform",
+                                 "summary":  "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
+                                 "detail":  "Built and shipped as a secure Next.js platform with role-aware admin workflows, section-based CMS operations, request tracking, and media/document publishing for public communication.",
+                                 "imagePath":  "/images/placeholders/project-data.svg",
+                                 "stack":  [
+                                               "Next.js",
+                                               "TypeScript",
+                                               "Tailwind CSS",
+                                               "Role-Based Admin",
+                                               "Admin CMS",
+                                               "Nodemailer"
+                                           ],
+                                 "category":  "Platform Engineering / CMS Systems",
+                                 "tags":  [
+                                              "Platform Engineering",
+                                              "CMS Systems",
+                                              "Bilingual Operations"
+                                          ],
+                                 "impact":  "Live in production for constituency communication and structured request handling.",
+                                 "featured":  true,
+                                 "repoUrl":  "https://nurulamin.org",
+                                 "privateRepo":  true,
+                                 "shortSummary":  "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
+                                 "challenge":  "Needed a production-ready public website that supports bilingual communication, structured service workflows, and controlled publishing.",
+                                 "solution":  "Built a secure Next.js platform with role-aware admin, CMS section management, request tracking, and media/document operations.",
+                                 "outcomes":  [
+                                                  "Launched a maintainable public communication platform for constituency services.",
+                                                  "Enabled controlled publishing and structured request handling through admin workflows.",
+                                                  "Provided reusable CMS architecture patterns for future civic platforms."
+                                              ],
+                                 "provenCapability":  "Secure platform engineering and CMS workflow design for live public-service systems.",
+                                 "figureType":  "cms-publishing-workflow",
+                                 "metrics":  [
+                                                 "Live production deployment",
+                                                 "Role-based publishing control",
+                                                 "Bilingual CMS operations"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Admin publishing lifecycle design",
+                                                     "Role-based moderation/publishing workflow"
+                                                 ],
+                                 "slug":  "nurul-amin-mp-website-platform",
+                                 "publishState":  "published",
+                                 "visibility":  "public",
+                                 "links":  [
+                                               "https://nurulamin.org"
+                                           ],
+                                 "figureImage":  "civic-cms-platform.svg"
+                             },
+                             {
+                                 "title":  "My Personal Portfolio Platform",
+                                 "summary":  "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
+                                 "detail":  "Designed and implemented with protected admin routes, signed session handling, content validation, and reusable section-level CMS patterns for maintainable updates.",
+                                 "imagePath":  "/images/placeholders/project-ai.svg",
+                                 "stack":  [
+                                               "Next.js",
+                                               "TypeScript",
+                                               "Tailwind CSS",
+                                               "Framer Motion",
+                                               "Argon2",
+                                               "JOSE JWT",
+                                               "Zod"
+                                           ],
+                                 "category":  "Platform Engineering / CMS Systems",
+                                 "tags":  [
+                                              "Platform Engineering",
+                                              "Secure CMS",
+                                              "Admin Workflow"
+                                          ],
+                                 "impact":  "Demonstrates a private CMS architecture optimized for practical portfolio and product delivery updates.",
+                                 "featured":  true,
+                                 "repoUrl":  "https://my-personal-portfolio-psi-seven.vercel.app/",
+                                 "privateRepo":  true,
+                                 "shortSummary":  "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
+                                 "challenge":  "Required a maintainable personal platform that supports controlled content updates without exposing admin/security internals publicly.",
+                                 "solution":  "Implemented protected admin authentication, CSRF/session controls, schema-validated content editing, and structured publishing workflows.",
+                                 "outcomes":  [
+                                                  "Enabled safe content operations through role-aware admin workflows.",
+                                                  "Created reusable CMS structures for project, experience, and blog updates.",
+                                                  "Improved maintainability with data-driven content and centralized validation."
+                                              ],
+                                 "provenCapability":  "Secure CMS and platform engineering with production-safe content operations.",
+                                 "figureType":  "cms-publishing-workflow",
+                                 "metrics":  [
+                                                 "Protected admin authentication flow",
+                                                 "Schema-validated content updates",
+                                                 "Blog CMS publish-state management"
+                                             ],
+                                 "proofAssets":  [
+                                                     "Admin workflow and permission architecture",
+                                                     "Content model validation and publishing lifecycle"
+                                                 ],
+                                 "slug":  "my-personal-portfolio-platform",
+                                 "publishState":  "published",
+                                 "visibility":  "public",
+                                 "links":  [
+                                               "https://my-personal-portfolio-psi-seven.vercel.app/"
+                                           ],
+                                 "figureImage":  "portfolio-cms-platform.svg"
+                             }
+                         ],
+    "projects":  [
+                     {
+                         "title":  "Healthcare Data Integration \u0026 Analytics Pipeline",
+                         "summary":  "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
+                         "detail":  "Designed and implemented Python workflows to clean, validate, and harmonize patient records, laboratory data, and clinical metadata across multiple sources, with strong consistency checks for downstream analytics and research.",
+                         "imagePath":  "/images/placeholders/project-data.svg",
+                         "stack":  [
+                                       "Python",
+                                       "Pandas",
+                                       "OpenPyXL",
+                                       "Data Cleaning",
+                                       "Data Integration",
+                                       "Data Validation",
+                                       "Healthcare Data Processing"
+                                   ],
+                         "category":  "Data Engineering",
+                         "tags":  [
+                                      "Healthcare ETL",
+                                      "Data Validation",
+                                      "Clinical Analytics Readiness"
+                                  ],
+                         "impact":  "Enabled reliable analysis-ready healthcare datasets for research and reporting workflows.",
+                         "contributions":  [
+                                               "Designed Python-based healthcare data processing pipelines",
+                                               "Harmonized large clinical datasets from multiple sources",
+                                               "Resolved duplicate records, ID mismatches, and irregular date formats",
+                                               "Integrated patient and laboratory data into a unified analytical dataset",
+                                               "Performed quality validation and standardization for research usage"
+                                           ],
+                         "featured":  true,
+                         "privateRepo":  true,
+                         "shortSummary":  "Clinical data integration workflow that transforms multi-source hospital records into validated, analysis-ready datasets.",
+                         "challenge":  "Clinical records arrived from multiple exports with inconsistent identifiers, date formats, and missing fields, reducing analytical reliability.",
+                         "solution":  "Built Python-based ingestion, cleaning, harmonization, and validation pipelines to standardize patient/lab records into a unified dataset.",
+                         "outcomes":  [
+                                          "Reduced dataset inconsistency before analytics handoff through repeatable validation checks.",
+                                          "Delivered a unified clinical dataset structure suitable for reporting and research analysis.",
+                                          "Created reusable data-quality workflow patterns for future healthcare integrations."
+                                      ],
+                         "provenCapability":  "Healthcare data engineering from raw source integration to validated analytics-ready delivery.",
+                         "figureType":  "healthcare-data-flow",
+                         "metrics":  [
+                                         "70k+ patient records integrated",
+                                         "1M+ laboratory rows harmonized",
+                                         "Multi-source validation checkpoints"
+                                     ],
+                         "proofAssets":  [
+                                             "Source-to-unified dataset transformation flow",
+                                             "Clinical data cleaning and validation ruleset"
+                                         ],
+                         "slug":  "healthcare-data-integration-analytics-pipeline",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "figureImage":  "healthcare-data-integration.svg"
+                     },
+                     {
+                         "title":  "Electrical Engineering RAG Bot",
+                         "summary":  "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
+                         "detail":  "Built as a practical AI toolchain for technical learning with retrieval over engineering sources, controllable reasoning detail, and configurable local/remote model support.",
+                         "imagePath":  "/images/placeholders/project-ai.svg",
+                         "stack":  [
+                                       "Python",
+                                       "Flask",
+                                       "RAG",
+                                       "BM25",
+                                       "OCR",
+                                       "Ollama"
+                                   ],
+                         "category":  "Applied AI Systems",
+                         "tags":  [
+                                      "RAG",
+                                      "Applied AI Systems",
+                                      "Cited Responses"
+                                  ],
+                         "impact":  "Demonstrates full-stack AI system design for engineering education.",
+                         "featured":  true,
+                         "repoUrl":  "https://github.com/Mahfuzmania/EE-Solutions",
+                         "shortSummary":  "RAG-based engineering assistant with bilingual support, retrieval grounding, and source-cited technical answers.",
+                         "challenge":  "Technical learners needed reliable answers tied to textbook context rather than generic chatbot responses.",
+                         "solution":  "Designed a retrieval pipeline with document parsing, chunking, BM25 retrieval, and grounded generation with citation references.",
+                         "outcomes":  [
+                                          "Produced citation-backed responses for engineering questions.",
+                                          "Enabled bilingual (English/Bengali) support with structured response formatting.",
+                                          "Demonstrated practical applied AI system assembly beyond model prompting alone."
+                                      ],
+                         "provenCapability":  "Applied AI systems engineering with retrieval architecture, explainability, and user-facing workflow design.",
+                         "figureType":  "rag-retrieval-workflow",
+                         "metrics":  [
+                                         "Retrieval-grounded response pipeline",
+                                         "Bilingual answer generation",
+                                         "Citation-aware output format"
+                                     ],
+                         "proofAssets":  [
+                                             "Ingestion-to-retrieval-to-answer architecture",
+                                             "Source citation response behavior"
+                                         ],
+                         "slug":  "electrical-engineering-rag-bot",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/EE-Solutions"
+                                   ],
+                         "figureImage":  "ee-rag-bot.svg"
+                     },
+                     {
+                         "title":  "EV Powertrain Simulation",
+                         "summary":  "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
+                         "detail":  "Time-domain simulation explored acceleration, efficiency, and range tradeoffs to identify practical battery configuration strategies.",
+                         "imagePath":  "/images/projects/ev-powertrain-simulation/thesis-report-p22-2.png",
+                         "stack":  [
+                                       "MATLAB",
+                                       "Simulink",
+                                       "Control Systems",
+                                       "PID"
+                                   ],
+                         "category":  "Simulation / Energy Systems",
+                         "tags":  [
+                                      "Simulation",
+                                      "Energy Systems",
+                                      "Tradeoff Analysis"
+                                  ],
+                         "featured":  true,
+                         "repoUrl":  "https://github.com/Mahfuzmania/EV-Powertrain-Simulation",
+                         "shortSummary":  "EV powertrain simulation for battery sizing and control tradeoff analysis using MATLAB/Simulink.",
+                         "challenge":  "Needed to compare how battery sizing and controller settings affect acceleration, efficiency, and usable range.",
+                         "solution":  "Built Simulink powertrain models and evaluated multiple scenarios across time-domain performance indicators.",
+                         "outcomes":  [
+                                          "Identified design tradeoffs between range targets and dynamic response.",
+                                          "Established repeatable simulation comparison setup for parameter exploration.",
+                                          "Generated evidence plots for performance-oriented design decisions."
+                                      ],
+                         "provenCapability":  "Simulation-led energy system analysis for practical engineering decision support.",
+                         "figureType":  "simulation-tradeoff-chart",
+                         "metrics":  [
+                                         "Battery sizing scenario comparison",
+                                         "Response and efficiency tradeoff plots",
+                                         "Simulation-driven configuration decisions"
+                                     ],
+                         "proofAssets":  [
+                                             "Powertrain simulation result chart",
+                                             "Scenario comparison outputs"
+                                         ],
+                         "slug":  "ev-powertrain-simulation",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/EV-Powertrain-Simulation"
+                                   ]
+                     },
+                     {
+                         "title":  "Breast Cancer Survival Prediction",
+                         "summary":  "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
+                         "detail":  "Applied statistical and machine learning survival modeling to support risk-aware clinical decision support analysis.",
+                         "imagePath":  "/images/projects/breast-cancer-survival-prediction/final-report-p7-1.png",
+                         "stack":  [
+                                       "Python",
+                                       "Scikit-learn",
+                                       "Survival Analysis",
+                                       "Jupyter"
+                                   ],
+                         "category":  "Clinical ML / Predictive Analytics",
+                         "tags":  [
+                                      "Clinical ML",
+                                      "Survival Analysis",
+                                      "Predictive Analytics"
+                                  ],
+                         "featured":  true,
+                         "repoUrl":  "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction",
+                         "shortSummary":  "Clinical survival modeling pipeline using SEER data with interpretable risk analysis outputs.",
+                         "challenge":  "Required a structured clinical ML workflow to estimate risk and compare survival model behavior on real-world outcome data.",
+                         "solution":  "Implemented preprocessing, feature engineering, and model evaluation using Kaplan-Meier, Cox PH, and Random Survival Forest methods.",
+                         "outcomes":  [
+                                          "Generated comparative survival analysis across classical and ML approaches.",
+                                          "Produced interpretable risk-oriented outputs for clinical analytics context.",
+                                          "Strengthened model-evaluation discipline for healthcare predictive workflows."
+                                      ],
+                         "provenCapability":  "Clinical ML pipeline design with statistical rigor and evaluation-focused decision support framing.",
+                         "figureType":  "clinical-ml-pipeline",
+                         "metrics":  [
+                                         "Kaplan-Meier + Cox PH + RSF comparison",
+                                         "SEER clinical dataset modeling workflow",
+                                         "Evaluation-led risk analytics output"
+                                     ],
+                         "proofAssets":  [
+                                             "Clinical ML pipeline structure",
+                                             "Survival analysis evaluation figure"
+                                         ],
+                         "slug":  "breast-cancer-survival-prediction",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/Breast-Cancer-Survival-Prediction"
+                                   ]
+                     },
+                     {
+                         "title":  "Advanced Controller Design and Optimization (PMSM FOC)",
+                         "summary":  "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
+                         "detail":  "Used series PI controller design, comparative tuning analysis, and simulation-based validation of dynamic response under parameter variations.",
+                         "imagePath":  "/images/projects/advanced-controller-design-and-optimization-pmsm-foc/technical-assessment-p5-1.png",
+                         "stack":  [
+                                       "Control Theory",
+                                       "FOC",
+                                       "PMSM",
+                                       "Simulation Analysis"
+                                   ],
+                         "category":  "Control Systems / Simulation",
+                         "tags":  [
+                                      "Control Systems",
+                                      "FOC",
+                                      "Response Analysis"
+                                  ],
+                         "impact":  "Showcases analytical controller design workflow from problem framing to quantitative validation.",
+                         "featured":  true,
+                         "privateRepo":  true,
+                         "shortSummary":  "PMSM field-oriented control redesign with PI tuning comparison and response robustness analysis.",
+                         "challenge":  "Current-controller behavior required improved settling performance and robustness under varying operating parameters.",
+                         "solution":  "Used series PI redesign and simulation-based comparative tuning to evaluate dynamic response and stability margins.",
+                         "outcomes":  [
+                                          "Improved response characterization for controller tuning decisions.",
+                                          "Documented tuning strategy comparison with response-curve evidence.",
+                                          "Mapped parameter sensitivity to practical control design choices."
+                                      ],
+                         "provenCapability":  "Control-system engineering using structured simulation evidence and quantitative tuning analysis.",
+                         "figureType":  "control-response-curve",
+                         "metrics":  [
+                                         "Controller tuning comparison workflow",
+                                         "Response and settling-time analysis",
+                                         "Robustness checks under variation"
+                                     ],
+                         "proofAssets":  [
+                                             "Control response curve snapshots",
+                                             "PI design assessment artifact"
+                                         ],
+                         "slug":  "advanced-controller-design-and-optimization-pmsm-foc",
+                         "publishState":  "published",
+                         "visibility":  "public"
+                     },
+                     {
+                         "title":  "Anomaly Detection Using Gaussian Model",
+                         "summary":  "Probabilistic anomaly detection workflow with threshold selection and F1-guided evaluation.",
+                         "detail":  "Built a probabilistic anomaly-detection workflow for server metrics using univariate and multivariate Gaussian models, threshold selection via F1 optimization, and false-positive control analysis for more reliable incident flagging.",
+                         "imagePath":  "/images/projects/anomaly-detection-using-gaussian-model/presentation-on-anomaly-detection-p1-1.jpeg",
+                         "stack":  [
+                                       "MATLAB",
+                                       "Statistical Modeling"
+                                   ],
+                         "category":  "Applied AI Systems",
+                         "tags":  [
+                                      "Anomaly Detection",
+                                      "Probabilistic Methods"
+                                  ],
+                         "repoUrl":  "https://github.com/Mahfuzmania/Anomaly-Detection-Using-Gaussian-Model",
+                         "shortSummary":  "Probabilistic anomaly detection workflow with threshold selection and F1-guided evaluation.",
+                         "challenge":  "Needed reliable anomaly flagging with controlled false positives across server telemetry behavior.",
+                         "solution":  "Implemented univariate and multivariate Gaussian density models, then tuned thresholds through evaluation-based selection.",
+                         "outcomes":  [
+                                          "Improved anomaly detection precision-recall balancing through threshold tuning.",
+                                          "Compared model behavior to support practical incident-flagging decisions."
+                                      ],
+                         "provenCapability":  "Applied ML workflow design with evaluation-first optimization under operational constraints.",
+                         "figureType":  "clinical-ml-pipeline",
+                         "metrics":  [
+                                         "F1-guided threshold optimization",
+                                         "Univariate vs multivariate comparison"
+                                     ],
+                         "proofAssets":  [
+                                             "Anomaly detection evaluation slides",
+                                             "Instruction manual result figures"
+                                         ],
+                         "slug":  "anomaly-detection-using-gaussian-model",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/Anomaly-Detection-Using-Gaussian-Model"
+                                   ],
+                         "featured":  false
+                     },
+                     {
+                         "title":  "ECG Signal Denoising with Wiener Filtering",
+                         "summary":  "ECG denoising pipeline combining QRS detection and Wiener filtering for cleaner waveform analysis.",
+                         "detail":  "Implemented an ECG-cleaning pipeline combining synchronous averaging, QRS detection through cross-correlation, and Wiener filtering to improve signal quality for downstream waveform interpretation.",
+                         "imagePath":  "/images/projects/ecg-signal-denoising-with-wiener-filtering/project-report-p4-2.jpg",
+                         "stack":  [
+                                       "MATLAB",
+                                       "Signal Processing"
+                                   ],
+                         "category":  "Signal / Image Processing",
+                         "tags":  [
+                                      "ECG",
+                                      "Biomedical Signals",
+                                      "Filtering"
+                                  ],
+                         "repoUrl":  "https://github.com/Mahfuzmania/ECG-Signal-Denoising-Wiener-Filtering",
+                         "shortSummary":  "ECG denoising pipeline combining QRS detection and Wiener filtering for cleaner waveform analysis.",
+                         "challenge":  "Raw ECG signals contained noise artifacts that reduced reliability of downstream waveform interpretation.",
+                         "solution":  "Combined synchronous averaging, cross-correlation QRS detection, and Wiener filtering for robust denoising.",
+                         "outcomes":  [
+                                          "Improved ECG signal clarity while preserving diagnostically relevant waveform structure.",
+                                          "Created a repeatable filtering pipeline for biomedical signal preprocessing."
+                                      ],
+                         "provenCapability":  "Signal-processing workflow design for biomedical data preparation and quality enhancement.",
+                         "figureType":  "signal-processing-pipeline",
+                         "metrics":  [
+                                         "Noise reduction with waveform preservation",
+                                         "QRS-guided filtering workflow"
+                                     ],
+                         "proofAssets":  [
+                                             "ECG denoising report plots",
+                                             "Pipeline implementation snapshots"
+                                         ],
+                         "slug":  "ecg-signal-denoising-with-wiener-filtering",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/ECG-Signal-Denoising-Wiener-Filtering"
+                                   ],
+                         "featured":  false
+                     },
+                     {
+                         "title":  "Image Thresholding for Background Removal",
+                         "summary":  "Threshold-based image preprocessing workflow for stable foreground extraction under near-white backgrounds.",
+                         "detail":  "Developed a threshold-based RGB preprocessing workflow to isolate foreground objects from white and near-white backgrounds, with parameter tuning for improved edge preservation and segmentation stability.",
+                         "imagePath":  "/images/projects/image-thresholding-for-background-removal/dsp_projectreport-p6-1.png",
+                         "stack":  [
+                                       "MATLAB",
+                                       "Image Processing"
+                                   ],
+                         "category":  "Signal / Image Processing",
+                         "tags":  [
+                                      "Segmentation",
+                                      "Thresholding",
+                                      "Preprocessing"
+                                  ],
+                         "repoUrl":  "https://github.com/Mahfuzmania/Image-Thresholding-for-Background-Removal",
+                         "shortSummary":  "Threshold-based image preprocessing workflow for stable foreground extraction under near-white backgrounds.",
+                         "challenge":  "Foreground extraction degraded around edges when backgrounds were near-white and lighting varied.",
+                         "solution":  "Implemented threshold segmentation with RGB tuning and post-processing steps to stabilize edge quality.",
+                         "outcomes":  [
+                                          "Improved segmentation stability for white/near-white background cases.",
+                                          "Reduced edge-noise artifacts through parameter tuning and refinement steps."
+                                      ],
+                         "provenCapability":  "Image preprocessing pipeline development with evidence-driven parameter optimization.",
+                         "figureType":  "signal-processing-pipeline",
+                         "metrics":  [
+                                         "Threshold tuning for edge preservation",
+                                         "Foreground-background separation improvement"
+                                     ],
+                         "proofAssets":  [
+                                             "Segmentation result comparison figures",
+                                             "DSP project report visual evidence"
+                                         ],
+                         "slug":  "image-thresholding-for-background-removal",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/Image-Thresholding-for-Background-Removal"
+                                   ],
+                         "featured":  false
+                     },
+                     {
+                         "title":  "Bluetooth Interfacing with 8051",
+                         "summary":  "8051 + HC-05 embedded control system for wireless command handling across actuators and indicators.",
+                         "detail":  "Engineered an embedded Bluetooth command system around 8051 + HC-05 to control LCD, LEDs, relay modules, and buzzer states through serial protocols, including command handling and basic security logic.",
+                         "imagePath":  "/images/projects/bluetooth-interfacing-with-8051/report-p22-1.jpeg",
+                         "stack":  [
+                                       "8051 Assembly",
+                                       "MIDE 51",
+                                       "Serial Communication"
+                                   ],
+                         "category":  "Embedded / Systems Work",
+                         "tags":  [
+                                      "Microcontroller",
+                                      "Bluetooth",
+                                      "Real-time Control"
+                                  ],
+                         "repoUrl":  "https://github.com/Mahfuzmania/Bluetooth-Interfacing-8051-Final",
+                         "shortSummary":  "8051 + HC-05 embedded control system for wireless command handling across actuators and indicators.",
+                         "challenge":  "Needed stable serial-command handling for multiple device outputs in an 8051 embedded setup.",
+                         "solution":  "Implemented Bluetooth command parsing and serial control logic for LED, relay, LCD, and buzzer modules.",
+                         "outcomes":  [
+                                          "Enabled multi-output command-driven control through low-cost embedded hardware.",
+                                          "Improved command sequencing reliability in real-time device interaction."
+                                      ],
+                         "provenCapability":  "Embedded systems integration with communication protocol handling and device-level control.",
+                         "figureType":  "embedded-system-diagram",
+                         "metrics":  [
+                                         "Serial command workflow for multi-device control",
+                                         "8051 + HC-05 integration implementation"
+                                     ],
+                         "proofAssets":  [
+                                             "Embedded report architecture pages",
+                                             "Hardware interaction documentation"
+                                         ],
+                         "slug":  "bluetooth-interfacing-with-8051",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/Bluetooth-Interfacing-8051-Final"
+                                   ],
+                         "featured":  false
+                     },
+                     {
+                         "title":  "Two-Area Power System MATLAB Simulink",
+                         "summary":  "Two-area power-system dynamic simulation for load-frequency and tie-line response analysis.",
+                         "detail":  "Modeled a two-area interconnected power system in Simulink to analyze load-frequency control behavior, tie-line power deviations, and system response under load disturbances.",
+                         "imagePath":  "/images/placeholders/project-simulation.svg",
+                         "stack":  [
+                                       "MATLAB",
+                                       "Simulink",
+                                       "Power Systems"
+                                   ],
+                         "category":  "Simulation / Energy Systems",
+                         "tags":  [
+                                      "LFC",
+                                      "Grid Dynamics",
+                                      "Frequency Control"
+                                  ],
+                         "repoUrl":  "https://github.com/Mahfuzmania/Two-Area-Power-System-MATLAB-Simulink",
+                         "shortSummary":  "Two-area power-system dynamic simulation for load-frequency and tie-line response analysis.",
+                         "challenge":  "Analyzed load disturbance effects on interconnected grid frequency and tie-line power behavior.",
+                         "solution":  "Modeled two-area power system dynamics in Simulink and evaluated transient and steady-state responses.",
+                         "outcomes":  [
+                                          "Characterized frequency-control behavior under disturbance scenarios.",
+                                          "Produced simulation evidence for system-level control understanding."
+                                      ],
+                         "provenCapability":  "Energy-system simulation and control response analysis using model-based evaluation.",
+                         "figureType":  "simulation-tradeoff-chart",
+                         "metrics":  [
+                                         "Load-frequency control response observation",
+                                         "Tie-line dynamic behavior analysis"
+                                     ],
+                         "proofAssets":  [
+                                             "Simulink system model outputs",
+                                             "Dynamic response interpretation notes"
+                                         ],
+                         "slug":  "two-area-power-system-matlab-simulink",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://github.com/Mahfuzmania/Two-Area-Power-System-MATLAB-Simulink"
+                                   ],
+                         "featured":  false,
+                         "figureImage":  "power-system-lfc.svg"
+                     },
+                     {
+                         "title":  "Cardiac EDA Processing",
+                         "summary":  "Private healthcare ETL pipeline for Oracle exports and lab sheets into curated patient-level analytics tables.",
+                         "detail":  "Designed a private healthcare ETL workflow that ingests Oracle exports and multi-sheet lab reports, standardizes identifiers and timelines, and outputs curated patient-level datasets for reliable analysis.",
+                         "imagePath":  "/images/placeholders/project-data.svg",
+                         "stack":  [
+                                       "Python",
+                                       "Pandas",
+                                       "OpenPyXL",
+                                       "Healthcare ETL"
+                                   ],
+                         "category":  "Data Engineering",
+                         "tags":  [
+                                      "Clinical Data",
+                                      "ETL",
+                                      "Standardization"
+                                  ],
+                         "privateRepo":  true,
+                         "shortSummary":  "Private healthcare ETL pipeline for Oracle exports and lab sheets into curated patient-level analytics tables.",
+                         "challenge":  "Clinical source files were fragmented across export types and lacked consistent identifiers/timelines.",
+                         "solution":  "Implemented extraction, harmonization, and quality checks to produce curated longitudinal clinical data assets.",
+                         "outcomes":  [
+                                          "Improved consistency of patient-level data across repeated ETL refresh cycles.",
+                                          "Reduced manual preparation effort for downstream analytics and reporting."
+                                      ],
+                         "provenCapability":  "Private clinical data integration with repeatable quality enforcement and structured output delivery.",
+                         "figureType":  "healthcare-data-flow",
+                         "metrics":  [
+                                         "Oracle + lab source consolidation",
+                                         "Identifier and timeline harmonization"
+                                     ],
+                         "proofAssets":  [
+                                             "ETL transformation workflow",
+                                             "Clinical data quality control checkpoints"
+                                         ],
+                         "slug":  "cardiac-eda-processing",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "featured":  false,
+                         "figureImage":  "cardiac-eda-workflow.svg"
+                     },
+                     {
+                         "title":  "Coronary Angiogram Dataset Cleaning",
+                         "summary":  "Rule-based cleaning and feature standardization pipeline for coronary angiogram clinical datasets.",
+                         "detail":  "Implemented rule-based cleaning and harmonization for coronary angiogram records, including severity normalization, derived feature generation, and quality checks to reduce analytical noise.",
+                         "imagePath":  "/images/placeholders/project-data.svg",
+                         "stack":  [
+                                       "Python",
+                                       "Data Cleaning",
+                                       "Clinical Rules"
+                                   ],
+                         "category":  "Data Engineering",
+                         "tags":  [
+                                      "Data Quality",
+                                      "Feature Engineering",
+                                      "Clinical Analytics"
+                                  ],
+                         "privateRepo":  true,
+                         "shortSummary":  "Rule-based cleaning and feature standardization pipeline for coronary angiogram clinical datasets.",
+                         "challenge":  "Coronary angiogram records contained inconsistent severity labels and noisy feature fields.",
+                         "solution":  "Applied domain rules for severity normalization, derived feature construction, and consistency validation.",
+                         "outcomes":  [
+                                          "Reduced analytical noise through structured data cleaning and normalization.",
+                                          "Prepared stable feature sets suitable for clinical analytics and modeling."
+                                      ],
+                         "provenCapability":  "Domain-informed data quality engineering for specialized clinical datasets.",
+                         "figureType":  "healthcare-data-flow",
+                         "metrics":  [
+                                         "Severity classification normalization",
+                                         "Derived clinical feature consistency checks"
+                                     ],
+                         "proofAssets":  [
+                                             "Rule-based cleaning workflow",
+                                             "Feature engineering quality validation notes"
+                                         ],
+                         "slug":  "coronary-angiogram-dataset-cleaning",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "featured":  false,
+                         "figureImage":  "coronary-cleaning-pipeline.svg"
+                     },
+                     {
+                         "title":  "Nurul Amin MP Website Platform",
+                         "summary":  "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
+                         "detail":  "Built and shipped as a secure Next.js platform with role-aware admin workflows, section-based CMS operations, request tracking, and media/document publishing for public communication.",
+                         "imagePath":  "/images/placeholders/project-data.svg",
+                         "stack":  [
+                                       "Next.js",
+                                       "TypeScript",
+                                       "Tailwind CSS",
+                                       "Role-Based Admin",
+                                       "Admin CMS",
+                                       "Nodemailer"
+                                   ],
+                         "category":  "Platform Engineering / CMS Systems",
+                         "tags":  [
+                                      "Platform Engineering",
+                                      "CMS Systems",
+                                      "Bilingual Operations"
+                                  ],
+                         "impact":  "Live in production for constituency communication and structured request handling.",
+                         "featured":  true,
+                         "repoUrl":  "https://nurulamin.org",
+                         "privateRepo":  true,
+                         "shortSummary":  "Live bilingual public-service platform with secure admin CMS, citizen request flow, and operational publishing control.",
+                         "challenge":  "Needed a production-ready public website that supports bilingual communication, structured service workflows, and controlled publishing.",
+                         "solution":  "Built a secure Next.js platform with role-aware admin, CMS section management, request tracking, and media/document operations.",
+                         "outcomes":  [
+                                          "Launched a maintainable public communication platform for constituency services.",
+                                          "Enabled controlled publishing and structured request handling through admin workflows.",
+                                          "Provided reusable CMS architecture patterns for future civic platforms."
+                                      ],
+                         "provenCapability":  "Secure platform engineering and CMS workflow design for live public-service systems.",
+                         "figureType":  "cms-publishing-workflow",
+                         "metrics":  [
+                                         "Live production deployment",
+                                         "Role-based publishing control",
+                                         "Bilingual CMS operations"
+                                     ],
+                         "proofAssets":  [
+                                             "Admin publishing lifecycle design",
+                                             "Role-based moderation/publishing workflow"
+                                         ],
+                         "slug":  "nurul-amin-mp-website-platform",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://nurulamin.org"
+                                   ],
+                         "figureImage":  "civic-cms-platform.svg"
+                     },
+                     {
+                         "title":  "My Personal Portfolio Platform",
+                         "summary":  "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
+                         "detail":  "Designed and implemented with protected admin routes, signed session handling, content validation, and reusable section-level CMS patterns for maintainable updates.",
+                         "imagePath":  "/images/placeholders/project-ai.svg",
+                         "stack":  [
+                                       "Next.js",
+                                       "TypeScript",
+                                       "Tailwind CSS",
+                                       "Framer Motion",
+                                       "Argon2",
+                                       "JOSE JWT",
+                                       "Zod"
+                                   ],
+                         "category":  "Platform Engineering / CMS Systems",
+                         "tags":  [
+                                      "Platform Engineering",
+                                      "Secure CMS",
+                                      "Admin Workflow"
+                                  ],
+                         "impact":  "Demonstrates a private CMS architecture optimized for practical portfolio and product delivery updates.",
+                         "featured":  true,
+                         "repoUrl":  "https://my-personal-portfolio-psi-seven.vercel.app/",
+                         "privateRepo":  true,
+                         "shortSummary":  "Secure portfolio platform with protected admin routes, schema-validated content updates, and blog CMS publishing controls.",
+                         "challenge":  "Required a maintainable personal platform that supports controlled content updates without exposing admin/security internals publicly.",
+                         "solution":  "Implemented protected admin authentication, CSRF/session controls, schema-validated content editing, and structured publishing workflows.",
+                         "outcomes":  [
+                                          "Enabled safe content operations through role-aware admin workflows.",
+                                          "Created reusable CMS structures for project, experience, and blog updates.",
+                                          "Improved maintainability with data-driven content and centralized validation."
+                                      ],
+                         "provenCapability":  "Secure CMS and platform engineering with production-safe content operations.",
+                         "figureType":  "cms-publishing-workflow",
+                         "metrics":  [
+                                         "Protected admin authentication flow",
+                                         "Schema-validated content updates",
+                                         "Blog CMS publish-state management"
+                                     ],
+                         "proofAssets":  [
+                                             "Admin workflow and permission architecture",
+                                             "Content model validation and publishing lifecycle"
+                                         ],
+                         "slug":  "my-personal-portfolio-platform",
+                         "publishState":  "published",
+                         "visibility":  "public",
+                         "links":  [
+                                       "https://my-personal-portfolio-psi-seven.vercel.app/"
+                                   ],
+                         "figureImage":  "portfolio-cms-platform.svg"
+                     }
+                 ],
+    "technicalFocus":  [
+                           {
+                               "title":  "Data Engineering for High-Integrity Systems",
+                               "detail":  "Designing resilient data pipelines from source ingestion to validated, analysis-ready outputs (including recent healthcare deployments)."
+                           },
+                           {
+                               "title":  "Applied AI Systems",
+                               "detail":  "Building retrieval-grounded AI applications with explainability, citations, and domain-aware response control."
+                           },
+                           {
+                               "title":  "Platform Engineering / CMS Systems",
+                               "detail":  "Delivering secure role-based content platforms with moderation, publishing workflows, and operational controls."
+                           },
+                           {
+                               "title":  "Simulation and Control Analysis",
+                               "detail":  "Using simulation and controller response evaluation to support engineering decisions with measurable evidence."
+                           }
+                       ],
+    "highlights":  [
+                       "Integrated 70k+ patient records and 1M+ laboratory entries into validated healthcare analytics datasets.",
+                       "Built and deployed secure CMS-backed public platforms including nurulamin.org and this portfolio system.",
+                       "Developed retrieval-augmented AI tooling with citation-grounded responses for technical learning workflows.",
+                       "Applied simulation and control analysis methods to evaluate performance, stability, and tradeoffs in engineering systems."
+                   ],
+    "aboutSummary":  [
+                         "Primary role: Data Engineer delivering high-integrity integration and quality pipelines.",
+                         "Secondary core: Applied AI systems builder focused on retrieval-grounded, domain-aware workflows.",
+                         "Platform strength: secure CMS and admin workflow engineering for production web systems.",
+                         "Supporting depth: simulation/control analysis for rigorous engineering validation."
+                     ],
+    "workingPhilosophy":  [
+                              "Establish data integrity before model decisions.",
+                              "Translate research ideas into deployable, maintainable systems.",
+                              "Design for traceability, security, and operational reliability.",
+                              "Prioritize measurable outcomes over feature noise."
+                          ],
+    "experience":  [
+                       {
+                           "period":  "Nov 2025 - Present",
+                           "role":  "Data Engineer",
+                           "org":  "Enact Business Solutions",
+                           "type":  "Professional Experience",
+                           "points":  [
+                                          "Built Python-based pipelines for multi-source clinical datasets, including patient, lab, and outcome records.",
+                                          "Standardized identifiers and timelines across sources to produce analysis-ready integrated datasets.",
+                                          "Implemented quality controls for missing values, duplicates, and temporal consistency before downstream analytics."
+                                      ]
+                       },
+                       {
+                           "period":  "Nov 2024 - Apr 2025",
+                           "role":  "Research Engineer (AI \u0026 Data Science)",
+                           "org":  "AIMS Lab, IRIIC, United International University",
+                           "type":  "Technical / Research Experience",
+                           "points":  [
+                                          "Contributed to Jotno.AI and Susastho.AI across NLP-driven screening and healthcare guidance workflows.",
+                                          "Applied machine learning and NLP techniques for symptom triage, risk-aware assessment, and model evaluation.",
+                                          "Worked with cross-functional teams to translate research workflows into deployable technical systems."
+                                      ]
+                       },
+                       {
+                           "period":  "2025 - Present",
+                           "role":  "Co-Founder, AZM Labs",
+                           "org":  "AZM Labs",
+                           "type":  "Product Leadership",
+                           "points":  [
+                                          "Driving technical strategy and execution for practical AI and data-centric software systems.",
+                                          "Led delivery of the live Nurul Amin MP platform (nurulamin.org) from architecture to operational CMS workflows.",
+                                          "Set delivery standards and roadmap priorities across internal products and client-facing platforms."
+                                      ]
+                       },
+                       {
+                           "period":  "2025 - Present",
+                           "role":  "Software Engineer, AZM Labs",
+                           "org":  "AZM Labs",
+                           "type":  "Product Engineering",
+                           "points":  [
+                                          "Built secure, admin-managed web platforms with role-based workflows and validated content pipelines.",
+                                          "Delivered and iterated the My Personal Portfolio platform (my-personal-portfolio-psi-seven.vercel.app) with protected CMS operations.",
+                                          "Delivered Next.js systems spanning content management, citizen workflows, and operational dashboards."
+                                      ]
+                       }
+                   ],
+    "education":  [
+                      {
+                          "period":  "Jan 2020 - Jun 2024",
+                          "degree":  "B.Sc. in Electrical and Electronic Engineering (CGPA: 3.72/4.00)",
+                          "institution":  "Islamic University of Technology (IUT)",
+                          "details":  [
+                                          "Relevant focus: AI/ML, biomedical signal processing, power electronics, control systems, power systems.",
+                                          "Undergraduate thesis: EV powertrain modeling and simulation."
+                                      ]
+                      },
+                      {
+                          "period":  "2019",
+                          "degree":  "Higher Secondary Certificate (GPA 5.00, General Grade Scholarship)",
+                          "institution":  "Dinajpur Govt. College, Dinajpur",
+                          "details":  [
+                                          "Science stream with strong mathematics and analytical foundation."
+                                      ]
+                      },
+                      {
+                          "period":  "2017",
+                          "degree":  "Secondary School Certificate (GPA 5.00)",
+                          "institution":  "Dinajpur Zilla School, Dinajpur",
+                          "details":  [
+                                          "Early academic distinction and Olympiad track record."
+                                      ]
+                      }
+                  ],
+    "training":  [
+                     {
+                         "period":  "Jun 2023",
+                         "title":  "Industrial Trainee",
+                         "organization":  "Institute of Nuclear Science and Technology",
+                         "details":  [
+                                         "Practical sessions on ITU TRIGA Mark-II training and research reactor operations."
+                                     ]
+                     },
+                     {
+                         "period":  "May 2023",
+                         "title":  "Industrial Trainee",
+                         "organization":  "Robi Axiata Limited",
+                         "details":  [
+                                         "Training in telecommunications network systems and communication design."
+                                     ]
+                     },
+                     {
+                         "period":  "May 2023",
+                         "title":  "Industrial Trainee",
+                         "organization":  "Bangladesh Power Development Board (BPDB)",
+                         "details":  [
+                                         "Hands-on exposure to steam, gas, and combined cycle power plant systems."
+                                     ]
+                     }
+                 ],
+    "researchThemes":  [
+                           "Healthcare data integration and reliable analytical infrastructure",
+                           "Survival modeling and interpretable clinical ML",
+                           "Signal and system-level analysis for biomedical and engineering use-cases",
+                           "Controller design and performance optimization in electrical drives",
+                           "Retrieval-augmented AI tools for technical learning and decision support"
+                       ],
+    "skillGroups":  [
+                        {
+                            "title":  "Backend and Platform Engineering",
+                            "items":  [
+                                          "Node.js Runtime",
+                                          "Next.js Route Handlers",
+                                          "TypeScript",
+                                          "REST API Design",
+                                          "Role-Based Admin",
+                                          "CMS Workflows",
+                                          "JSON/Content Persistence"
+                                      ]
+                        },
+                        {
+                            "title":  "Security and Reliability",
+                            "items":  [
+                                          "Argon2",
+                                          "JOSE JWT",
+                                          "Session Cookies",
+                                          "CSRF Protection",
+                                          "Rate Limiting",
+                                          "Zod Validation",
+                                          "API Route Guarding"
+                                      ]
+                        },
+                        {
+                            "title":  "Data, AI, and Simulation",
+                            "items":  [
+                                          "Python",
+                                          "Pandas",
+                                          "OpenPyXL",
+                                          "RAG Pipelines",
+                                          "MATLAB",
+                                          "Simulink",
+                                          "Control Systems",
+                                          "Survival Analysis"
+                                      ]
+                        }
+                    ],
+    "achievementItems":  [
+                             "OIC partial scholarship recipient for academic excellence at IUT.",
+                             "Champion, 10th Mathematical Olympiad (Higher Secondary Group, Dinajpur).",
+                             "Conference publication at ICECET 2023.",
+                             "Director of Operations, Esonance 2023 (major university tech festival).",
+                             "IELTS overall band score: 7.5 (CEFR C1)."
+                         ],
+    "publications":  [
+                         {
+                             "title":  "Survival Analysis of Breast Cancer Patients: A Population-Based Study from SEER",
+                             "authors":  "R S Rahman, Al Keats, M A Kabir, A Newaz, M M Islam",
+                             "venue":  "2023 International Conference on Electrical, Computer and Energy Technologies (ICECET)",
+                             "year":  2023,
+                             "url":  "https://scholar.google.com/citations?hl=en\u0026user=y-kOLZ8AAAAJ",
+                             "citations":  4
+                         }
+                     ],
+    "ielts":  {
+                  "overallBand":  "7.5",
+                  "listening":  "7.5",
+                  "reading":  "9.0",
+                  "writing":  "6.5",
+                  "speaking":  "6.5",
+                  "cefrLevel":  "C1"
+              }
 }

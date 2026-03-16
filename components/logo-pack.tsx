@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { IconBrandFacebookFilled, IconBrandGithubFilled, IconBrandLinkedinFilled } from "@tabler/icons-react";
+import { siGooglescholar, siResearchgate } from "simple-icons";
 import { UiIcon, type UiIconName } from "@/components/ui-icon";
 
 type IconProps = {
@@ -50,6 +51,30 @@ export function FacebookIcon({ className = "" }: IconProps) {
   return (
     <BrandMark className={`text-[#1877F2] ${className}`.trim()}>
       <IconBrandFacebookFilled className="h-[56%] w-[56%]" stroke={1.9} />
+    </BrandMark>
+  );
+}
+
+function SimpleBrandSvg({ path, className = "" }: { path: string; className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={`h-[56%] w-[56%] ${className}`.trim()} fill="currentColor" aria-hidden>
+      <path d={path} />
+    </svg>
+  );
+}
+
+export function GoogleScholarIcon({ className = "" }: IconProps) {
+  return (
+    <BrandMark className={`text-[#4285F4] ${className}`.trim()}>
+      <SimpleBrandSvg path={siGooglescholar.path} />
+    </BrandMark>
+  );
+}
+
+export function ResearchGateIcon({ className = "" }: IconProps) {
+  return (
+    <BrandMark className={`text-[#00CCBB] ${className}`.trim()}>
+      <SimpleBrandSvg path={siResearchgate.path} />
     </BrandMark>
   );
 }

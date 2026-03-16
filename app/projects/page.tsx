@@ -1,4 +1,3 @@
-﻿import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { PageHero } from "@/components/page-hero";
 import { StrategyIcon, WorkflowIcon } from "@/components/logo-pack";
 import { ProjectsBrowser } from "@/components/projects-browser";
@@ -14,7 +13,16 @@ export default async function ProjectsPage() {
   const { featuredProjects, projects } = await getPortfolioContent();
   const lang = await getSiteLang();
   const visibleFeaturedProjects = featuredProjects.filter((project) => project.publishState !== "draft" && project.visibility !== "private");
-  const visibleProjects = projects.filter((project) => project.publishState !== "draft" && project.visibility !== "private");
+  const featuredKeys = new Set(visibleFeaturedProjects.map((project) => project.slug ?? project.title));
+  const seenProjectKeys = new Set<string>();
+  const visibleProjects = projects.filter((project) => {
+    if (project.publishState === "draft" || project.visibility === "private") return false;
+    const key = project.slug ?? project.title;
+    if (featuredKeys.has(key)) return false;
+    if (seenProjectKeys.has(key)) return false;
+    seenProjectKeys.add(key);
+    return true;
+  });
   const t = {
     hero: {
       kicker: lang === "bn" ? "প্রজেক্টস" : "Projects",
@@ -25,31 +33,15 @@ export default async function ProjectsPage() {
       description:
         lang === "bn"
           ? "পাবলিক রিপোজিটরি এবং প্রাইভেট ইমপ্লিমেন্টেশন থেকে বাছাই করা কাজ।"
-          : "Each project is positioned by domain and backed by specific evidence: pipeline figures, workflow architecture, evaluation outputs, or simulation charts.",
-    },
-    lens: {
-      label: lang === "bn" ? "পোর্টফোলিও দৃষ্টিভঙ্গি" : "Portfolio Lens",
-      title: lang === "bn" ? "হাইপ নয়, ইমপ্লিমেন্টেশন" : "Execution over buzzwords",
-      description:
-        lang === "bn"
-          ? "প্রতিটি প্রজেক্টে সমস্যা, পদ্ধতি এবং পরিমাপযোগ্য ফলাফলে ফোকাস রাখা হয়েছে।"
-          : "Every project card is structured around problem, build approach, outcome enabled, and capability demonstrated.",
-    },
-    types: {
-      label: lang === "bn" ? "প্রজেক্ট টাইপস" : "Project Types",
-      title: lang === "bn" ? "গবেষণা থেকে সফটওয়্যার" : "From research to deployable systems",
-      description:
-        lang === "bn"
-          ? "এআই টুলস, হেলথকেয়ার ডেটা, সারভাইভাল অ্যানালাইসিস, সিগন্যাল প্রসেসিং এবং সিমুলেশন-চালিত ইঞ্জিনিয়ারিং রয়েছে।"
-          : "Categories separate data engineering, applied AI, clinical ML, CMS platform work, and simulation/control systems for clearer technical positioning.",
+          : "Selected implementations from public repositories and private production work.",
     },
     featured: {
       eyebrow: lang === "bn" ? "ফিচার্ড" : "Featured",
-      title: lang === "bn" ? "মূল প্রজেক্ট অ্যাঙ্কর" : "Flagship project anchors",
+      title: lang === "bn" ? "নির্বাচিত প্রজেক্ট" : "Selected projects",
       description:
         lang === "bn"
-          ? "সবচেয়ে শক্তিশালী ইমপ্লিমেন্টেশন গভীরতা যেসব প্রজেক্টে দেখা যায়।"
-          : "Flagship projects showing production-style execution and evidence-first communication.",
+          ? "মূল কাজগুলো দ্রুত দেখার জন্য সংক্ষিপ্তভাবে উপস্থাপন।"
+          : "A concise view of the strongest implementations.",
     },
     all: {
       eyebrow: lang === "bn" ? "সব প্রজেক্ট" : "All Projects",
@@ -57,7 +49,7 @@ export default async function ProjectsPage() {
       description:
         lang === "bn"
           ? "ডোমেইন ও মেথড অনুযায়ী প্রজেক্ট ফিল্টার করে দেখুন।"
-          : "Filter by corrected category taxonomy to review methods, proof style, and execution scope.",
+          : "Use filters to quickly find relevant project categories.",
     },
   };
 
@@ -66,18 +58,6 @@ export default async function ProjectsPage() {
       <Reveal>
         <PageHero kicker={t.hero.kicker} title={t.hero.title} description={t.hero.description} />
       </Reveal>
-
-      <section className="section-shell">
-        <div className="grid gap-4">
-          <Reveal>
-            <DomainEvidenceFrame variant="data" lang={lang} title={t.lens.title} description={t.lens.description} rowsLimit={4} />
-          </Reveal>
-
-          <Reveal>
-            <DomainEvidenceFrame variant="platform" lang={lang} title={t.types.title} description={t.types.description} rowsLimit={4} />
-          </Reveal>
-        </div>
-      </section>
 
       <section className="section-shell section-shell--with-heading">
         <Reveal>
@@ -101,4 +81,3 @@ export default async function ProjectsPage() {
     </div>
   );
 }
-

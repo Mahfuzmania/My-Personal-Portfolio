@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+import Image from "next/image";
+import { CtaLink } from "@/components/cta-link";
 import { DomainEvidenceFrame } from "@/components/domain-evidence-frame";
 import { BrainIcon, CircuitIcon, DatabaseIcon } from "@/components/logo-pack";
 import { PageHero } from "@/components/page-hero";
@@ -21,7 +22,7 @@ const BN_RESEARCH_THEME_MAP: Record<string, string> = {
 };
 
 export default async function ResearchPage() {
-  const { researchThemes, uiContent } = await getPortfolioContent();
+  const { ielts, profile, publications, researchThemes, uiContent } = await getPortfolioContent();
   const lang = await getSiteLang();
 
   const tr = (value: string) => normalizeBnUiText(repairMojibakeText(value), lang);
@@ -54,6 +55,25 @@ export default async function ResearchPage() {
           ? "যে ক্ষেত্রগুলোতে ধারাবাহিকভাবে কাজ করছি এবং বাস্তব ডেলিভারিতে প্রয়োগ করছি।"
           : "Domains where experiments translate into production-relevant methods and architecture choices.",
       practiceEyebrow: lang === "bn" ? "প্র্যাকটিসে গবেষণা" : "Research in practice",
+    },
+    academic: {
+      eyebrow: lang === "bn" ? "একাডেমিক প্রোফাইল" : "Academic Profiles",
+      title: lang === "bn" ? "গবেষণা প্রমাণ ও প্রোফাইল লিংক" : "Research proof and profile links",
+      scholar: lang === "bn" ? "গুগল স্কলার" : "Google Scholar",
+      researchGate: lang === "bn" ? "রিসার্চগেট" : "ResearchGate",
+      ielts: lang === "bn" ? "IELTS স্কোর" : "IELTS Score",
+      overall: lang === "bn" ? "ওভারঅল" : "Overall",
+    },
+    publications: {
+      eyebrow: lang === "bn" ? "প্রকাশনা" : "Publications",
+      title: lang === "bn" ? "প্রকাশিত গবেষণা কাজ" : "Published research work",
+      description:
+        lang === "bn"
+          ? "প্রকাশনা, ভেন্যু, বছর এবং সাইটেশনসহ তালিকা।"
+          : "Publication list with venue, year, and citations.",
+      citation: lang === "bn" ? "সাইটেশন" : "Citations",
+      view: lang === "bn" ? "লিংক দেখুন" : "View Link",
+      empty: lang === "bn" ? "এখনও কোনো প্রকাশনা যোগ করা হয়নি।" : "No publications have been added yet.",
     },
     themes: {
       eyebrow: lang === "bn" ? "অ্যাপ্লাইড রিসার্চ থিম" : "Applied Research Themes",
@@ -113,6 +133,68 @@ export default async function ResearchPage() {
               ))}
             </div>
           </article>
+        </div>
+      </section>
+
+      <section className="section-shell">
+        <div className="grid gap-4 lg:grid-cols-2">
+          <article className="card card-pad">
+            <SectionHeading eyebrow={t.academic.eyebrow} title={t.academic.title} icon={<DatabaseIcon className="h-8 w-8" />} />
+            <div className="mt-3 flex flex-wrap gap-2">
+              {profile.googleScholar ? (
+                <CtaLink href={profile.googleScholar} secondary external>
+                  {t.academic.scholar}
+                </CtaLink>
+              ) : null}
+              {profile.researchGate ? (
+                <CtaLink href={profile.researchGate} secondary external>
+                  {t.academic.researchGate}
+                </CtaLink>
+              ) : null}
+            </div>
+          </article>
+
+          {ielts ? (
+            <article className="card card-pad">
+              <SectionHeading eyebrow={t.academic.ielts} title={`${t.academic.overall}: ${ielts.overallBand}`} icon={<BrainIcon className="h-8 w-8" />} />
+              <div className="mt-3 flex flex-wrap gap-2">
+                {ielts.listening ? <span className="chip">{`Listening ${ielts.listening}`}</span> : null}
+                {ielts.reading ? <span className="chip">{`Reading ${ielts.reading}`}</span> : null}
+                {ielts.writing ? <span className="chip">{`Writing ${ielts.writing}`}</span> : null}
+                {ielts.speaking ? <span className="chip">{`Speaking ${ielts.speaking}`}</span> : null}
+                {ielts.cefrLevel ? <span className="chip chip--accent">{`CEFR ${ielts.cefrLevel}`}</span> : null}
+              </div>
+            </article>
+          ) : null}
+        </div>
+      </section>
+
+      <section className="section-shell section-shell--with-heading">
+        <Reveal>
+          <SectionHeading eyebrow={t.publications.eyebrow} title={t.publications.title} description={t.publications.description} icon={<DatabaseIcon className="h-8 w-8" />} />
+        </Reveal>
+        <div className="grid gap-4">
+          {publications.length === 0 ? <p className="text-sm text-muted">{t.publications.empty}</p> : null}
+          {publications.map((item, idx) => (
+            <Reveal key={`${item.title}-${item.year}`} delay={idx * 0.05}>
+              <article className="card card-pad">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="chip chip--accent">{item.year}</span>
+                  {typeof item.citations === "number" ? <span className="chip">{`${t.publications.citation}: ${item.citations}`}</span> : null}
+                </div>
+                <h3 className="mt-2 text-xl font-semibold tracking-tight">{tr(item.title)}</h3>
+                {item.authors ? <p className="mt-2 text-sm text-muted">{tr(item.authors)}</p> : null}
+                <p className="mt-2 text-sm text-muted">{tr(item.venue)}</p>
+                {item.url ? (
+                  <div className="mt-3">
+                    <CtaLink href={item.url} secondary external>
+                      {t.publications.view}
+                    </CtaLink>
+                  </div>
+                ) : null}
+              </article>
+            </Reveal>
+          ))}
         </div>
       </section>
 

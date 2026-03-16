@@ -24,7 +24,7 @@ import { getSiteLang } from "@/lib/lang";
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const { experience, featuredProjects, highlights, profile, technicalFocus, uiContent } = await getPortfolioContent();
+  const { experience, featuredProjects, highlights, profile, publications, technicalFocus, uiContent } = await getPortfolioContent();
   const lang = await getSiteLang();
   const visibleFeaturedProjects = featuredProjects.filter((project) => project.publishState !== "draft" && project.visibility !== "private");
   const displayName = lang === "bn" ? "মোঃ মাহফুজুল ইসলাম" : "Md Mahfuzul Islam";
@@ -83,7 +83,7 @@ export default async function HomePage() {
     },
     stats: {
       featured: lang === "bn" ? "ফিচার্ড" : "Featured",
-      focus: lang === "bn" ? "ফোকাস এরিয়া" : "Focus Areas",
+      publications: lang === "bn" ? "প্রকাশনা" : "Publications",
       roles: lang === "bn" ? "বর্তমান ভূমিকা" : "Current Roles",
     },
     scopeTitle: lang === "bn" ? "বর্তমান কাজের পরিধি" : "Execution priorities",
@@ -141,6 +141,11 @@ export default async function HomePage() {
               <CtaLink href={profile.github} secondary external>
                 GitHub
               </CtaLink>
+              {profile.googleScholar ? (
+                <CtaLink href={profile.googleScholar} secondary external>
+                  Google Scholar
+                </CtaLink>
+              ) : null}
             </div>
 
             <div className="home-hero__stats mt-auto">
@@ -149,8 +154,8 @@ export default async function HomePage() {
                 <p className="home-hero__stat-value">{visibleFeaturedProjects.length}</p>
               </article>
               <article className="home-hero__stat">
-                <p className="meta-label">{t.stats.focus}</p>
-                <p className="home-hero__stat-value">{technicalFocus.length}</p>
+                <p className="meta-label">{t.stats.publications}</p>
+                <p className="home-hero__stat-value">{publications.length}</p>
               </article>
               <article className="home-hero__stat">
                 <p className="meta-label">{t.stats.roles}</p>

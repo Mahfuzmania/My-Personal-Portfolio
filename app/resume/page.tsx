@@ -13,7 +13,7 @@ import { repairMojibakeText } from "@/lib/mojibake";
 export const dynamic = "force-dynamic";
 
 export default async function ResumePage() {
-  const { profile, skillGroups, uiContent } = await getPortfolioContent();
+  const { ielts, profile, publications, skillGroups, uiContent } = await getPortfolioContent();
   const lang = await getSiteLang();
   const tr = (value: string) => normalizeBnUiText(repairMojibakeText(value), lang);
   const summaryPoints = uiContent.resume.summaryPoints[lang].map((item) => tr(item));
@@ -65,18 +65,44 @@ export default async function ResumePage() {
             </div>
           </article>
 
-          <DomainEvidenceFrame
-            variant="data"
-            lang={lang}
-            title={lang === "bn" ? "ডেলিভারি প্রুফ ফ্রেম" : "Delivery proof frame"}
-            description={
-              lang === "bn"
-                ? "ডেটা ইনজেশন, স্ট্যান্ডার্ডাইজেশন, ভ্যালিডেশন এবং প্রোডাকশন-রেডি হ্যান্ডঅফ ফ্লো।"
-                : "Data ingestion, standardization, validation, and production-ready handoff flow."
-            }
-            rowsLimit={4}
-            className="card card-pad"
-          />
+          <div className="grid gap-4">
+            <DomainEvidenceFrame
+              variant="data"
+              lang={lang}
+              title={lang === "bn" ? "ডেলিভারি প্রুফ ফ্রেম" : "Delivery proof frame"}
+              description={
+                lang === "bn"
+                  ? "ডেটা ইনজেশন, স্ট্যান্ডার্ডাইজেশন, ভ্যালিডেশন এবং প্রোডাকশন-রেডি হ্যান্ডঅফ ফ্লো।"
+                  : "Data ingestion, standardization, validation, and production-ready handoff flow."
+              }
+              rowsLimit={4}
+              className="card card-pad"
+            />
+
+            <article className="card card-pad">
+              <div className="mb-4 flex items-center gap-3">
+                <DatabaseIcon className="h-8 w-8" />
+                <h2 className="section-title text-2xl font-semibold">{lang === "bn" ? "একাডেমিক প্রোফাইল" : "Academic Profile"}</h2>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {profile.googleScholar ? (
+                  <CtaLink href={profile.googleScholar} secondary external>
+                    Google Scholar
+                  </CtaLink>
+                ) : null}
+                {profile.researchGate ? (
+                  <CtaLink href={profile.researchGate} secondary external>
+                    ResearchGate
+                  </CtaLink>
+                ) : null}
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="chip chip--accent">{`${lang === "bn" ? "প্রকাশনা" : "Publications"}: ${publications.length}`}</span>
+                {ielts ? <span className="chip chip--accent">{`IELTS: ${ielts.overallBand}`}</span> : null}
+                {ielts?.cefrLevel ? <span className="chip">{`CEFR ${ielts.cefrLevel}`}</span> : null}
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 

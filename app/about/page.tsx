@@ -137,7 +137,7 @@ export default async function AboutPage() {
               <SectionHeading eyebrow={t.roles.eyebrow} title={t.roles.title} description={t.roles.description} icon={<CollaborationIcon className="h-8 w-8" />} />
               <div className="mt-3 grid gap-3">
                 {roleCards.map((item) => (
-                  <article key={item.title.en} className="card p-3.5">
+                  <article key={item.title.en} className="card about-frame-card p-3.5">
                     <h3 className="flex items-center gap-2.5 text-xl font-semibold tracking-tight md:text-2xl">
                       {resolveCompanyLogo(item.title.en, companyLogos) ? (
                         <Image
@@ -190,7 +190,7 @@ export default async function AboutPage() {
                 <SectionHeading eyebrow={tr(t.focus.eyebrow)} title={tr(t.focus.title)} description={tr(t.focus.description)} icon={<BadgeIcon name="focus" />} />
                 <div className="mt-3 grid gap-3">
                   {focusCards.map((item) => (
-                    <article key={item.title.en} className="rounded-xl border border-border bg-surface/70 px-4 py-3">
+                    <article key={item.title.en} className="about-frame-card rounded-xl border border-border bg-surface/70 px-4 py-3">
                       <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.1em] text-accent">
                         {resolveCompanyLogo(item.title.en, companyLogos) ? (
                           <Image

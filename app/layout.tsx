@@ -76,6 +76,7 @@ export default async function RootLayout({
 }>) {
   const content = await getPortfolioContent();
   const lang = await getSiteLang();
+  const sameAs = [content.profile.linkedin, content.profile.github, content.profile.facebook, content.profile.googleScholar, content.profile.researchGate].filter(Boolean);
 
   return (
     <html lang={lang} data-lang={lang} suppressHydrationWarning>
@@ -117,8 +118,9 @@ export default async function RootLayout({
               url: siteUrl.origin,
               author: {
                 "@type": "Person",
-                name: "Md Mahfuzul Islam",
+                name: content.profile.name,
                 jobTitle: "Data Engineer",
+                sameAs,
               },
             }}
           />

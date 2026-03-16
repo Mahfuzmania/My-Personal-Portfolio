@@ -2,7 +2,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { ContactQuickMessageForm } from "@/components/contact-quick-message-form";
-import { FacebookIcon, GithubIcon, LinkedInIcon, MailIcon, SparkIcon } from "@/components/logo-pack";
+import { FacebookIcon, GithubIcon, GoogleScholarIcon, LinkedInIcon, MailIcon, ResearchGateIcon, SparkIcon } from "@/components/logo-pack";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -125,6 +125,28 @@ export default async function ContactPage() {
                       </Link>
                     }
                   />
+                  {profile.googleScholar ? (
+                    <ContactRow
+                      icon={<GoogleScholarIcon className="h-6 w-6" />}
+                      label="Google Scholar"
+                      value={
+                        <Link href={profile.googleScholar} target="_blank" rel="noreferrer" className="hover:text-accent">
+                          {formatPublicUrl(profile.googleScholar)}
+                        </Link>
+                      }
+                    />
+                  ) : null}
+                  {profile.researchGate ? (
+                    <ContactRow
+                      icon={<ResearchGateIcon className="h-6 w-6" />}
+                      label="ResearchGate"
+                      value={
+                        <Link href={profile.researchGate} target="_blank" rel="noreferrer" className="hover:text-accent">
+                          {formatPublicUrl(profile.researchGate)}
+                        </Link>
+                      }
+                    />
+                  ) : null}
                 </div>
               </div>
             </article>
