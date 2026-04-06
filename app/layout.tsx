@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lora, Noto_Serif_Bengali, Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { normalizeBnUiText } from "@/lib/bn-localize";
@@ -125,6 +126,7 @@ export default async function RootLayout({
             }}
           />
         </div>
+        <Analytics />
       </body>
     </html>
   );
